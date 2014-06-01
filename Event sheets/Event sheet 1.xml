@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <include>Camera</include>
+        <event-group description="" sid="2897060075777959" title="NPC">
+            <sub-events>
+                <event-block collapsed="1" sid="853795155706787">
+                    <conditions>
+                        <condition behavior="8Direction" id="0" inverted="1" name="Is moving" sid="4568382050836169" type="Camera" />
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="8" name="Set enabled" sid="5708062496893983" type="Player">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="2086728106167993">
+                            <conditions>
+                                <condition id="-3" name="Is on-screen" sid="1765133814437218" type="NPC" />
+                            </conditions>
+                            <actions>
+                                <action behavior="8Direction" id="8" name="Set enabled" sid="5343476854662251" type="NPC">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="1219888893175615">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="8143413496183939" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="8" name="Set enabled" sid="1830207241678258" type="Player">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="8Direction" id="8" name="Set enabled" sid="7585961732209646" type="NPC">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="3052503956438317" title="Zombies">
+            <sub-events>
+                <event-block collapsed="1" sid="2668445456408989">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="7056031962185933" type="System">
+                            <param id="0" name="Object">Zombie</param>
+                        </condition>
+                        <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="5846199569260264" type="Zombie">
+                            <param id="0" name="Object">Victim</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="542814027685804">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="1338044148798049" type="Victim">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="Y co-ordinate">Zombie.Y - Zombie.Height / 2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="8759215442275464" type="Zombie">
+                                    <param id="0" name="Control">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2056336829098309">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="6111724790828084" type="System" />
+                                <condition id="-2" name="Compare Y" sid="2415571907500971" type="Victim">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Y co-ordinate">Zombie.Y + Zombie.Height / 2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="9635302436476434" type="Zombie">
+                                    <param id="0" name="Control">3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="496355702104206">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="8213383877257611" type="Victim">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="X co-ordinate">Zombie.X - Zombie.Width / 2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="4258127500849516" type="Zombie">
+                                    <param id="0" name="Control">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8156108174310469">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="5619705313746416" type="System" />
+                                <condition id="-1" name="Compare X" sid="8879872798033395" type="Victim">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="X co-ordinate">Zombie.X + Zombie.Width / 2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="6101575151331553" type="Zombie">
+                                    <param id="0" name="Control">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
