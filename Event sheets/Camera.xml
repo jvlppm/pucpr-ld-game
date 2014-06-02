@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Camera</name>
     <events>
-        <event-block sid="4884373254014317">
+        <event-block collapsed="1" sid="4884373254014317">
             <conditions>
                 <condition id="-36" name="Pick overlapping point" sid="7874121659193227" type="System">
                     <param id="0" name="Object">Area</param>
@@ -120,7 +120,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block collapsed="1" sid="5498755554358997">
+        <event-block sid="5498755554358997">
             <conditions>
                 <condition id="-36" name="Pick overlapping point" sid="5432879488429826" type="System">
                     <param id="0" name="Object">Area</param>

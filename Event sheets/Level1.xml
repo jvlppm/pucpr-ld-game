@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Level1</name>
+    <events>
+        <include>GamePlay</include>
+        <event-block sid="4232379297267838">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="8253620963330933" type="System" />
+            </conditions>
+            <actions>
+                <action id="1" name="Set size" sid="2050482943818811" type="Messages">
+                    <param id="0" name="Width">3</param>
+                    <param id="1" name="Height">3</param>
+                    <param id="2" name="Depth">1</param>
+                </action>
+                <action id="3" name="Set at XY" sid="3814712898384132" type="Messages">
+                    <param id="0" name="X">0</param>
+                    <param id="1" name="Y">0</param>
+                    <param id="2" name="Value">&quot;Ajude meus amigos&#x0D;&#x0A;Esta faca pode te ajudar&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <variable constant="0" name="State" sid="5779240340133855" static="0" type="text">Waiting</variable>
+        <event-group description="" sid="800431554552432" title="Knife gift">
+            <sub-events>
+                <event-block sid="9257388658206582">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="9669466948122158" type="Player">
+                            <param id="0" name="Object">KnifeArea</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="4610889130255208" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="8656922230648761" type="System">
+                            <param id="0" name="Variable">State</param>
+                            <param id="1" name="Value">&quot;WalkingToPlayer&quot;</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="7654061892360665" type="Player">
+                            <param id="0" name="Instance variable">AutoEnable</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action behavior="8Direction" id="8" name="Set enabled" sid="7621581661657071" type="Player">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="714641610770229">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="5647267543469205" type="System">
+                            <param id="0" name="Variable">State</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;WalkingToPlayer&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="3954115392726549" type="Victim">
+                            <param id="0" name="Unique ID">29</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="1521760209712462">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="3071591395183488" type="Victim">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="X co-ordinate">Player.X</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="5033329824766712" type="Victim">
+                                    <param id="0" name="Control">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6269676072688607">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="7937660157626731" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="1596986639896745">
+                                    <conditions>
+                                        <condition id="-2" name="Compare Y" sid="2416138403917985" type="Victim">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="Y co-ordinate">Player.Y</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="8Direction" id="7" name="Simulate control" sid="5096403698204354" type="Victim">
+                                            <param id="0" name="Control">3</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="8494282253931102">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="3284832666102451" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="8Direction" id="7" name="Simulate control" sid="3309306602024654" type="Victim">
+                                            <param id="0" name="Control">2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="1664582419455802">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="6822542998626666" type="Victim">
+                                    <param id="0" name="Object">Player</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="9485464255789083" type="Messages">
+                                    <param id="0" name="Instance variable">Message</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="2224066587487838" type="KnifeArea" />
+                                <action id="-9" name="Set value" sid="2924961583342239" type="System">
+                                    <param id="0" name="Variable">State</param>
+                                    <param id="1" name="Value">&quot;Done&quot;</param>
+                                </action>
+                                <action behavior="8Direction" disabled="1" id="8" name="Set enabled" sid="7960343878435158" type="Victim">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block disabled="1" sid="3170757614005402">
+                    <conditions>
+                        <condition id="1" name="On any key pressed" sid="3008981141921207" type="Keyboard" />
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="8634834402568684" type="Player">
+                            <param id="0" name="Instance variable">AutoEnable</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="8Direction" id="8" name="Set enabled" sid="6077494130529548" type="Player">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
