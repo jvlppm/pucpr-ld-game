@@ -73,7 +73,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="6269676072688607">
+                        <event-block collapsed="1" sid="6269676072688607">
                             <conditions>
                                 <condition id="-22" name="Else" sid="7937660157626731" type="System" />
                             </conditions>
@@ -123,23 +123,13 @@
                                 <action behavior="8Direction" disabled="1" id="8" name="Set enabled" sid="7960343878435158" type="Victim">
                                     <param id="0" name="State">0</param>
                                 </action>
+                                <action id="-13" name="Set boolean" sid="9393515425423821" type="Player">
+                                    <param id="0" name="Instance variable">CarryingKnife</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
-                </event-block>
-                <event-block disabled="1" sid="3170757614005402">
-                    <conditions>
-                        <condition id="1" name="On any key pressed" sid="3008981141921207" type="Keyboard" />
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="8634834402568684" type="Player">
-                            <param id="0" name="Instance variable">AutoEnable</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action behavior="8Direction" id="8" name="Set enabled" sid="6077494130529548" type="Player">
-                            <param id="0" name="State">1</param>
-                        </action>
-                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
