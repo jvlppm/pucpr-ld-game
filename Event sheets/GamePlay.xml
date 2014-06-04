@@ -87,7 +87,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="3766674772289778" title="Victims">
+        <event-group collapsed="1" description="" sid="3766674772289778" title="Victims">
             <sub-events>
                 <event-block sid="6970142373032275">
                     <conditions>
@@ -115,7 +115,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="7610956851657086">
+                <event-block collapsed="1" sid="7610956851657086">
                     <conditions>
                         <condition id="-8" name="Is boolean instance variable set" sid="3097174163708096" type="Victim">
                             <param id="0" name="Instance variable">Running</param>
@@ -194,6 +194,18 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block sid="3665040161346942">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="9758037715962836" type="Victim">
+                            <param id="0" name="Object">Player</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="5229232388335406" type="Victim">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="3052503956438317" title="Zombies">
@@ -215,6 +227,9 @@
                         <action id="-10" name="Set value" sid="4150268351383997" type="Zombie">
                             <param id="0" name="Instance variable">Holding</param>
                             <param id="1" name="Value">Character.UID</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="1158397562513376" type="Character">
+                            <param id="0" name="State">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -245,6 +260,9 @@
                         <action id="-13" name="Set boolean" sid="1814883894799414" type="Character">
                             <param id="0" name="Instance variable">AutoEnable</param>
                             <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="2304889963267405" type="Character">
+                            <param id="0" name="State">0</param>
                         </action>
                     </actions>
                 </event-block>
