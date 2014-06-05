@@ -5,7 +5,7 @@
     <events>
         <include>Utils</include>
         <include>Camera</include>
-        <event-group description="" sid="2897060075777959" title="Characters">
+        <event-group collapsed="1" description="" sid="2897060075777959" title="Characters">
             <sub-events>
                 <event-block collapsed="1" sid="6429507390627526">
                     <conditions>
@@ -312,7 +312,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block collapsed="1" sid="3011547771811964">
+                <event-block sid="3011547771811964">
                     <conditions>
                         <condition id="-11" name="For Each" sid="4081659821480804" type="System">
                             <param id="0" name="Object">Zombie</param>
@@ -331,7 +331,7 @@
                                 <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="4055011458893377" type="Zombie">
                                     <param id="0" name="Object">GoodGuy</param>
                                 </condition>
-                                <condition disabled="1" id="-3" name="Is on-screen" sid="9944639276474629" type="GoodGuy" />
+                                <condition id="-3" name="Is on-screen" sid="9944639276474629" type="GoodGuy" />
                                 <condition id="-13" name="Pick nth instance" sid="5896171138686972" type="System">
                                     <param id="0" name="Object">GoodGuy</param>
                                     <param id="1" name="Instance">0</param>
@@ -369,6 +369,11 @@
                         </condition>
                         <condition id="-14" name="Pick by unique ID" sid="5527378287441479" type="Zombie">
                             <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="3208803596807013" type="Zombie">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
                         </condition>
                         <condition id="-14" name="Pick by unique ID" sid="1764832235118494" type="Character">
                             <param id="0" name="Unique ID">Function.Param(1)</param>
@@ -432,10 +437,27 @@
                         <action behavior="Bullet" id="5" name="Set enabled" sid="1451248643632821" type="Character">
                             <param id="0" name="State">1</param>
                         </action>
-                        <action id="-17" name="Move forward" sid="4120157305470225" type="Zombie">
-                            <param id="0" name="Distance">-5</param>
-                        </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="1936268066267517">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="26447679855805" type="Zombie">
+                                    <param id="0" name="Instance variable">Health</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-17" name="Move forward" sid="4120157305470225" type="Zombie">
+                                    <param id="0" name="Distance">-4</param>
+                                </action>
+                                <action id="-23" name="Move at angle" sid="1383330590275407" type="Character">
+                                    <param id="0" name="Angle">Zombie.Angle</param>
+                                    <param id="1" name="Distance">4</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
