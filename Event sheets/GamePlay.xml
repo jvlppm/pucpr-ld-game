@@ -5,17 +5,12 @@
     <events>
         <include>Utils</include>
         <include>Camera</include>
-        <event-group collapsed="1" description="" sid="2897060075777959" title="NPC">
+        <event-group description="" sid="2897060075777959" title="Characters">
             <sub-events>
-                <event-block collapsed="1" sid="6429507390627526">
+                <event-block sid="6429507390627526">
                     <conditions>
                         <condition id="-8" name="Is boolean instance variable set" sid="9606856087968288" type="Character">
                             <param id="0" name="Instance variable">AutoEnable</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="6279757004825179" type="Character">
-                            <param id="0" name="Instance variable">Health</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">0</param>
                         </condition>
                         <condition id="-11" name="For Each" sid="4680673911537968" type="System">
                             <param id="0" name="Object">Character</param>
@@ -30,6 +25,11 @@
                                     <param id="1" name="Speed">1</param>
                                 </condition>
                                 <condition id="-3" name="Is on-screen" sid="1765133814437218" type="Character" />
+                                <condition id="-7" name="Compare instance variable" sid="6279757004825179" type="Character">
+                                    <param id="0" name="Instance variable">Health</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action behavior="Bullet" id="5" name="Set enabled" sid="2213488802749908" type="Character">
@@ -75,7 +75,21 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block collapsed="1" sid="8676823658211393">
+                <event-block disabled="1" sid="8531452890494635">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="4710453799687346" type="Character">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="1540750191993403" type="Character">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8676823658211393">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="228195979821599" type="Character">
                             <param id="0" name="Instance variable">Health</param>
@@ -83,7 +97,11 @@
                             <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="240673453112404" type="Character">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <event-block sid="6442656417932284">
                             <conditions>
@@ -237,7 +255,7 @@
                 <event-block sid="5032556258015384">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="5661433258847534" type="Zombie">
-                            <param id="0" name="Object">Character</param>
+                            <param id="0" name="Object">GoodGuy</param>
                         </condition>
                         <condition id="-7" name="Compare instance variable" sid="4828505588819494" type="Zombie">
                             <param id="0" name="Instance variable">Holding</param>
@@ -248,6 +266,9 @@
                             <param id="0" name="Instance variable">Health</param>
                             <param id="1" name="Comparison">4</param>
                             <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="3241252169608233" type="Character">
+                            <param id="0" name="Unique ID">GoodGuy.UID</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -313,7 +334,7 @@
                 </event-block>
                 <event-block sid="3011547771811964">
                     <conditions>
-                        <condition id="-3" name="Is on-screen" sid="9944639276474629" type="Victim" />
+                        <condition id="-3" name="Is on-screen" sid="9944639276474629" type="GoodGuy" />
                         <condition id="-3" name="Is on-screen" sid="1164320351851821" type="Zombie" />
                         <condition id="-7" name="Compare instance variable" sid="1483123731536603" type="Zombie">
                             <param id="0" name="Instance variable">Health</param>
@@ -324,18 +345,18 @@
                             <param id="0" name="Object">Zombie</param>
                         </condition>
                         <condition id="-34" name="Pick by evaluate" sid="6252485418676607" type="System">
-                            <param id="0" name="Object">Victim</param>
-                            <param id="1" name="Expression">distance(Zombie.X, Zombie.Y, Victim.X, Victim.Y) &lt; 100</param>
+                            <param id="0" name="Object">GoodGuy</param>
+                            <param id="1" name="Expression">distance(Zombie.X, Zombie.Y, GoodGuy.X, GoodGuy.Y) &lt; 150</param>
                         </condition>
-                        <condition id="-3" name="Is on-screen" sid="5626392208847367" type="Victim" />
+                        <condition id="-3" name="Is on-screen" sid="5626392208847367" type="GoodGuy" />
                         <condition id="-13" name="Pick nth instance" sid="5896171138686972" type="System">
-                            <param id="0" name="Object">Victim</param>
+                            <param id="0" name="Object">GoodGuy</param>
                             <param id="1" name="Instance">0</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-8" name="Set angle" sid="2521059445827661" type="Zombie">
-                            <param id="0" name="Angle">angle(Zombie.X, Zombie.Y, Victim.X, Victim.Y)</param>
+                            <param id="0" name="Angle">angle(Zombie.X, Zombie.Y, GoodGuy.X, GoodGuy.Y)</param>
                         </action>
                         <action behavior="Bullet" id="0" name="Set speed" sid="9416666472783391" type="Zombie">
                             <param id="0" name="Speed">40</param>
@@ -344,7 +365,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="6773088495970466" title="Balloon">
+        <event-group description="" sid="6773088495970466" title="Balloon">
             <sub-events>
                 <event-block sid="1755681182641615">
                     <conditions>
@@ -437,6 +458,10 @@
                                             <param id="0" name="Instance variable">AutoEnable</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
+                                        <action id="-10" name="Set value" sid="959565781022128" type="Messages">
+                                            <param id="0" name="Instance variable">Index</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
@@ -479,7 +504,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="7871028774943537" title="Player">
+        <event-group description="" sid="7871028774943537" title="Player">
             <sub-events>
                 <event-block sid="8280718908687473">
                     <conditions>
@@ -546,7 +571,7 @@
                             </conditions>
                             <actions />
                             <sub-events>
-                                <event-block collapsed="1" sid="7023371633381726">
+                                <event-block sid="7023371633381726">
                                     <conditions>
                                         <condition id="-7" name="Compare instance variable" sid="1174450378627109" type="Knife">
                                             <param id="0" name="Instance variable">State</param>
@@ -578,7 +603,7 @@
                                         </event-block>
                                     </sub-events>
                                 </event-block>
-                                <event-block collapsed="1" sid="3716272604030348">
+                                <event-block sid="3716272604030348">
                                     <conditions>
                                         <condition id="-7" name="Compare instance variable" sid="8096057272427492" type="Knife">
                                             <param id="0" name="Instance variable">State</param>

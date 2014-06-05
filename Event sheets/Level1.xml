@@ -12,12 +12,17 @@
                 <action id="1" name="Set size" sid="2050482943818811" type="Messages">
                     <param id="0" name="Width">3</param>
                     <param id="1" name="Height">3</param>
-                    <param id="2" name="Depth">1</param>
+                    <param id="2" name="Depth">3</param>
                 </action>
                 <action id="3" name="Set at XY" sid="3814712898384132" type="Messages">
                     <param id="0" name="X">0</param>
                     <param id="1" name="Y">0</param>
                     <param id="2" name="Value">&quot;Ajude meus amigos&#x0D;&#x0A;Esta faca pode te ajudar&quot;</param>
+                </action>
+                <action id="3" name="Set at XY" sid="3787345953197407" type="Messages">
+                    <param id="0" name="X">1</param>
+                    <param id="1" name="Y">0</param>
+                    <param id="2" name="Value">&quot;Salve meus amigos&#x0D;&#x0A;Use este revolver a seu favor&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -100,6 +105,33 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="4921246366619843" title="Gun gift">
+            <sub-events>
+                <event-block sid="8860192286470366">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="8719359496320166" type="Player">
+                            <param id="0" name="Object">Victim</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="4677829952858737" type="Victim">
+                            <param id="0" name="Unique ID">4</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="540434433584671" type="Player">
+                            <param id="0" name="Instance variable">CarryingGun</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="4218079717203376" type="Messages">
+                            <param id="0" name="Instance variable">Message</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="29743828212391" type="Player">
+                            <param id="0" name="Instance variable">CarryingGun</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
