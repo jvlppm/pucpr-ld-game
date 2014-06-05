@@ -7,7 +7,7 @@
         <include>Camera</include>
         <event-group description="" sid="2897060075777959" title="Characters">
             <sub-events>
-                <event-block sid="6429507390627526">
+                <event-block collapsed="1" sid="6429507390627526">
                     <conditions>
                         <condition id="-8" name="Is boolean instance variable set" sid="9606856087968288" type="Character">
                             <param id="0" name="Instance variable">AutoEnable</param>
@@ -89,7 +89,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="8676823658211393">
+                <event-block collapsed="1" sid="8676823658211393">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="228195979821599" type="Character">
                             <param id="0" name="Instance variable">Health</param>
@@ -277,31 +277,18 @@
                             <param id="1" name="Comparison">4</param>
                             <param id="2" name="Value">0</param>
                         </condition>
-                        <condition id="-14" name="Pick by unique ID" sid="3241252169608233" type="Character">
-                            <param id="0" name="Unique ID">GoodGuy.UID</param>
-                        </condition>
                     </conditions>
                     <actions>
-                        <action id="-13" name="Set boolean" sid="6786075232568224" type="Character">
-                            <param id="0" name="Instance variable">AutoEnable</param>
-                            <param id="1" name="Value">0</param>
+                        <action id="0" name="Call function" sid="5496899234060294" type="Function">
+                            <param id="0" name="Name">&quot;ZombieHold&quot;</param>
+                            <param id="1" name="Parameter {n}">Zombie.UID{###}GoodGuy.UID</param>
                         </action>
-                        <action id="-13" name="Set boolean" sid="793357632506115" type="Zombie">
-                            <param id="0" name="Instance variable">AutoEnable</param>
-                            <param id="1" name="Value">0</param>
+                        <action id="-16" name="Wait" sid="1710987007140365" type="System">
+                            <param id="0" name="Seconds">2</param>
                         </action>
-                        <action id="-10" name="Set value" sid="4150268351383997" type="Zombie">
-                            <param id="0" name="Instance variable">Holding</param>
-                            <param id="1" name="Value">Character.UID</param>
-                        </action>
-                        <action behavior="Sine" id="0" name="Set active" sid="1158397562513376" type="Character">
-                            <param id="0" name="State">1</param>
-                        </action>
-                        <action behavior="Bullet" id="5" name="Set enabled" sid="2684671191408064" type="Character">
-                            <param id="0" name="State">0</param>
-                        </action>
-                        <action behavior="Bullet" id="5" name="Set enabled" sid="1638344797867103" type="Zombie">
-                            <param id="0" name="State">0</param>
+                        <action id="0" name="Call function" sid="8293568104151504" type="Function">
+                            <param id="0" name="Name">&quot;ZombieRelease&quot;</param>
+                            <param id="1" name="Parameter {n}">Zombie.UID{###}GoodGuy.UID</param>
                         </action>
                     </actions>
                 </event-block>
@@ -317,32 +304,15 @@
                             <param id="1" name="Comparison">5</param>
                             <param id="2" name="Value">0</param>
                         </condition>
-                        <condition id="-14" name="Pick by unique ID" sid="7854694836495611" type="Character">
-                            <param id="0" name="Unique ID">Zombie.Holding</param>
-                        </condition>
                     </conditions>
                     <actions>
-                        <action id="-10" name="Set value" sid="1901646716972114" type="Zombie">
-                            <param id="0" name="Instance variable">Holding</param>
-                            <param id="1" name="Value">-1</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="1814883894799414" type="Character">
-                            <param id="0" name="Instance variable">AutoEnable</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="4308742545542225" type="Zombie">
-                            <param id="0" name="Instance variable">AutoEnable</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action behavior="Sine" id="0" name="Set active" sid="2304889963267405" type="Character">
-                            <param id="0" name="State">0</param>
-                        </action>
-                        <action behavior="Bullet" id="5" name="Set enabled" sid="7287614755477132" type="Character">
-                            <param id="0" name="State">1</param>
+                        <action id="0" name="Call function" sid="1804097587887903" type="Function">
+                            <param id="0" name="Name">&quot;ZombieRelease&quot;</param>
+                            <param id="1" name="Parameter {n}">Zombie.UID{###}Zombie.Holding</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="3011547771811964">
+                <event-block collapsed="1" sid="3011547771811964">
                     <conditions>
                         <condition id="-11" name="For Each" sid="4081659821480804" type="System">
                             <param id="0" name="Object">Zombie</param>
@@ -361,7 +331,7 @@
                                 <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="4055011458893377" type="Zombie">
                                     <param id="0" name="Object">GoodGuy</param>
                                 </condition>
-                                <condition id="-3" name="Is on-screen" sid="9944639276474629" type="GoodGuy" />
+                                <condition disabled="1" id="-3" name="Is on-screen" sid="9944639276474629" type="GoodGuy" />
                                 <condition id="-13" name="Pick nth instance" sid="5896171138686972" type="System">
                                     <param id="0" name="Object">GoodGuy</param>
                                     <param id="1" name="Instance">0</param>
@@ -391,6 +361,81 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="5715188491627261">
+                    <conditions>
+                        <condition id="0" name="On function" sid="1432867587613914" type="Function">
+                            <param id="0" name="Name">&quot;ZombieHold&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="5527378287441479" type="Zombie">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="1764832235118494" type="Character">
+                            <param id="0" name="Unique ID">Function.Param(1)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="6786075232568224" type="Character">
+                            <param id="0" name="Instance variable">AutoEnable</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="793357632506115" type="Zombie">
+                            <param id="0" name="Instance variable">AutoEnable</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="4150268351383997" type="Zombie">
+                            <param id="0" name="Instance variable">Holding</param>
+                            <param id="1" name="Value">Character.UID</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="1158397562513376" type="Character">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="2684671191408064" type="Character">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="1638344797867103" type="Zombie">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="2684831201144417" type="Zombie">
+                            <param id="0" name="Angle">angle(Zombie.X, Zombie.Y, Character.X, Character.Y)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6161878113429321">
+                    <conditions>
+                        <condition id="0" name="On function" sid="9989210086701573" type="Function">
+                            <param id="0" name="Name">&quot;ZombieRelease&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="7056476761576042" type="Zombie">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="3074319268331587" type="Character">
+                            <param id="0" name="Unique ID">Function.Param(1)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="4170366143394197" type="Zombie">
+                            <param id="0" name="Instance variable">Holding</param>
+                            <param id="1" name="Value">-1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="5587902954441136" type="Character">
+                            <param id="0" name="Instance variable">AutoEnable</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="6168518124121981" type="Zombie">
+                            <param id="0" name="Instance variable">AutoEnable</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="844276943980011" type="Character">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="1451248643632821" type="Character">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-17" name="Move forward" sid="4120157305470225" type="Zombie">
+                            <param id="0" name="Distance">-5</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
