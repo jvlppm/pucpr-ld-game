@@ -11,6 +11,7 @@
     <saved-with-version>16800</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -18,6 +19,7 @@
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
@@ -54,6 +56,11 @@
             <instance-variables>
                 <instance-variable name="CarryingKnife" sid="7007895370605417" type="boolean" />
             </instance-variables>
+            <behaviors>
+                <behavior-type name="8Direction" sid="5233118766950463">
+                    <behavior id="EightDir" />
+                </behavior-type>
+            </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8094744416390986" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
@@ -211,6 +218,9 @@
             <plugin id="TiledBg" />
             <texture />
         </object-type>
+        <object-type name="Function" sid="794278120413938">
+            <plugin id="Function" />
+        </object-type>
     </object-folder>
     <families>
         <family name="Character" plugin-id="Sprite" sid="3925885853165109">
@@ -224,11 +234,11 @@
                 <instance-variable name="Health" sid="6424499004099243" type="number" />
             </instance-variables>
             <behaviors>
-                <behavior-type name="8Direction" sid="4874389450036702">
-                    <behavior id="EightDir" />
-                </behavior-type>
                 <behavior-type name="Sine" sid="2951143800245884">
                     <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="9177077586611152">
+                    <behavior id="Bullet" />
                 </behavior-type>
             </behaviors>
         </family>
@@ -245,6 +255,12 @@
                 <member>Zombie</member>
             </members>
         </family>
+        <family name="GoodGuy" plugin-id="Sprite" sid="2536208045445007">
+            <members>
+                <member>Player</member>
+                <member>Victim</member>
+            </members>
+        </family>
     </families>
     <layout-folder expanded="1">
         <layout>Level1.xml</layout>
@@ -253,9 +269,11 @@
         <event-sheet>GamePlay.xml</event-sheet>
         <event-sheet>Camera.xml</event-sheet>
         <event-sheet>Level1.xml</event-sheet>
+        <event-sheet>Utils.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="30" />
+        <global-instance type="Function" uid="35" />
     </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />

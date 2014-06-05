@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>GamePlay</name>
     <events>
+        <include>Utils</include>
         <include>Camera</include>
         <event-group collapsed="1" description="" sid="2897060075777959" title="NPC">
             <sub-events>
@@ -10,6 +11,11 @@
                     <conditions>
                         <condition id="-8" name="Is boolean instance variable set" sid="9606856087968288" type="Character">
                             <param id="0" name="Instance variable">AutoEnable</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="6279757004825179" type="Character">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
                         </condition>
                         <condition id="-11" name="For Each" sid="4680673911537968" type="System">
                             <param id="0" name="Object">Character</param>
@@ -26,7 +32,7 @@
                                 <condition id="-3" name="Is on-screen" sid="1765133814437218" type="Character" />
                             </conditions>
                             <actions>
-                                <action behavior="8Direction" id="8" name="Set enabled" sid="5343476854662251" type="Character">
+                                <action behavior="Bullet" id="5" name="Set enabled" sid="2213488802749908" type="Character">
                                     <param id="0" name="State">1</param>
                                 </action>
                             </actions>
@@ -36,12 +42,38 @@
                                 <condition id="-22" name="Else" sid="8143413496183939" type="System" />
                             </conditions>
                             <actions>
-                                <action behavior="8Direction" id="8" name="Set enabled" sid="7585961732209646" type="Character">
+                                <action behavior="Bullet" id="5" name="Set enabled" sid="10172761207788" type="Character">
                                     <param id="0" name="State">0</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="33976300699042">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="9844189528466002" type="Player">
+                            <param id="0" name="Instance variable">AutoEnable</param>
+                        </condition>
+                        <condition behavior="8Direction" id="1" name="Compare speed" sid="8554597378772326" type="Camera">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Speed">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="8" name="Set enabled" sid="5430085889670611" type="Player">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8672916273063104">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="8392509844057057" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="8" name="Set enabled" sid="1173883529244684" type="Player">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block collapsed="1" sid="8676823658211393">
                     <conditions>
@@ -51,11 +83,7 @@
                             <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action behavior="8Direction" id="8" name="Set enabled" sid="8952040705105596" type="Character">
-                            <param id="0" name="State">0</param>
-                        </action>
-                    </actions>
+                    <actions />
                     <sub-events>
                         <event-block sid="6442656417932284">
                             <conditions>
@@ -87,7 +115,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="3766674772289778" title="Victims">
+        <event-group description="" sid="3766674772289778" title="Victims">
             <sub-events>
                 <event-block sid="6970142373032275">
                     <conditions>
@@ -115,96 +143,92 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block collapsed="1" sid="7610956851657086">
-                    <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="3097174163708096" type="Victim">
-                            <param id="0" name="Instance variable">Running</param>
-                        </condition>
-                        <condition id="-3" name="Is on-screen" sid="7066169561830387" type="Victim" />
-                        <condition id="-11" name="For Each" sid="4748242857181352" type="System">
-                            <param id="0" name="Object">Victim</param>
-                        </condition>
-                        <condition disabled="1" id="-3" name="Is on-screen" sid="5612882082654088" type="Zombie" />
-                        <condition disabled="1" id="-7" name="Compare instance variable" sid="7477355888741815" type="Zombie">
-                            <param id="0" name="Instance variable">Health</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                        <condition id="-15" name="Pick nearest/furthest" sid="3878435522699642" type="Zombie">
-                            <param id="0" name="Which">0</param>
-                            <param id="1" name="X">Victim.X</param>
-                            <param id="2" name="Y">Victim.Y</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="4724171976366163">
-                            <conditions>
-                                <condition id="-2" name="Compare Y" sid="1710036287107058" type="Victim">
-                                    <param id="0" name="Comparison">2</param>
-                                    <param id="1" name="Y co-ordinate">Zombie.Y - Zombie.Height / 2</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="8Direction" id="7" name="Simulate control" sid="900930468323792" type="Victim">
-                                    <param id="0" name="Control">2</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="4039968790661564">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="7918579971741418" type="System" />
-                                <condition id="-2" name="Compare Y" sid="772410986626061" type="Victim">
-                                    <param id="0" name="Comparison">4</param>
-                                    <param id="1" name="Y co-ordinate">Zombie.Y + Zombie.Height / 2</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="8Direction" id="7" name="Simulate control" sid="9826667431802394" type="Victim">
-                                    <param id="0" name="Control">3</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="2015727835548226">
-                            <conditions>
-                                <condition id="-1" name="Compare X" sid="7040617543274881" type="Victim">
-                                    <param id="0" name="Comparison">2</param>
-                                    <param id="1" name="X co-ordinate">Zombie.X - Zombie.Width / 2</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="8Direction" id="7" name="Simulate control" sid="4832139328269169" type="Victim">
-                                    <param id="0" name="Control">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="2607036486933715">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="508554468950626" type="System" />
-                                <condition id="-1" name="Compare X" sid="2568876080166271" type="Victim">
-                                    <param id="0" name="Comparison">4</param>
-                                    <param id="1" name="X co-ordinate">Zombie.X + Zombie.Width / 2</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="8Direction" id="7" name="Simulate control" sid="1848535426050486" type="Victim">
-                                    <param id="0" name="Control">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
                 <event-block sid="3665040161346942">
                     <conditions>
                         <condition id="1" name="Is overlapping another object" sid="9758037715962836" type="Victim">
                             <param id="0" name="Object">Player</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="5229232388335406" type="Victim">
-                            <param id="0" name="Control">2</param>
-                        </action>
-                    </actions>
+                    <actions />
+                </event-block>
+                <event-block sid="4706235495098837">
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="658511659056421" type="Victim" />
+                        <condition id="-11" name="For Each" sid="8982328255764358" type="System">
+                            <param id="0" name="Object">Victim</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="9292031129885653" type="Victim">
+                            <param id="0" name="Instance variable">Running</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="x_component" sid="2863045986847837" static="0" type="number">0</variable>
+                        <variable constant="0" name="y_component" sid="8762039936927857" static="0" type="number">0</variable>
+                        <variable constant="0" name="count" sid="5621624683614894" static="0" type="number">0</variable>
+                        <event-block sid="8883373093638601">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="1655314597990026" type="System">
+                                    <param id="0" name="Object">Enemy</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="3805303534987038" type="System">
+                                    <param id="0" name="First value">distance(Victim.X, Victim.Y, Enemy.X, Enemy.Y)</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">50</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="1270273028338113" type="Character">
+                                    <param id="0" name="Unique ID">Enemy.UID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="7413495499100982" type="System">
+                                    <param id="0" name="Variable">x_component</param>
+                                    <param id="1" name="Value">cos(angle(Victim.X, Victim.Y, Enemy.X, Enemy.Y))</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="6778603739686324" type="System">
+                                    <param id="0" name="Variable">y_component</param>
+                                    <param id="1" name="Value">sin(angle(Victim.X, Victim.Y, Enemy.X, Enemy.Y))</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="9912264946036453" type="System">
+                                    <param id="0" name="Variable">count</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9918109228565961">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="2420172785526148" type="System">
+                                    <param id="0" name="Variable">x_component</param>
+                                    <param id="1" name="Value">x_component / count</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="3429353078116513" type="System">
+                                    <param id="0" name="Variable">y_component</param>
+                                    <param id="1" name="Value">y_component / count</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="4624724653915555" type="Victim">
+                                    <param id="0" name="Angle">270 - angle(0, 0, y_component, x_component)</param>
+                                </action>
+                                <action behavior="Bullet" id="0" name="Set speed" sid="2554529063315405" type="Victim">
+                                    <param id="0" name="Speed">50</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3023869248624889">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="7925112190826842" type="System">
+                                    <param id="0" name="Variable">count</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="0" name="Set speed" sid="6163844204734128" type="Victim">
+                                    <param id="0" name="Speed">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
@@ -215,12 +239,23 @@
                         <condition id="0" name="On collision with another object" sid="5661433258847534" type="Zombie">
                             <param id="0" name="Object">Character</param>
                         </condition>
+                        <condition id="-7" name="Compare instance variable" sid="4828505588819494" type="Zombie">
+                            <param id="0" name="Instance variable">Holding</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="3930107320249303" type="Zombie">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
-                        <action behavior="8Direction" id="8" name="Set enabled" sid="8285038282499782" type="Character">
-                            <param id="0" name="State">0</param>
-                        </action>
                         <action id="-13" name="Set boolean" sid="6786075232568224" type="Character">
+                            <param id="0" name="Instance variable">AutoEnable</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="793357632506115" type="Zombie">
                             <param id="0" name="Instance variable">AutoEnable</param>
                             <param id="1" name="Value">0</param>
                         </action>
@@ -230,6 +265,12 @@
                         </action>
                         <action behavior="Sine" id="0" name="Set active" sid="1158397562513376" type="Character">
                             <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="2684671191408064" type="Character">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="1638344797867103" type="Zombie">
+                            <param id="0" name="State">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -250,9 +291,6 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="8Direction" id="8" name="Set enabled" sid="4228798198263017" type="Character">
-                            <param id="0" name="State">1</param>
-                        </action>
                         <action id="-10" name="Set value" sid="1901646716972114" type="Zombie">
                             <param id="0" name="Instance variable">Holding</param>
                             <param id="1" name="Value">-1</param>
@@ -261,89 +299,48 @@
                             <param id="0" name="Instance variable">AutoEnable</param>
                             <param id="1" name="Value">1</param>
                         </action>
+                        <action id="-13" name="Set boolean" sid="4308742545542225" type="Zombie">
+                            <param id="0" name="Instance variable">AutoEnable</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                         <action behavior="Sine" id="0" name="Set active" sid="2304889963267405" type="Character">
                             <param id="0" name="State">0</param>
                         </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="7287614755477132" type="Character">
+                            <param id="0" name="State">1</param>
+                        </action>
                     </actions>
                 </event-block>
-                <event-block collapsed="1" sid="4706235495098837">
+                <event-block sid="3011547771811964">
                     <conditions>
-                        <condition id="-3" name="Is on-screen" sid="658511659056421" type="Victim" />
-                        <condition id="-11" name="For Each" sid="8982328255764358" type="System">
-                            <param id="0" name="Object">Victim</param>
-                        </condition>
-                        <condition disabled="1" id="-3" name="Is on-screen" sid="6202693331581179" type="Zombie" />
-                        <condition id="-7" name="Compare instance variable" sid="24994922565211" type="Zombie">
+                        <condition id="-3" name="Is on-screen" sid="9944639276474629" type="Victim" />
+                        <condition id="-3" name="Is on-screen" sid="1164320351851821" type="Zombie" />
+                        <condition id="-7" name="Compare instance variable" sid="1483123731536603" type="Zombie">
                             <param id="0" name="Instance variable">Health</param>
                             <param id="1" name="Comparison">4</param>
                             <param id="2" name="Value">0</param>
                         </condition>
-                        <condition behavior="LineOfSight" disabled="1" id="0" name="Has LOS to object" sid="638253952020059" type="Zombie">
-                            <param id="0" name="Object">Victim</param>
+                        <condition id="-11" name="For Each" sid="4081659821480804" type="System">
+                            <param id="0" name="Object">Zombie</param>
                         </condition>
-                        <condition id="-15" name="Pick nearest/furthest" sid="7999360642627426" type="Zombie">
-                            <param id="0" name="Which">0</param>
-                            <param id="1" name="X">Victim.X</param>
-                            <param id="2" name="Y">Victim.Y</param>
+                        <condition id="-34" name="Pick by evaluate" sid="6252485418676607" type="System">
+                            <param id="0" name="Object">Victim</param>
+                            <param id="1" name="Expression">distance(Zombie.X, Zombie.Y, Victim.X, Victim.Y) &lt; 100</param>
+                        </condition>
+                        <condition id="-3" name="Is on-screen" sid="5626392208847367" type="Victim" />
+                        <condition id="-13" name="Pick nth instance" sid="5896171138686972" type="System">
+                            <param id="0" name="Object">Victim</param>
+                            <param id="1" name="Instance">0</param>
                         </condition>
                     </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="542814027685804">
-                            <conditions>
-                                <condition id="-2" name="Compare Y" sid="1338044148798049" type="Victim">
-                                    <param id="0" name="Comparison">2</param>
-                                    <param id="1" name="Y co-ordinate">Zombie.Y - Zombie.Height / 2</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="8Direction" id="7" name="Simulate control" sid="8759215442275464" type="Zombie">
-                                    <param id="0" name="Control">2</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="2056336829098309">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="6111724790828084" type="System" />
-                                <condition id="-2" name="Compare Y" sid="2415571907500971" type="Victim">
-                                    <param id="0" name="Comparison">4</param>
-                                    <param id="1" name="Y co-ordinate">Zombie.Y + Zombie.Height / 2</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="8Direction" id="7" name="Simulate control" sid="9635302436476434" type="Zombie">
-                                    <param id="0" name="Control">3</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="496355702104206">
-                            <conditions>
-                                <condition id="-1" name="Compare X" sid="8213383877257611" type="Victim">
-                                    <param id="0" name="Comparison">2</param>
-                                    <param id="1" name="X co-ordinate">Zombie.X - Zombie.Width / 2</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="8Direction" id="7" name="Simulate control" sid="4258127500849516" type="Zombie">
-                                    <param id="0" name="Control">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="8156108174310469">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="5619705313746416" type="System" />
-                                <condition id="-1" name="Compare X" sid="8879872798033395" type="Victim">
-                                    <param id="0" name="Comparison">4</param>
-                                    <param id="1" name="X co-ordinate">Zombie.X + Zombie.Width / 2</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="8Direction" id="7" name="Simulate control" sid="6101575151331553" type="Zombie">
-                                    <param id="0" name="Control">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
+                    <actions>
+                        <action id="-8" name="Set angle" sid="2521059445827661" type="Zombie">
+                            <param id="0" name="Angle">angle(Zombie.X, Zombie.Y, Victim.X, Victim.Y)</param>
+                        </action>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="9416666472783391" type="Zombie">
+                            <param id="0" name="Speed">40</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
@@ -382,9 +379,6 @@
                         <action id="-13" name="Set boolean" sid="4526364845056258" type="Player">
                             <param id="0" name="Instance variable">AutoEnable</param>
                             <param id="1" name="Value">0</param>
-                        </action>
-                        <action behavior="8Direction" id="8" name="Set enabled" sid="6436853903360206" type="Player">
-                            <param id="0" name="State">0</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -438,9 +432,6 @@
                                         <action id="-10" name="Set value" sid="4440537280776472" type="Messages">
                                             <param id="0" name="Instance variable">Message</param>
                                             <param id="1" name="Value">-1</param>
-                                        </action>
-                                        <action behavior="8Direction" id="8" name="Set enabled" sid="5630187814735706" type="Player">
-                                            <param id="0" name="State">1</param>
                                         </action>
                                         <action id="-13" name="Set boolean" sid="5573795289503759" type="Player">
                                             <param id="0" name="Instance variable">AutoEnable</param>
@@ -517,7 +508,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="3193611664449879" title="Weapons">
+        <event-group description="" sid="3193611664449879" title="Weapons">
             <sub-events>
                 <event-block sid="1870731739834124">
                     <conditions>

@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Utils</name>
+    <events>
+        <event-block sid="6941332416979838">
+            <conditions>
+                <condition id="0" name="On function" sid="2373435769899891" type="Function">
+                    <param id="0" name="Name">&quot;AverageAngle&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <variable constant="0" name="x_component" sid="574117898672022" static="0" type="number">0</variable>
+                <variable constant="0" name="y_component" sid="7020462108598545" static="0" type="number">0</variable>
+                <event-block sid="5846872842235209">
+                    <conditions>
+                        <condition id="-10" name="For" sid="6160326193441982" type="System">
+                            <param id="0" name="Name">&quot;currentAngle&quot;</param>
+                            <param id="1" name="Start index">0</param>
+                            <param id="2" name="End index">Function.ParamCount</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="6521170464586209" type="System">
+                            <param id="0" name="Variable">x_component</param>
+                            <param id="1" name="Value">cos(Function.Param(loopindex))</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="9502352896815816" type="System">
+                            <param id="0" name="Variable">y_component</param>
+                            <param id="1" name="Value">sin(Function.Param(loopindex))</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7818778209961163">
+                    <conditions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="44064288909685" type="System">
+                            <param id="0" name="Variable">x_component</param>
+                            <param id="1" name="Value">x_component / Function.ParamCount</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="566689554677017" type="System">
+                            <param id="0" name="Variable">y_component</param>
+                            <param id="1" name="Value">y_component / Function.ParamCount</param>
+                        </action>
+                        <action id="1" name="Set return value" sid="7425103075307523" type="Function">
+                            <param id="0" name="Value">angle(0,0,y_component,x_component)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>
