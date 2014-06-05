@@ -622,7 +622,7 @@
                                 <speed>0</speed>
                                 <acceleration>0</acceleration>
                                 <gravity>0</gravity>
-                                <bounce-off-solids>No</bounce-off-solids>
+                                <bounce-off-solids>Yes</bounce-off-solids>
                                 <set-angle>Yes</set-angle>
                                 <initial-state>Enabled</initial-state>
                             </properties>
@@ -634,7 +634,7 @@
                         </behavior-instance>
                         <behavior-instance type="LineOfSight">
                             <properties>
-                                <obstacles>Solids</obstacles>
+                                <obstacles>Custom</obstacles>
                                 <range>200</range>
                                 <cone-of-view>60</cone-of-view>
                                 <use-collision-cells>Yes</use-collision-cells>
@@ -976,8 +976,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>32</x>
-                        <y>112</y>
+                        <x>496</x>
+                        <y>496</y>
                         <z>0</z>
                         <width>16</width>
                         <height>16</height>
@@ -1118,7 +1118,7 @@
                                 <speed>0</speed>
                                 <acceleration>0</acceleration>
                                 <gravity>0</gravity>
-                                <bounce-off-solids>No</bounce-off-solids>
+                                <bounce-off-solids>Yes</bounce-off-solids>
                                 <set-angle>Yes</set-angle>
                                 <initial-state>Enabled</initial-state>
                             </properties>
@@ -1130,7 +1130,7 @@
                         </behavior-instance>
                         <behavior-instance type="LineOfSight">
                             <properties>
-                                <obstacles>Solids</obstacles>
+                                <obstacles>Custom</obstacles>
                                 <range>200</range>
                                 <cone-of-view>60</cone-of-view>
                                 <use-collision-cells>Yes</use-collision-cells>
@@ -1183,7 +1183,7 @@
                                 <speed>0</speed>
                                 <acceleration>0</acceleration>
                                 <gravity>0</gravity>
-                                <bounce-off-solids>No</bounce-off-solids>
+                                <bounce-off-solids>Yes</bounce-off-solids>
                                 <set-angle>Yes</set-angle>
                                 <initial-state>Enabled</initial-state>
                             </properties>
@@ -1195,7 +1195,7 @@
                         </behavior-instance>
                         <behavior-instance type="LineOfSight">
                             <properties>
-                                <obstacles>Solids</obstacles>
+                                <obstacles>Custom</obstacles>
                                 <range>200</range>
                                 <cone-of-view>60</cone-of-view>
                                 <use-collision-cells>Yes</use-collision-cells>
@@ -1309,7 +1309,7 @@
                                 <speed>0</speed>
                                 <acceleration>0</acceleration>
                                 <gravity>0</gravity>
-                                <bounce-off-solids>No</bounce-off-solids>
+                                <bounce-off-solids>Yes</bounce-off-solids>
                                 <set-angle>Yes</set-angle>
                                 <initial-state>Enabled</initial-state>
                             </properties>
@@ -1321,7 +1321,7 @@
                         </behavior-instance>
                         <behavior-instance type="LineOfSight">
                             <properties>
-                                <obstacles>Solids</obstacles>
+                                <obstacles>Custom</obstacles>
                                 <range>200</range>
                                 <cone-of-view>60</cone-of-view>
                                 <use-collision-cells>Yes</use-collision-cells>
@@ -1374,7 +1374,7 @@
                                 <speed>0</speed>
                                 <acceleration>0</acceleration>
                                 <gravity>0</gravity>
-                                <bounce-off-solids>No</bounce-off-solids>
+                                <bounce-off-solids>Yes</bounce-off-solids>
                                 <set-angle>Yes</set-angle>
                                 <initial-state>Enabled</initial-state>
                             </properties>
@@ -1386,7 +1386,7 @@
                         </behavior-instance>
                         <behavior-instance type="LineOfSight">
                             <properties>
-                                <obstacles>Solids</obstacles>
+                                <obstacles>Custom</obstacles>
                                 <range>200</range>
                                 <cone-of-view>60</cone-of-view>
                                 <use-collision-cells>Yes</use-collision-cells>

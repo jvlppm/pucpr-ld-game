@@ -133,7 +133,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="3766674772289778" title="Victims">
+        <event-group collapsed="1" description="" sid="3766674772289778" title="Victims">
             <sub-events>
                 <event-block sid="6970142373032275">
                     <conditions>
@@ -252,6 +252,16 @@
         </event-group>
         <event-group description="" sid="3052503956438317" title="Zombies">
             <sub-events>
+                <event-block sid="2747026023799614">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="5328620491563456" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="LineOfSight" id="2" name="Add obstacle" sid="1801982842913132" type="Zombie">
+                            <param id="0" name="Obstacle">Wall</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="5032556258015384">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="5661433258847534" type="Zombie">
@@ -334,34 +344,53 @@
                 </event-block>
                 <event-block sid="3011547771811964">
                     <conditions>
-                        <condition id="-3" name="Is on-screen" sid="9944639276474629" type="GoodGuy" />
-                        <condition id="-3" name="Is on-screen" sid="1164320351851821" type="Zombie" />
-                        <condition id="-7" name="Compare instance variable" sid="1483123731536603" type="Zombie">
-                            <param id="0" name="Instance variable">Health</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
                         <condition id="-11" name="For Each" sid="4081659821480804" type="System">
                             <param id="0" name="Object">Zombie</param>
                         </condition>
-                        <condition id="-34" name="Pick by evaluate" sid="6252485418676607" type="System">
-                            <param id="0" name="Object">GoodGuy</param>
-                            <param id="1" name="Expression">distance(Zombie.X, Zombie.Y, GoodGuy.X, GoodGuy.Y) &lt; 150</param>
-                        </condition>
-                        <condition id="-3" name="Is on-screen" sid="5626392208847367" type="GoodGuy" />
-                        <condition id="-13" name="Pick nth instance" sid="5896171138686972" type="System">
-                            <param id="0" name="Object">GoodGuy</param>
-                            <param id="1" name="Instance">0</param>
-                        </condition>
                     </conditions>
-                    <actions>
-                        <action id="-8" name="Set angle" sid="2521059445827661" type="Zombie">
-                            <param id="0" name="Angle">angle(Zombie.X, Zombie.Y, GoodGuy.X, GoodGuy.Y)</param>
-                        </action>
-                        <action behavior="Bullet" id="0" name="Set speed" sid="9416666472783391" type="Zombie">
-                            <param id="0" name="Speed">40</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="1897773520524168">
+                            <conditions>
+                                <condition id="-3" name="Is on-screen" sid="1164320351851821" type="Zombie" />
+                                <condition id="-7" name="Compare instance variable" sid="1483123731536603" type="Zombie">
+                                    <param id="0" name="Instance variable">Health</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="4055011458893377" type="Zombie">
+                                    <param id="0" name="Object">GoodGuy</param>
+                                </condition>
+                                <condition id="-3" name="Is on-screen" sid="9944639276474629" type="GoodGuy" />
+                                <condition id="-13" name="Pick nth instance" sid="5896171138686972" type="System">
+                                    <param id="0" name="Object">GoodGuy</param>
+                                    <param id="1" name="Instance">0</param>
+                                </condition>
+                                <condition disabled="1" id="-34" name="Pick by evaluate" sid="6252485418676607" type="System">
+                                    <param id="0" name="Object">GoodGuy</param>
+                                    <param id="1" name="Expression">distance(Zombie.X, Zombie.Y, GoodGuy.X, GoodGuy.Y) &lt; 150</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="0" name="Set speed" sid="9416666472783391" type="Zombie">
+                                    <param id="0" name="Speed">40</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="2521059445827661" type="Zombie">
+                                    <param id="0" name="Angle">angle(Zombie.X, Zombie.Y, GoodGuy.X, GoodGuy.Y)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5492314109396737">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="1731997867988263" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="0" name="Set speed" sid="7890903541871821" type="Zombie">
+                                    <param id="0" name="Speed">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
