@@ -121,6 +121,7 @@
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="Running" sid="1004775502044393" type="boolean" />
+                <instance-variable name="MaxSpeed" sid="7344284322092775" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="LineOfSight" sid="1163388097903242">

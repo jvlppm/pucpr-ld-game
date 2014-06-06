@@ -50,5 +50,43 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <event-block sid="9649514433048088">
+            <conditions>
+                <condition id="0" name="On function" sid="2696215776225985" type="Function">
+                    <param id="0" name="Name">&quot;LengthDir&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="119121679679279">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="844541119390784" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;x&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set return value" sid="8839207469108237" type="Function">
+                            <param id="0" name="Value">Function.Param(1)*cos(Function.Param(2))</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8915065643973544">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="7131482072840793" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;y&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set return value" sid="4558310764375277" type="Function">
+                            <param id="0" name="Value">Function.Param(1)*sin(Function.Param(2))</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
     </events>
 </c2eventsheet>

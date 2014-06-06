@@ -133,7 +133,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="3766674772289778" title="Victims">
+        <event-group description="" sid="3766674772289778" title="Victims">
             <sub-events>
                 <event-block sid="6970142373032275">
                     <conditions>
@@ -228,7 +228,7 @@
                                     <param id="0" name="Angle">270 - angle(0, 0, y_component, x_component)</param>
                                 </action>
                                 <action behavior="Bullet" id="0" name="Set speed" sid="2554529063315405" type="Victim">
-                                    <param id="0" name="Speed">50</param>
+                                    <param id="0" name="Speed">Victim.MaxSpeed</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -250,7 +250,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="3052503956438317" title="Zombies">
+        <event-group collapsed="1" description="" sid="3052503956438317" title="Zombies">
             <sub-events>
                 <event-block sid="2747026023799614">
                     <conditions>
@@ -264,8 +264,10 @@
                 </event-block>
                 <event-block sid="5032556258015384">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="5661433258847534" type="Zombie">
+                        <condition id="9" name="Is overlapping at offset" sid="5661433258847534" type="Zombie">
                             <param id="0" name="Object">GoodGuy</param>
+                            <param id="1" name="Offset X">Function.Call(&quot;LengthDir&quot;, &quot;x&quot;, 2, Zombie.Angle)</param>
+                            <param id="2" name="Offset Y">Function.Call(&quot;LengthDir&quot;, &quot;y&quot;, 2, Zombie.Angle)</param>
                         </condition>
                         <condition id="-7" name="Compare instance variable" sid="4828505588819494" type="Zombie">
                             <param id="0" name="Instance variable">Holding</param>
@@ -336,6 +338,10 @@
                                     <param id="0" name="Object">GoodGuy</param>
                                     <param id="1" name="Instance">0</param>
                                 </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="7402167463437018" type="Character">
+                                    <param id="0" name="Unique ID">GoodGuy.UID</param>
+                                </condition>
+                                <condition behavior="Sine" id="0" inverted="1" name="Is active" sid="6700788079223877" type="Character" />
                             </conditions>
                             <actions>
                                 <action behavior="Bullet" id="0" name="Set speed" sid="9416666472783391" type="Zombie">
@@ -444,6 +450,9 @@
                         <action behavior="Bullet" id="5" name="Set enabled" sid="1451248643632821" type="Character">
                             <param id="0" name="State">1</param>
                         </action>
+                        <action id="-17" name="Move forward" sid="6838896887525652" type="Zombie">
+                            <param id="0" name="Distance">-2</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="1936268066267517">
@@ -455,10 +464,10 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-17" name="Move forward" sid="4120157305470225" type="Zombie">
-                                    <param id="0" name="Distance">-4</param>
+                                <action disabled="1" id="-17" name="Move forward" sid="4120157305470225" type="Zombie">
+                                    <param id="0" name="Distance">-6</param>
                                 </action>
-                                <action id="-23" name="Move at angle" sid="1383330590275407" type="Character">
+                                <action disabled="1" id="-23" name="Move at angle" sid="1383330590275407" type="Character">
                                     <param id="0" name="Angle">Zombie.Angle</param>
                                     <param id="1" name="Distance">4</param>
                                 </action>
@@ -483,7 +492,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="6773088495970466" title="Balloon">
+        <event-group collapsed="1" description="" sid="6773088495970466" title="Balloon">
             <sub-events>
                 <event-block sid="1755681182641615">
                     <conditions>
@@ -622,7 +631,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="7871028774943537" title="Player">
+        <event-group collapsed="1" description="" sid="7871028774943537" title="Player">
             <sub-events>
                 <event-block sid="8280718908687473">
                     <conditions>
@@ -773,19 +782,37 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-12" name="Subtract from" sid="4582330531617707" type="Character">
-                                    <param id="0" name="Instance variable">Health</param>
-                                    <param id="1" name="Value">5</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="4117443700324915" type="Knife">
+                                <action disabled="1" id="-10" name="Set value" sid="4117443700324915" type="Knife">
                                     <param id="0" name="Instance variable">State</param>
                                     <param id="1" name="Value">&quot;GoingBack&quot;</param>
                                 </action>
-                                <action id="-13" name="Set boolean" sid="6166959941014352" type="Knife">
-                                    <param id="0" name="Instance variable">Hit</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="6171942957148739">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="4116065204453974" type="Character">
+                                            <param id="0" name="Instance variable">Health</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="6166959941014352" type="Knife">
+                                            <param id="0" name="Instance variable">Hit</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="7752977712207892">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-12" name="Subtract from" sid="4582330531617707" type="Character">
+                                            <param id="0" name="Instance variable">Health</param>
+                                            <param id="1" name="Value">5</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-group>

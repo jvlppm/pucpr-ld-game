@@ -537,6 +537,7 @@
                         <AutoEnable>true</AutoEnable>
                         <Health>1</Health>
                         <Running>false</Running>
+                        <MaxSpeed>50</MaxSpeed>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -557,7 +558,7 @@
                                 <speed>0</speed>
                                 <acceleration>0</acceleration>
                                 <gravity>0</gravity>
-                                <bounce-off-solids>No</bounce-off-solids>
+                                <bounce-off-solids>Yes</bounce-off-solids>
                                 <set-angle>Yes</set-angle>
                                 <initial-state>Enabled</initial-state>
                             </properties>
@@ -867,6 +868,7 @@
                         <AutoEnable>false</AutoEnable>
                         <Health>1</Health>
                         <Running>false</Running>
+                        <MaxSpeed>50</MaxSpeed>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -887,7 +889,7 @@
                                 <speed>0</speed>
                                 <acceleration>0</acceleration>
                                 <gravity>0</gravity>
-                                <bounce-off-solids>No</bounce-off-solids>
+                                <bounce-off-solids>Yes</bounce-off-solids>
                                 <set-angle>Yes</set-angle>
                                 <initial-state>Enabled</initial-state>
                             </properties>
@@ -978,7 +980,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>48</x>
+                        <x>32</x>
                         <y>112</y>
                         <z>0</z>
                         <width>16</width>
@@ -1211,8 +1213,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>656</x>
-                        <y>184</y>
+                        <x>560</x>
+                        <y>208</y>
                         <z>0</z>
                         <width>16</width>
                         <height>16</height>
@@ -1492,6 +1494,407 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Victim" uid="44">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <AutoEnable>false</AutoEnable>
+                        <Health>1</Health>
+                        <Running>false</Running>
+                        <MaxSpeed>10</MaxSpeed>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>No</active-on-start>
+                                <movement>Horizontal</movement>
+                                <wave>Sine</wave>
+                                <period>0.25</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>1</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>0</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>Yes</bounce-off-solids>
+                                <set-angle>Yes</set-angle>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="LineOfSight">
+                            <properties>
+                                <obstacles>Solids</obstacles>
+                                <range>100</range>
+                                <cone-of-view>30</cone-of-view>
+                                <use-collision-cells>Yes</use-collision-cells>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>680</x>
+                        <y>376</y>
+                        <z>0</z>
+                        <width>16</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Zombie" uid="45">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <AutoEnable>true</AutoEnable>
+                        <Health>1</Health>
+                        <Holding>-1</Holding>
+                        <Following>false</Following>
+                        <KeepWalking>false</KeepWalking>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>No</active-on-start>
+                                <movement>Horizontal</movement>
+                                <wave>Sine</wave>
+                                <period>0.25</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>1</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>0</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>Yes</bounce-off-solids>
+                                <set-angle>Yes</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="LineOfSight">
+                            <properties>
+                                <obstacles>Custom</obstacles>
+                                <range>200</range>
+                                <cone-of-view>60</cone-of-view>
+                                <use-collision-cells>Yes</use-collision-cells>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>680</x>
+                        <y>352</y>
+                        <z>0</z>
+                        <width>16</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>1.570796371</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Zombie" uid="46">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <AutoEnable>true</AutoEnable>
+                        <Health>1</Health>
+                        <Holding>-1</Holding>
+                        <Following>false</Following>
+                        <KeepWalking>false</KeepWalking>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>No</active-on-start>
+                                <movement>Horizontal</movement>
+                                <wave>Sine</wave>
+                                <period>0.25</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>1</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>0</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>Yes</bounce-off-solids>
+                                <set-angle>Yes</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="LineOfSight">
+                            <properties>
+                                <obstacles>Custom</obstacles>
+                                <range>200</range>
+                                <cone-of-view>60</cone-of-view>
+                                <use-collision-cells>Yes</use-collision-cells>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>696</x>
+                        <y>400</y>
+                        <z>0</z>
+                        <width>16</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>-2.443460941</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Zombie" uid="47">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <AutoEnable>true</AutoEnable>
+                        <Health>1</Health>
+                        <Holding>-1</Holding>
+                        <Following>false</Following>
+                        <KeepWalking>false</KeepWalking>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>No</active-on-start>
+                                <movement>Horizontal</movement>
+                                <wave>Sine</wave>
+                                <period>0.25</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>1</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>0</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>Yes</bounce-off-solids>
+                                <set-angle>Yes</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="LineOfSight">
+                            <properties>
+                                <obstacles>Custom</obstacles>
+                                <range>200</range>
+                                <cone-of-view>60</cone-of-view>
+                                <use-collision-cells>Yes</use-collision-cells>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>560</x>
+                        <y>576</y>
+                        <z>0</z>
+                        <width>16</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>3.141592741</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Zombie" uid="48">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <AutoEnable>true</AutoEnable>
+                        <Health>1</Health>
+                        <Holding>-1</Holding>
+                        <Following>false</Following>
+                        <KeepWalking>false</KeepWalking>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>No</active-on-start>
+                                <movement>Horizontal</movement>
+                                <wave>Sine</wave>
+                                <period>0.25</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>1</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>0</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>Yes</bounce-off-solids>
+                                <set-angle>Yes</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="LineOfSight">
+                            <properties>
+                                <obstacles>Custom</obstacles>
+                                <range>200</range>
+                                <cone-of-view>60</cone-of-view>
+                                <use-collision-cells>Yes</use-collision-cells>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>712</x>
+                        <y>568</y>
+                        <z>0</z>
+                        <width>16</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>2.339636087</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Zombie" uid="49">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <AutoEnable>true</AutoEnable>
+                        <Health>1</Health>
+                        <Holding>-1</Holding>
+                        <Following>false</Following>
+                        <KeepWalking>false</KeepWalking>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>No</active-on-start>
+                                <movement>Horizontal</movement>
+                                <wave>Sine</wave>
+                                <period>0.25</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>1</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>0</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>Yes</bounce-off-solids>
+                                <set-angle>Yes</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="LineOfSight">
+                            <properties>
+                                <obstacles>Custom</obstacles>
+                                <range>200</range>
+                                <cone-of-view>60</cone-of-view>
+                                <use-collision-cells>Yes</use-collision-cells>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>640</x>
+                        <y>608</y>
+                        <z>0</z>
+                        <width>16</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>-1.570796371</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
