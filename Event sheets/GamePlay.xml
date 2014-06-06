@@ -686,7 +686,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-group description="" sid="6454508332916548" title="Knife">
+                <event-group collapsed="1" description="" sid="6454508332916548" title="Knife">
                     <sub-events>
                         <event-block sid="4064754307868574">
                             <conditions>
@@ -813,6 +813,26 @@
                                     </actions>
                                 </event-block>
                             </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="8165322307502895" title="Gun">
+                    <sub-events>
+                        <event-block sid="3967618514829974">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="6070128793063599" type="Player">
+                                    <param id="0" name="Instance variable">CarryingGun</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="8170897702940212" type="Gun">
+                                    <param id="0" name="Object">Player</param>
+                                    <param id="1" name="Image point (optional)">&quot;Weapon&quot;</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="992746278404357" type="Gun">
+                                    <param id="0" name="Angle">Player.Angle</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-group>
