@@ -5,7 +5,7 @@
     <events>
         <include>Utils</include>
         <include>Camera</include>
-        <event-group collapsed="1" description="" sid="2897060075777959" title="Characters">
+        <event-group description="" sid="2897060075777959" title="Characters">
             <sub-events>
                 <event-block sid="6429507390627526">
                     <conditions>
@@ -94,46 +94,41 @@
                         <condition id="-7" name="Compare instance variable" sid="228195979821599" type="Character">
                             <param id="0" name="Instance variable">Health</param>
                             <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">0</param>
+                            <param id="2" name="Value">-40</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action behavior="Solid" id="0" name="Set enabled" sid="240673453112404" type="Character">
                             <param id="0" name="State">0</param>
                         </action>
+                        <action id="4" name="Set animation" sid="1652163925138002" type="Character">
+                            <param id="0" name="Animation">&quot;Squashed&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
                     </actions>
-                    <sub-events>
-                        <event-block sid="6442656417932284">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="1531065382594328" type="Character">
-                                    <param id="0" name="Instance variable">Health</param>
-                                    <param id="1" name="Comparison">3</param>
-                                    <param id="2" name="Value">-40</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="1652163925138002" type="Character">
-                                    <param id="0" name="Animation">&quot;Squashed&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="4341916251342612">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="7808106716603711" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="620959373516406" type="Character">
-                                    <param id="0" name="Animation">&quot;Dead&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
+                </event-block>
+                <event-block sid="3461776281954669">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="2641582244295701" type="System" />
+                        <condition id="-7" name="Compare instance variable" sid="527003083696435" type="Character">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="1850814151240302" type="Character">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="2969297058111159" type="Character">
+                            <param id="0" name="Animation">&quot;Dead&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="3766674772289778" title="Victims">
+        <event-group description="" sid="3766674772289778" title="Victims">
             <sub-events>
                 <event-block sid="6970142373032275">
                     <conditions>
@@ -250,7 +245,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="3052503956438317" title="Zombies">
+        <event-group description="" sid="3052503956438317" title="Zombies">
             <sub-events>
                 <event-block sid="2747026023799614">
                     <conditions>
@@ -450,9 +445,6 @@
                         <action behavior="Bullet" id="5" name="Set enabled" sid="1451248643632821" type="Character">
                             <param id="0" name="State">1</param>
                         </action>
-                        <action id="-17" name="Move forward" sid="6838896887525652" type="Zombie">
-                            <param id="0" name="Distance">-2</param>
-                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="1936268066267517">
@@ -464,6 +456,9 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="-17" name="Move forward" sid="6838896887525652" type="Zombie">
+                                    <param id="0" name="Distance">-2</param>
+                                </action>
                                 <action disabled="1" id="-17" name="Move forward" sid="4120157305470225" type="Zombie">
                                     <param id="0" name="Distance">-6</param>
                                 </action>
@@ -492,7 +487,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="6773088495970466" title="Balloon">
+        <event-group description="" sid="6773088495970466" title="Balloon">
             <sub-events>
                 <event-block sid="1755681182641615">
                     <conditions>
@@ -748,7 +743,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="3193611664449879" title="Weapons">
+        <event-group description="" sid="3193611664449879" title="Weapons">
             <sub-events>
                 <event-block sid="1870731739834124">
                     <conditions>
@@ -774,9 +769,9 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-group collapsed="1" description="" sid="6454508332916548" title="Knife">
+                <event-group description="" sid="6454508332916548" title="Knife">
                     <sub-events>
-                        <event-block collapsed="1" sid="4064754307868574">
+                        <event-block sid="4064754307868574">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="6048919233397953" type="Knife">
                                     <param id="0" name="Instance variable">Owner</param>
@@ -996,6 +991,7 @@
                                 <action behavior="Bullet" id="5" name="Set enabled" sid="1694180838336522" type="BulletShell">
                                     <param id="0" name="State">0</param>
                                 </action>
+                                <action id="-25" name="Move to bottom" sid="2611770778331984" type="BulletShell" />
                             </actions>
                         </event-block>
                     </sub-events>
@@ -1004,7 +1000,7 @@
         </event-group>
         <event-group description="" sid="569804434613888" title="HUD">
             <sub-events>
-                <event-block collapsed="1" sid="1517814329212286">
+                <event-block sid="1517814329212286">
                     <conditions>
                         <condition id="-8" name="Is boolean instance variable set" sid="3850111470731568" type="Player">
                             <param id="0" name="Instance variable">CarryingKnife</param>
