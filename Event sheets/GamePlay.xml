@@ -5,9 +5,9 @@
     <events>
         <include>Utils</include>
         <include>Camera</include>
-        <event-group collapsed="1" description="" sid="2897060075777959" title="Characters">
+        <event-group description="" sid="2897060075777959" title="Characters">
             <sub-events>
-                <event-block collapsed="1" sid="6429507390627526">
+                <event-block sid="6429507390627526">
                     <conditions>
                         <condition id="-8" name="Is boolean instance variable set" sid="9606856087968288" type="Character">
                             <param id="0" name="Instance variable">AutoEnable</param>
@@ -89,7 +89,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block collapsed="1" sid="8676823658211393">
+                <event-block sid="8676823658211393">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="228195979821599" type="Character">
                             <param id="0" name="Instance variable">Health</param>
@@ -250,7 +250,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="3052503956438317" title="Zombies">
+        <event-group description="" sid="3052503956438317" title="Zombies">
             <sub-events>
                 <event-block sid="2747026023799614">
                     <conditions>
@@ -631,7 +631,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="7871028774943537" title="Player">
+        <event-group description="" sid="7871028774943537" title="Player">
             <sub-events>
                 <event-block sid="8280718908687473">
                     <conditions>
@@ -655,6 +655,42 @@
                         <action id="-29" name="Move to object" sid="794924080227958" type="Knife">
                             <param id="0" name="Where">1</param>
                             <param id="1" name="Object">Player</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2187940477451241">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="1695418716870088" type="Keyboard">
+                            <param id="0" name="Key">88 (X)</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="932696270608911" type="Player">
+                            <param id="0" name="Instance variable">CarryingGun</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="5721202237890695" type="Gun">
+                            <param id="0" name="Object">SimpleBullet</param>
+                            <param id="1" name="Layer">Player.LayerNumber</param>
+                            <param id="2" name="Image point">&quot;Front&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="4632564685417155" type="SimpleBullet">
+                            <param id="0" name="Instance variable">Owner</param>
+                            <param id="1" name="Value">Player.UID</param>
+                        </action>
+                        <action id="-29" name="Move to object" sid="2903752708476008" type="SimpleBullet">
+                            <param id="0" name="Where">1</param>
+                            <param id="1" name="Object">Player</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="4135992262359893" type="SimpleBullet">
+                            <param id="0" name="Angle">Player.Angle</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="8551624278586166" type="Gun">
+                            <param id="0" name="Object">BulletShell</param>
+                            <param id="1" name="Layer">Gun.LayerNumber</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="9438459470599618" type="BulletShell">
+                            <param id="0" name="Angle">180 - Player.Angle + random(180) - 90</param>
                         </action>
                     </actions>
                 </event-block>
@@ -688,7 +724,7 @@
                 </event-block>
                 <event-group collapsed="1" description="" sid="6454508332916548" title="Knife">
                     <sub-events>
-                        <event-block sid="4064754307868574">
+                        <event-block collapsed="1" sid="4064754307868574">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="6048919233397953" type="Knife">
                                     <param id="0" name="Instance variable">Owner</param>
@@ -825,12 +861,73 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-4" name="Set position to another object" sid="8170897702940212" type="Gun">
-                                    <param id="0" name="Object">Player</param>
-                                    <param id="1" name="Image point (optional)">&quot;Weapon&quot;</param>
+                                <action id="-10" name="Set value" sid="6038925406496068" type="Gun">
+                                    <param id="0" name="Instance variable">OldPlayerX2</param>
+                                    <param id="1" name="Value">Gun.OldPlayerX1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="4492246063247969" type="Gun">
+                                    <param id="0" name="Instance variable">OldPlayerY2</param>
+                                    <param id="1" name="Value">Gun.OldPlayerY1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="256096872754471" type="Gun">
+                                    <param id="0" name="Instance variable">OldPlayerX1</param>
+                                    <param id="1" name="Value">Player.X + Player.ImagePointX(&quot;Weapon&quot;) - Player.ImagePointX(0)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="8433072573937336" type="Gun">
+                                    <param id="0" name="Instance variable">OldPlayerY1</param>
+                                    <param id="1" name="Value">Player.Y + Player.ImagePointY(&quot;Weapon&quot;) - Player.ImagePointY(0)</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="8170897702940212" type="Gun">
+                                    <param id="0" name="X">Gun.OldPlayerX2</param>
+                                    <param id="1" name="Y">Gun.OldPlayerY2</param>
                                 </action>
                                 <action id="-8" name="Set angle" sid="992746278404357" type="Gun">
                                     <param id="0" name="Angle">Player.Angle</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5133677701216001">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="3002297516345176" type="Bullet">
+                                    <param id="0" name="Object">Character</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="5370091173307494" type="Character">
+                                    <param id="0" name="Instance variable">Health</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="6681680387909679" type="Bullet" />
+                                <action id="-12" name="Subtract from" sid="3433670883948858" type="Character">
+                                    <param id="0" name="Instance variable">Health</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7896721733903308">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="6888559504120867" type="Bullet">
+                                    <param id="0" name="Object">Wall</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="3707303961597535" type="Bullet" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="131774704703046">
+                            <conditions>
+                                <condition id="-34" name="Pick by evaluate" sid="6437212249968795" type="System">
+                                    <param id="0" name="Object">BulletShell</param>
+                                    <param id="1" name="Expression">BulletShell.Sine.CyclePosition &gt; 0.5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Sine" id="0" name="Set active" sid="5312278535481272" type="BulletShell">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action behavior="Bullet" id="5" name="Set enabled" sid="1694180838336522" type="BulletShell">
+                                    <param id="0" name="State">0</param>
                                 </action>
                             </actions>
                         </event-block>

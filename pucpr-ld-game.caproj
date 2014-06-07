@@ -239,10 +239,41 @@
                 <instance-variable name="State" sid="1066357487875425" type="string" />
                 <instance-variable name="Distance" sid="4159458034510042" type="number" />
                 <instance-variable name="Hit" sid="204066366782184" type="boolean" />
+                <instance-variable name="OldPlayerX1" sid="6061650002418867" type="number" />
+                <instance-variable name="OldPlayerY1" sid="7844643335165834" type="number" />
+                <instance-variable name="OldPlayerX2" sid="2485081468776182" type="number" />
+                <instance-variable name="OldPlayerY2" sid="6053026940261876" type="number" />
             </instance-variables>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9697319607995063" speed="5">
-                    <frame duration="1" hotspotX="0.166667" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.166667" hotspotY="0.5">
+                        <image-point name="Front" x="1" y="0.5" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SimpleBullet" sid="335573620772988">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5075422462877851" speed="50">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BulletShell" sid="1109555315407983">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="6099314650074718">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="7889623976150186">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2492624598748545" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -289,6 +320,19 @@
                 <member>Player</member>
                 <member>Victim</member>
             </members>
+        </family>
+        <family name="Bullet" plugin-id="Sprite" sid="537786314314864">
+            <members>
+                <member>SimpleBullet</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="Owner" sid="1852864882527458" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Bullet" sid="6888028329765249">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
         </family>
     </families>
     <layout-folder expanded="1">
