@@ -5,7 +5,7 @@
     <events>
         <include>Utils</include>
         <include>Camera</include>
-        <event-group description="" sid="2897060075777959" title="Characters">
+        <event-group collapsed="1" description="" sid="2897060075777959" title="Characters">
             <sub-events>
                 <event-block sid="6429507390627526">
                     <conditions>
@@ -133,7 +133,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="3766674772289778" title="Victims">
+        <event-group collapsed="1" description="" sid="3766674772289778" title="Victims">
             <sub-events>
                 <event-block sid="6970142373032275">
                     <conditions>
@@ -250,7 +250,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="3052503956438317" title="Zombies">
+        <event-group collapsed="1" description="" sid="3052503956438317" title="Zombies">
             <sub-events>
                 <event-block sid="2747026023799614">
                     <conditions>
@@ -641,6 +641,9 @@
                         <condition id="-8" name="Is boolean instance variable set" sid="2570044362247388" type="Player">
                             <param id="0" name="Instance variable">CarryingKnife</param>
                         </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="9247062216808947" type="Player">
+                            <param id="0" name="Instance variable">HoldingKnife</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="0" name="Spawn another object" sid="3063615560442297" type="Player">
@@ -658,6 +661,29 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="9246430597994552">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="1522872614650812" type="Keyboard">
+                            <param id="0" name="Key">90 (Z)</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="316109022485842" type="Player">
+                            <param id="0" name="Instance variable">CarryingKnife</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="408557440313148" type="Player">
+                            <param id="0" name="Instance variable">HoldingKnife</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="9677900557923006" type="Player">
+                            <param id="0" name="Instance variable">HoldingKnife</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="8692376308629223" type="Player">
+                            <param id="0" name="Instance variable">HoldingGun</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="2187940477451241">
                     <conditions>
                         <condition id="0" name="On key pressed" sid="1695418716870088" type="Keyboard">
@@ -665,6 +691,9 @@
                         </condition>
                         <condition id="-8" name="Is boolean instance variable set" sid="932696270608911" type="Player">
                             <param id="0" name="Instance variable">CarryingGun</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="7614508555794209" type="Player">
+                            <param id="0" name="Instance variable">HoldingGun</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -690,13 +719,36 @@
                             <param id="2" name="Image point">0</param>
                         </action>
                         <action behavior="Bullet" id="3" name="Set angle of motion" sid="9438459470599618" type="BulletShell">
-                            <param id="0" name="Angle">180 - Player.Angle + random(180) - 90</param>
+                            <param id="0" name="Angle">(Player.Angle+180 + random(180) - 90)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1703250627941567">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="7415254814235368" type="Keyboard">
+                            <param id="0" name="Key">88 (X)</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="4192240266599264" type="Player">
+                            <param id="0" name="Instance variable">CarryingGun</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="2197136174959661" type="Player">
+                            <param id="0" name="Instance variable">HoldingGun</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="9047041307140641" type="Player">
+                            <param id="0" name="Instance variable">HoldingKnife</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="8614862477583223" type="Player">
+                            <param id="0" name="Instance variable">HoldingGun</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="3193611664449879" title="Weapons">
+        <event-group collapsed="1" description="" sid="3193611664449879" title="Weapons">
             <sub-events>
                 <event-block sid="1870731739834124">
                     <conditions>
@@ -885,6 +937,21 @@
                                     <param id="0" name="Angle">Player.Angle</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="4249365491479971">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="9658530885618339" type="Player">
+                                            <param id="0" name="Instance variable">HoldingGun</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="4117426627608048" type="Gun">
+                                            <param id="0" name="X">-100</param>
+                                            <param id="1" name="Y">-100</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="5133677701216001">
                             <conditions>
@@ -933,6 +1000,82 @@
                         </event-block>
                     </sub-events>
                 </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="569804434613888" title="HUD">
+            <sub-events>
+                <event-block collapsed="1" sid="1517814329212286">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="3850111470731568" type="Player">
+                            <param id="0" name="Instance variable">CarryingKnife</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="8257701331475474" type="HUD_Knife">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="7417515627718961">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="434541010113335" type="Player">
+                                    <param id="0" name="Instance variable">HoldingKnife</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="809641897974811" type="HUD_Knife">
+                                    <param id="0" name="Opacity">50</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="115820554336246">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="8454700984351754" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="3892035260802373" type="HUD_Knife">
+                            <param id="0" name="Opacity">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8313307141283253">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="644344751361621" type="Player">
+                            <param id="0" name="Instance variable">CarryingGun</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="7102464281617445" type="HUD_Gun">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="4052313202705751">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="9451503647371119" type="Player">
+                                    <param id="0" name="Instance variable">HoldingGun</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="3267568063788086" type="HUD_Gun">
+                                    <param id="0" name="Opacity">50</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="1961394437355009">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="555207508537897" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="155256804525818" type="HUD_Gun">
+                            <param id="0" name="Opacity">0</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
     </events>

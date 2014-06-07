@@ -112,6 +112,10 @@
                                     <param id="0" name="Instance variable">CarryingKnife</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
+                                <action id="-13" name="Set boolean" sid="7967358330770821" type="Player">
+                                    <param id="0" name="Instance variable">HoldingKnife</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
