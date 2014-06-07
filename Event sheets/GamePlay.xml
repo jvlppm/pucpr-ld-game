@@ -5,7 +5,7 @@
     <events>
         <include>Utils</include>
         <include>Camera</include>
-        <event-group description="" sid="2897060075777959" title="Characters">
+        <event-group collapsed="1" description="" sid="2897060075777959" title="Characters">
             <sub-events>
                 <event-block sid="6429507390627526">
                     <conditions>
@@ -128,7 +128,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="3766674772289778" title="Victims">
+        <event-group collapsed="1" description="" sid="3766674772289778" title="Victims">
             <sub-events>
                 <event-block sid="6970142373032275">
                     <conditions>
@@ -274,6 +274,11 @@
                             <param id="1" name="Comparison">4</param>
                             <param id="2" name="Value">0</param>
                         </condition>
+                        <condition id="-7" name="Compare instance variable" sid="6753650208900962" type="Zombie">
+                            <param id="0" name="Instance variable">ReleaseDelay</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="0" name="Call function" sid="5496899234060294" type="Function">
@@ -337,6 +342,11 @@
                                     <param id="0" name="Unique ID">GoodGuy.UID</param>
                                 </condition>
                                 <condition behavior="Sine" id="0" inverted="1" name="Is active" sid="6700788079223877" type="Character" />
+                                <condition id="-7" name="Compare instance variable" sid="8154297185845189" type="Zombie">
+                                    <param id="0" name="Instance variable">ReleaseDelay</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action behavior="Bullet" id="0" name="Set speed" sid="9416666472783391" type="Zombie">
@@ -445,9 +455,13 @@
                         <action behavior="Bullet" id="5" name="Set enabled" sid="1451248643632821" type="Character">
                             <param id="0" name="State">1</param>
                         </action>
+                        <action id="-10" name="Set value" sid="1589709759369264" type="Zombie">
+                            <param id="0" name="Instance variable">ReleaseDelay</param>
+                            <param id="1" name="Value">0.5</param>
+                        </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="1936268066267517">
+                        <event-block disabled="1" sid="1936268066267517">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="26447679855805" type="Zombie">
                                     <param id="0" name="Instance variable">Health</param>
@@ -485,9 +499,24 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="7483115825215037">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="559697588775953" type="Zombie">
+                            <param id="0" name="Instance variable">ReleaseDelay</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="4399037112544204" type="Zombie">
+                            <param id="0" name="Instance variable">ReleaseDelay</param>
+                            <param id="1" name="Value">dt</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="6773088495970466" title="Balloon">
+        <event-group collapsed="1" description="" sid="6773088495970466" title="Balloon">
             <sub-events>
                 <event-block sid="1755681182641615">
                     <conditions>
@@ -626,7 +655,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="7871028774943537" title="Player">
+        <event-group collapsed="1" description="" sid="7871028774943537" title="Player">
             <sub-events>
                 <event-block sid="8280718908687473">
                     <conditions>
@@ -717,6 +746,26 @@
                             <param id="0" name="Angle">(Player.Angle+180 + random(180) - 90)</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="9691761401221066">
+                            <conditions>
+                                <condition id="-3" name="Is on-screen" sid="4778212320694409" type="Character" />
+                                <condition id="-11" name="For Each" sid="7919063067288481" type="System">
+                                    <param id="0" name="Object">Character</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="1929279266646328" type="System">
+                                    <param id="0" name="First value">Player.UID</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Second value">Character.UID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-8" name="Set angle" sid="8034637335837835" type="Character">
+                                    <param id="0" name="Angle">angle(Character.X, Character.Y, Player.X, Player.Y)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="1703250627941567">
                     <conditions>
@@ -743,7 +792,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="3193611664449879" title="Weapons">
+        <event-group collapsed="1" description="" sid="3193611664449879" title="Weapons">
             <sub-events>
                 <event-block sid="1870731739834124">
                     <conditions>
@@ -769,9 +818,9 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-group description="" sid="6454508332916548" title="Knife">
+                <event-group collapsed="1" description="" sid="6454508332916548" title="Knife">
                     <sub-events>
-                        <event-block sid="4064754307868574">
+                        <event-block collapsed="1" sid="4064754307868574">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="6048919233397953" type="Knife">
                                     <param id="0" name="Instance variable">Owner</param>
@@ -899,7 +948,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="8165322307502895" title="Gun">
+                <event-group collapsed="1" description="" sid="8165322307502895" title="Gun">
                     <sub-events>
                         <event-block sid="3967618514829974">
                             <conditions>
@@ -998,9 +1047,9 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group description="" sid="569804434613888" title="HUD">
+        <event-group collapsed="1" description="" sid="569804434613888" title="HUD">
             <sub-events>
-                <event-block sid="1517814329212286">
+                <event-block collapsed="1" sid="1517814329212286">
                     <conditions>
                         <condition id="-8" name="Is boolean instance variable set" sid="3850111470731568" type="Player">
                             <param id="0" name="Instance variable">CarryingKnife</param>
