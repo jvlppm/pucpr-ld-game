@@ -5,6 +5,145 @@
     <events>
         <include>Utils</include>
         <include>Camera</include>
+        <event-group collapsed="1" description="" sid="6773088495970466" title="Balloon">
+            <sub-events>
+                <event-block sid="1755681182641615">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="8760342310712686" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Clear" sid="6407746087734199" type="Messages" />
+                    </actions>
+                </event-block>
+                <event-block sid="9441057967663321">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="3447303958088918" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="1488310737403378" type="BalloonText">
+                            <param id="0" name="Y">Balloon.Y + (Balloon.Height - BalloonText.Height) / 2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6011596442802542">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="8657773377038484" type="Messages">
+                            <param id="0" name="Instance variable">Message</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="7060292305672026" type="BalloonText">
+                            <param id="0" name="Text">Messages.At(Messages.Message, Messages.Index)</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="4526364845056258" type="Player">
+                            <param id="0" name="Instance variable">AutoEnable</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="9086652315371314">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="4216043330215499" type="Balloon">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Y co-ordinate">Balloon.VisibleY</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="4249936376478894" type="Balloon">
+                                    <param id="0" name="Control">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6688939102978162">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="9222040371309797" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="8Direction" id="10" name="Set vector Y" sid="3628129254842723" type="Balloon">
+                                    <param id="0" name="Vector Y">0</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="164183972102272" type="Balloon">
+                                    <param id="0" name="Y">Balloon.VisibleY</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1140119623031024">
+                            <conditions>
+                                <condition id="1" name="On any key pressed" sid="9987741443494835" type="Keyboard" />
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="385591119408046" type="Messages">
+                                    <param id="0" name="Instance variable">Index</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="831259068052723">
+                                    <conditions>
+                                        <condition id="1" name="Compare at XY" sid="3156978444796488" type="Messages">
+                                            <param id="0" name="X">Messages.Message</param>
+                                            <param id="1" name="Y">Messages.Index</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="4440537280776472" type="Messages">
+                                            <param id="0" name="Instance variable">Message</param>
+                                            <param id="1" name="Value">-1</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="5573795289503759" type="Player">
+                                            <param id="0" name="Instance variable">AutoEnable</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="959565781022128" type="Messages">
+                                            <param id="0" name="Instance variable">Index</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="7625959734013255">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="8417102441656297" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="6502982153532224">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="1118332577635214" type="Balloon">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="Y co-ordinate">Balloon.InvisibleY</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="6040114476631735" type="Balloon">
+                                    <param id="0" name="Control">3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2558828820212618">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="6326773206917017" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="8Direction" id="10" name="Set vector Y" sid="9727494272365772" type="Balloon">
+                                    <param id="0" name="Vector Y">0</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="9224849496441325" type="Balloon">
+                                    <param id="0" name="Y">Balloon.InvisibleY</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-group collapsed="1" description="" sid="2897060075777959" title="Characters">
             <sub-events>
                 <event-block sid="6429507390627526">
@@ -424,7 +563,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="6161878113429321">
+                <event-block collapsed="1" sid="6161878113429321">
                     <conditions>
                         <condition id="0" name="On function" sid="9989210086701573" type="Function">
                             <param id="0" name="Name">&quot;ZombieRelease&quot;</param>
@@ -516,146 +655,206 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="6773088495970466" title="Balloon">
+        <event-group collapsed="1" description="" sid="9438648782380541" title="Snipers">
             <sub-events>
-                <event-block sid="1755681182641615">
+                <event-block sid="6870329120158633">
                     <conditions>
-                        <condition id="-2" name="On start of layout" sid="8760342310712686" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Clear" sid="6407746087734199" type="Messages" />
-                    </actions>
-                </event-block>
-                <event-block sid="9441057967663321">
-                    <conditions>
-                        <condition id="-1" name="Every tick" sid="3447303958088918" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-2" name="Set Y" sid="1488310737403378" type="BalloonText">
-                            <param id="0" name="Y">Balloon.Y + (Balloon.Height - BalloonText.Height) / 2</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="6011596442802542">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="8657773377038484" type="Messages">
-                            <param id="0" name="Instance variable">Message</param>
-                            <param id="1" name="Comparison">5</param>
+                        <condition id="-7" name="Compare instance variable" sid="8462071480455254" type="Sniper">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Comparison">4</param>
                             <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-3" name="Is on-screen" sid="926855998336266" type="Sniper" />
+                        <condition id="-6" name="Every X seconds" sid="9916507095541701" type="System">
+                            <param id="0" name="Interval (seconds)">2</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="4604107105216064" type="Sniper">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Set text" sid="7060292305672026" type="BalloonText">
-                            <param id="0" name="Text">Messages.At(Messages.Message, Messages.Index)</param>
+                        <action id="-10" name="Set value" sid="5417612657091808" type="Sniper">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Value">&quot;Aiming&quot;</param>
                         </action>
-                        <action id="-13" name="Set boolean" sid="4526364845056258" type="Player">
-                            <param id="0" name="Instance variable">AutoEnable</param>
-                            <param id="1" name="Value">0</param>
+                        <action id="0" name="Spawn another object" sid="7836545612915712" type="Sniper">
+                            <param id="0" name="Object">SniperAim</param>
+                            <param id="1" name="Layer">Sniper.LayerNumber</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="8921593380700907" type="SniperAim">
+                            <param id="0" name="Instance variable">Owner</param>
+                            <param id="1" name="Value">Sniper.UID</param>
                         </action>
                     </actions>
+                </event-block>
+                <event-block sid="7082825788179696">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="1345838719586929" type="SniperAim">
+                            <param id="0" name="Instance variable">Owner</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="5986902730428735" type="Sniper">
+                            <param id="0" name="Unique ID">SniperAim.Owner</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-20" name="Rotate toward angle" sid="2560813066680402" type="SniperAim">
+                            <param id="0" name="Degrees">2</param>
+                            <param id="1" name="Angle">angle(Self.X, Self.Y, Player.X, Player.Y)</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="8501319939405663" type="Sniper">
+                            <param id="0" name="Angle">angle(Sniper.X, Sniper.Y, SniperAim.X, SniperAim.Y)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6436920879625818">
+                    <conditions>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="3280864922452105" type="SniperAim" />
+                        <condition id="-14" name="Pick by unique ID" sid="5034864882812996" type="Sniper">
+                            <param id="0" name="Unique ID">SniperAim.Owner</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="7309685477196305" type="SniperAim" />
+                        <action id="-10" name="Set value" sid="8009511160387848" type="Sniper">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4929341124605661">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="5090802546850913" type="Sniper">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-11" name="For Each" sid="461453397147227" type="System">
+                            <param id="0" name="Object">Sniper</param>
+                        </condition>
+                        <condition id="-34" name="Pick by evaluate" sid="3358314330897998" type="System">
+                            <param id="0" name="Object">SniperAim</param>
+                            <param id="1" name="Expression">SniperAim.Owner = Sniper.UID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="5310581046779132" type="SniperAim" />
+                        <action id="-10" name="Set value" sid="7351149576512921" type="Sniper">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7966037355216316">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="2548393309511419" type="SniperAim">
+                            <param id="0" name="Object">Wall</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="9247199072086537" type="Sniper">
+                            <param id="0" name="Unique ID">SniperAim.Owner</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="5345847840327239" type="SniperAim" />
+                        <action id="-10" name="Set value" sid="2268531610553359" type="Sniper">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4960837091584217">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="6858465076458524" type="Sniper">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="1" name="Is overlapping another object" sid="9708463597523654" type="SniperAim">
+                            <param id="0" name="Object">Player</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="6760252710942278" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="2076641372656041" type="Sniper">
+                            <param id="0" name="Unique ID">SniperAim.Owner</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="6766510888323367" type="Sniper">
+                            <param id="0" name="Object">SniperBullet</param>
+                            <param id="1" name="Layer">Sniper.LayerNumber</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="7449760971428594" type="SniperBullet">
+                            <param id="0" name="Angle">angle(SniperBullet.X, SniperBullet.Y, Player.X, Player.Y)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="3744221811851148" type="SniperBullet">
+                            <param id="0" name="Instance variable">Owner</param>
+                            <param id="1" name="Value">Sniper.UID</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="8533180673967638" type="SniperAim" />
+                    </actions>
                     <sub-events>
-                        <event-block sid="9086652315371314">
+                        <event-block sid="1084054181182611">
                             <conditions>
-                                <condition id="-2" name="Compare Y" sid="4216043330215499" type="Balloon">
-                                    <param id="0" name="Comparison">4</param>
-                                    <param id="1" name="Y co-ordinate">Balloon.VisibleY</param>
+                                <condition id="-3" name="Is on-screen" sid="5493787985633494" type="Zombie" />
+                                <condition id="-7" name="Compare instance variable" sid="7035951644441116" type="Zombie">
+                                    <param id="0" name="Instance variable">Health</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="8Direction" id="7" name="Simulate control" sid="4249936376478894" type="Balloon">
-                                    <param id="0" name="Control">2</param>
+                                <action id="-8" name="Set angle" sid="2728789201019649" type="Zombie">
+                                    <param id="0" name="Angle">angle(Zombie.X, Zombie.Y, Player.X, Player.Y)</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="6688939102978162">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="9222040371309797" type="System" />
-                            </conditions>
+                        <event-block sid="3859667422442539">
+                            <conditions />
                             <actions>
-                                <action behavior="8Direction" id="10" name="Set vector Y" sid="3628129254842723" type="Balloon">
-                                    <param id="0" name="Vector Y">0</param>
+                                <action id="-10" name="Set value" sid="799006668667252" type="Sniper">
+                                    <param id="0" name="Instance variable">State</param>
+                                    <param id="1" name="Value">&quot;Waiting&quot;</param>
                                 </action>
-                                <action id="-2" name="Set Y" sid="164183972102272" type="Balloon">
-                                    <param id="0" name="Y">Balloon.VisibleY</param>
+                                <action id="-16" name="Wait" sid="8551280878697858" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="3178064931264047" type="Sniper">
+                                    <param id="0" name="Instance variable">State</param>
+                                    <param id="1" name="Value">&quot;&quot;</param>
                                 </action>
                             </actions>
-                        </event-block>
-                        <event-block sid="1140119623031024">
-                            <conditions>
-                                <condition id="1" name="On any key pressed" sid="9987741443494835" type="Keyboard" />
-                            </conditions>
-                            <actions>
-                                <action id="-11" name="Add to" sid="385591119408046" type="Messages">
-                                    <param id="0" name="Instance variable">Index</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                            <sub-events>
-                                <event-block sid="831259068052723">
-                                    <conditions>
-                                        <condition id="1" name="Compare at XY" sid="3156978444796488" type="Messages">
-                                            <param id="0" name="X">Messages.Message</param>
-                                            <param id="1" name="Y">Messages.Index</param>
-                                            <param id="2" name="Comparison">0</param>
-                                            <param id="3" name="Value">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="4440537280776472" type="Messages">
-                                            <param id="0" name="Instance variable">Message</param>
-                                            <param id="1" name="Value">-1</param>
-                                        </action>
-                                        <action id="-13" name="Set boolean" sid="5573795289503759" type="Player">
-                                            <param id="0" name="Instance variable">AutoEnable</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="959565781022128" type="Messages">
-                                            <param id="0" name="Instance variable">Index</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="7625959734013255">
+                <event-block sid="1287796300961536">
                     <conditions>
-                        <condition id="-22" name="Else" sid="8417102441656297" type="System" />
+                        <condition id="0" name="On collision with another object" sid="538838529633733" type="SniperAim">
+                            <param id="0" name="Object">Area</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="3595903841615962" type="Sniper">
+                            <param id="0" name="Unique ID">SniperAim.Owner</param>
+                        </condition>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="7393621521303161" type="Sniper">
+                            <param id="0" name="Object">Area</param>
+                        </condition>
                     </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="6502982153532224">
-                            <conditions>
-                                <condition id="-2" name="Compare Y" sid="1118332577635214" type="Balloon">
-                                    <param id="0" name="Comparison">2</param>
-                                    <param id="1" name="Y co-ordinate">Balloon.InvisibleY</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="8Direction" id="7" name="Simulate control" sid="6040114476631735" type="Balloon">
-                                    <param id="0" name="Control">3</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="2558828820212618">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="6326773206917017" type="System" />
-                            </conditions>
-                            <actions>
-                                <action behavior="8Direction" id="10" name="Set vector Y" sid="9727494272365772" type="Balloon">
-                                    <param id="0" name="Vector Y">0</param>
-                                </action>
-                                <action id="-2" name="Set Y" sid="9224849496441325" type="Balloon">
-                                    <param id="0" name="Y">Balloon.InvisibleY</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="398166745105962" type="SniperAim" />
+                        <action id="-10" name="Set value" sid="3384434016016467" type="Sniper">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="7871028774943537" title="Player">
+        <event-group description="" sid="7871028774943537" title="Player">
             <sub-events>
                 <event-block sid="8280718908687473">
                     <conditions>
@@ -806,6 +1005,31 @@
                         <action id="-13" name="Set boolean" sid="8614862477583223" type="Player">
                             <param id="0" name="Instance variable">HoldingGun</param>
                             <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4603764371528546">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="9842800314645672" type="Keyboard">
+                            <param id="0" name="Key">16 (Shift)</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="6896713297810405" type="Player">
+                            <param id="0" name="Instance variable">CanRun</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="4" name="Set max speed" sid="8288816612706959" type="Player">
+                            <param id="0" name="Max Speed">130</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="398015332191425">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="710024685774647" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="4" name="Set max speed" sid="991629096817473" type="Player">
+                            <param id="0" name="Max Speed">80</param>
                         </action>
                     </actions>
                 </event-block>
@@ -969,7 +1193,7 @@
                 </event-group>
                 <event-group description="" sid="8165322307502895" title="Gun">
                     <sub-events>
-                        <event-block collapsed="1" sid="3967618514829974">
+                        <event-block sid="3967618514829974">
                             <conditions>
                                 <condition id="-8" name="Is boolean instance variable set" sid="6070128793063599" type="Player">
                                     <param id="0" name="Instance variable">CarryingGun</param>
@@ -1174,129 +1398,5 @@
                 </action>
             </actions>
         </event-block>
-        <event-group description="" sid="9438648782380541" title="Snipers">
-            <sub-events>
-                <event-block sid="6870329120158633">
-                    <conditions>
-                        <condition id="-3" name="Is on-screen" sid="926855998336266" type="Sniper" />
-                        <condition id="-6" name="Every X seconds" sid="9916507095541701" type="System">
-                            <param id="0" name="Interval (seconds)">2</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="4604107105216064" type="Sniper">
-                            <param id="0" name="Instance variable">State</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-10" name="Set value" sid="5417612657091808" type="Sniper">
-                            <param id="0" name="Instance variable">State</param>
-                            <param id="1" name="Value">&quot;Aiming&quot;</param>
-                        </action>
-                        <action id="0" name="Spawn another object" sid="7836545612915712" type="Sniper">
-                            <param id="0" name="Object">SniperAim</param>
-                            <param id="1" name="Layer">Sniper.LayerNumber</param>
-                            <param id="2" name="Image point">0</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="8921593380700907" type="SniperAim">
-                            <param id="0" name="Instance variable">Owner</param>
-                            <param id="1" name="Value">Sniper.UID</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="7082825788179696">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="1345838719586929" type="SniperAim">
-                            <param id="0" name="Instance variable">Owner</param>
-                            <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                        <condition id="-14" name="Pick by unique ID" sid="5986902730428735" type="Sniper">
-                            <param id="0" name="Unique ID">SniperAim.Owner</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-20" name="Rotate toward angle" sid="2560813066680402" type="SniperAim">
-                            <param id="0" name="Degrees">2</param>
-                            <param id="1" name="Angle">angle(Self.X, Self.Y, Player.X, Player.Y)</param>
-                        </action>
-                        <action id="-8" name="Set angle" sid="8501319939405663" type="Sniper">
-                            <param id="0" name="Angle">angle(Sniper.X, Sniper.Y, SniperAim.X, SniperAim.Y)</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="6436920879625818">
-                    <conditions>
-                        <condition id="-3" inverted="1" name="Is on-screen" sid="3280864922452105" type="SniperAim" />
-                        <condition id="-14" name="Pick by unique ID" sid="5034864882812996" type="Sniper">
-                            <param id="0" name="Unique ID">SniperAim.Owner</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" sid="7309685477196305" type="SniperAim" />
-                        <action id="-10" name="Set value" sid="8009511160387848" type="Sniper">
-                            <param id="0" name="Instance variable">State</param>
-                            <param id="1" name="Value">&quot;&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="7966037355216316">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="2548393309511419" type="SniperAim">
-                            <param id="0" name="Object">Wall</param>
-                        </condition>
-                        <condition id="-14" name="Pick by unique ID" sid="9247199072086537" type="Sniper">
-                            <param id="0" name="Unique ID">SniperAim.Owner</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" sid="5345847840327239" type="SniperAim" />
-                        <action id="-10" name="Set value" sid="2268531610553359" type="Sniper">
-                            <param id="0" name="Instance variable">State</param>
-                            <param id="1" name="Value">&quot;&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="4960837091584217">
-                    <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="9708463597523654" type="SniperAim">
-                            <param id="0" name="Object">Player</param>
-                        </condition>
-                        <condition id="-6" name="Every X seconds" sid="6760252710942278" type="System">
-                            <param id="0" name="Interval (seconds)">1.0</param>
-                        </condition>
-                        <condition id="-14" name="Pick by unique ID" sid="2076641372656041" type="Sniper">
-                            <param id="0" name="Unique ID">SniperAim.Owner</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Spawn another object" sid="6766510888323367" type="Sniper">
-                            <param id="0" name="Object">SniperBullet</param>
-                            <param id="1" name="Layer">Sniper.LayerNumber</param>
-                            <param id="2" name="Image point">0</param>
-                        </action>
-                        <action id="-8" name="Set angle" sid="7449760971428594" type="SniperBullet">
-                            <param id="0" name="Angle">angle(SniperBullet.X, SniperBullet.Y, Player.X, Player.Y)</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="3744221811851148" type="SniperBullet">
-                            <param id="0" name="Instance variable">Owner</param>
-                            <param id="1" name="Value">Sniper.UID</param>
-                        </action>
-                        <action id="-9" name="Destroy" sid="8533180673967638" type="SniperAim" />
-                        <action id="-10" name="Set value" sid="799006668667252" type="Sniper">
-                            <param id="0" name="Instance variable">State</param>
-                            <param id="1" name="Value">&quot;Waiting&quot;</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="8551280878697858" type="System">
-                            <param id="0" name="Seconds">2</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="3178064931264047" type="Sniper">
-                            <param id="0" name="Instance variable">State</param>
-                            <param id="1" name="Value">&quot;&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
     </events>
 </c2eventsheet>
