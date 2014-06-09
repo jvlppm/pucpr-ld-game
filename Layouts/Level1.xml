@@ -2043,9 +2043,9 @@
                     <instance-variables>
                         <AutoEnable>true</AutoEnable>
                         <Health>1</Health>
-                        <CarryingKnife>true</CarryingKnife>
-                        <HoldingKnife>true</HoldingKnife>
-                        <CarryingGun>true</CarryingGun>
+                        <CarryingKnife>false</CarryingKnife>
+                        <HoldingKnife>false</HoldingKnife>
+                        <CarryingGun>false</CarryingGun>
                         <HoldingGun>false</HoldingGun>
                         <SimpleBullets>6</SimpleBullets>
                         <CanRun>false</CanRun>
@@ -2094,8 +2094,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1072</x>
-                        <y>320</y>
+                        <x>896</x>
+                        <y>736</y>
                         <z>0</z>
                         <width>16</width>
                         <height>16</height>
