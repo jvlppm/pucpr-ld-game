@@ -47,9 +47,12 @@
                     <param id="1" name="Y">1</param>
                     <param id="2" name="Value">&quot;Corra com a&#x0D;&#x0A;tecla Shift&quot;</param>
                 </action>
+                <action behavior="Pathfinding" id="5" name="Add obstacle" sid="200426955542396" type="Zombie">
+                    <param id="0" name="Obstacle">Wall</param>
+                </action>
             </actions>
         </event-block>
-        <event-group description="" sid="800431554552432" title="Knife gift">
+        <event-group collapsed="1" description="" sid="800431554552432" title="Knife gift">
             <sub-events>
                 <event-block sid="9257388658206582">
                     <conditions>
@@ -154,7 +157,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="4921246366619843" title="Gun gift">
+        <event-group collapsed="1" description="" sid="4921246366619843" title="Gun gift">
             <sub-events>
                 <variable constant="0" name="enemiesOnScreen" sid="4718331082805744" static="0" type="number">0</variable>
                 <event-block sid="8860192286470366">
@@ -273,7 +276,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="2268179519039859" title="Run Gift">
+        <event-group collapsed="1" description="" sid="2268179519039859" title="Run Gift">
             <sub-events>
                 <event-block sid="7343290333555935">
                     <conditions>
@@ -341,6 +344,62 @@
                     <actions>
                         <action behavior="Bullet" id="0" name="Set speed" sid="5455624302572587" type="Victim">
                             <param id="0" name="Speed">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="5492905900470633" title="Dinner">
+            <sub-events>
+                <event-block sid="1427902067996916">
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="4018864343969256" type="Zombie" />
+                        <condition id="1" name="Is overlapping another object" sid="359323299143768" type="Zombie">
+                            <param id="0" name="Object">DinnerArea</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="3022941495342069" type="Zombie">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="3330606072165584">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="775707111121665" type="System">
+                                    <param id="0" name="Interval (seconds)">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Pathfinding" id="0" name="Find path" sid="2405862763685527" type="Zombie">
+                                    <param id="0" name="X">Player.X</param>
+                                    <param id="1" name="Y">Player.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="30483656617479">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="4907742653214873" type="Zombie">
+                            <param id="0" name="Object">Character</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="2" name="Stop" sid="19180576076653" type="Zombie" />
+                        <action id="-9" name="Destroy" sid="2965806009251723" type="DinnerArea" />
+                    </actions>
+                </event-block>
+                <event-block sid="8053047662199555">
+                    <conditions>
+                        <condition id="-19" name="On destroyed" sid="517914791809278" type="DinnerArea" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="5745528991998496" type="Zombie">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Pathfinding" id="3" name="Set enabled" sid="7998195080277826" type="Zombie">
+                            <param id="0" name="Set">0</param>
                         </action>
                     </actions>
                 </event-block>

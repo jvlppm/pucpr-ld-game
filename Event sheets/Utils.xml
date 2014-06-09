@@ -3,7 +3,29 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Utils</name>
     <events>
-        <event-block sid="6941332416979838">
+        <variable constant="0" name="ScreenWidth" sid="9749730160495133" static="0" type="number">0</variable>
+        <variable constant="0" name="ScreenHeight" sid="9692446442046856" static="0" type="number">0</variable>
+        <variable constant="0" name="ScreenMaxDistance" sid="7286347641671951" static="0" type="number">0</variable>
+        <event-block sid="520163318847726">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="7325285906213962" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="9980081188789653" type="System">
+                    <param id="0" name="Variable">ScreenWidth</param>
+                    <param id="1" name="Value">ViewportRight(&quot;HUD&quot;) - ViewportLeft(&quot;HUD&quot;) </param>
+                </action>
+                <action id="-9" name="Set value" sid="8762508380909148" type="System">
+                    <param id="0" name="Variable">ScreenHeight</param>
+                    <param id="1" name="Value">ViewportBottom(&quot;HUD&quot;) - ViewportTop(&quot;HUD&quot;) </param>
+                </action>
+                <action id="-9" name="Set value" sid="9607456616364627" type="System">
+                    <param id="0" name="Variable">ScreenMaxDistance</param>
+                    <param id="1" name="Value">sqrt(ScreenWidth*ScreenWidth + ScreenHeight * ScreenHeight)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block collapsed="1" sid="6941332416979838">
             <conditions>
                 <condition id="0" name="On function" sid="2373435769899891" type="Function">
                     <param id="0" name="Name">&quot;AverageAngle&quot;</param>
@@ -50,7 +72,7 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="9649514433048088">
+        <event-block collapsed="1" sid="9649514433048088">
             <conditions>
                 <condition id="0" name="On function" sid="2696215776225985" type="Function">
                     <param id="0" name="Name">&quot;LengthDir&quot;</param>

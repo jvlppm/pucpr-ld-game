@@ -144,9 +144,9 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="2897060075777959" title="Characters">
+        <event-group description="" sid="2897060075777959" title="Characters">
             <sub-events>
-                <event-block sid="6429507390627526">
+                <event-block collapsed="1" sid="6429507390627526">
                     <conditions>
                         <condition id="-8" name="Is boolean instance variable set" sid="9606856087968288" type="Character">
                             <param id="0" name="Instance variable">AutoEnable</param>
@@ -394,6 +394,10 @@
                         <action behavior="LineOfSight" id="2" name="Add obstacle" sid="1801982842913132" type="Zombie">
                             <param id="0" name="Obstacle">Wall</param>
                         </action>
+                        <action behavior="Pathfinding" id="5" name="Add obstacle" sid="6163048643323379" type="Zombie">
+                            <param id="0" name="Obstacle">Wall</param>
+                        </action>
+                        <action behavior="Pathfinding" id="4" name="Regenerate obstacle map" sid="4892120239729108" type="Zombie" />
                     </actions>
                 </event-block>
                 <event-block sid="5032556258015384">
@@ -653,6 +657,14 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="9866441491046362">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="0" name="On path found" sid="3915430543899456" type="Zombie" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="1" name="Move along path" sid="9810645901238683" type="Zombie" />
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group collapsed="1" description="" sid="9438648782380541" title="Snipers">
@@ -854,7 +866,165 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="7871028774943537" title="Player">
+        <event-group description="" sid="1746198295301054" title="InvisibleMan">
+            <sub-events>
+                <event-block sid="8372894496072236">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="4561100097074711" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="5" name="Add obstacle" sid="2844587729392942" type="InvisibleMan">
+                            <param id="0" name="Obstacle">Wall</param>
+                        </action>
+                        <action behavior="Pathfinding" id="4" name="Regenerate obstacle map" sid="9442727150707392" type="InvisibleMan" />
+                    </actions>
+                </event-block>
+                <event-block sid="8838717090453826">
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="9522075622638089" type="InvisibleMan" />
+                        <condition id="-4" name="Trigger once while true" sid="6125387076320343" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="3826122779698949" type="Function">
+                            <param id="0" name="Name">&quot;InvisibleGoToRandom&quot;</param>
+                            <param id="1" name="Parameter {n}">InvisibleMan.UID</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="6177665296044897" type="InvisibleMan">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2215855887501768">
+                    <conditions>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="7587738929163339" type="InvisibleMan" />
+                        <condition id="-4" name="Trigger once while true" sid="1391259584634985" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="2" name="Stop" sid="9914234947577369" type="InvisibleMan" />
+                        <action id="-16" name="Set opacity" sid="3374205126310904" type="InvisibleMan">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4324656161830704">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="0" name="On path found" sid="139349264197762" type="InvisibleMan" />
+                        <condition id="-7" name="Compare instance variable" sid="3429764310942575" type="InvisibleMan">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="1" name="Move along path" sid="1844460773148972" type="InvisibleMan" />
+                    </actions>
+                </event-block>
+                <event-block sid="1758324003044095">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="5" name="On arrived" sid="2464856863114327" type="InvisibleMan" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="239824608917774">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="5587345242878881" type="System">
+                                    <param id="0" name="First value">distance(InvisibleMan.X, InvisibleMan.Y, Player.X, Player.Y)</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">ScreenMaxDistance * 0.25</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="1680059038303305" type="Function">
+                                    <param id="0" name="Name">&quot;InvisibleGoToRandom&quot;</param>
+                                    <param id="1" name="Parameter {n}">InvisibleMan.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8635853630942368">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="8335755231865073" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Pathfinding" id="0" name="Find path" sid="8745479849182988" type="InvisibleMan">
+                                    <param id="0" name="X">Player.X</param>
+                                    <param id="1" name="Y">Player.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="8605534249926614">
+                    <conditions>
+                        <condition id="0" name="On function" sid="1117677105536962" type="Function">
+                            <param id="0" name="Name">&quot;InvisibleGoToRandom&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="102955205702192" type="InvisibleMan">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="6592093249657284" type="InvisibleMan">
+                            <param id="0" name="X">ViewportLeft(InvisibleMan.LayerNumber) + random((ViewportRight(InvisibleMan.LayerNumber)) - (ViewportLeft(InvisibleMan.LayerNumber)))</param>
+                            <param id="1" name="Y">ViewportTop(InvisibleMan.LayerNumber) + random((ViewportBottom(InvisibleMan.LayerNumber)) - (ViewportTop(InvisibleMan.LayerNumber)))</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1003820755162384">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="182788008394396" type="System" />
+                        <condition id="-10" name="Compare opacity" sid="8062032223521878" type="InvisibleMan">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Opacity">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="9631609172000658" type="InvisibleMan">
+                            <param id="0" name="Opacity">InvisibleMan.Opacity - dt * 100</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="311469443150515">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="934612283155852" type="System">
+                            <param id="0" name="Interval (seconds)">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="9579921200981748" type="InvisibleMan">
+                            <param id="0" name="Opacity">20 + random(40)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="4952125449471231">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="1792963362865858" type="InvisibleMan">
+                            <param id="0" name="Object">Bullet</param>
+                        </condition>
+                        <condition id="0" name="On collision with another object" sid="9327317088973548" type="InvisibleMan">
+                            <param id="0" name="Object">Character</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="5504406509436261" type="InvisibleMan">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4224452801242449">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="5447475839691912" type="InvisibleMan">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="2" name="Stop" sid="8831302050581065" type="InvisibleMan" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="7871028774943537" title="Player">
             <sub-events>
                 <event-block sid="8280718908687473">
                     <conditions>
@@ -1035,7 +1205,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="3193611664449879" title="Weapons">
+        <event-group collapsed="1" description="" sid="3193611664449879" title="Weapons">
             <sub-events>
                 <event-block sid="1870731739834124">
                     <conditions>
