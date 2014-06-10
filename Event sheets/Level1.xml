@@ -158,7 +158,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="4921246366619843" title="Gun gift">
+        <event-group collapsed="1" description="" sid="4921246366619843" title="Gun gift">
             <sub-events>
                 <variable constant="0" name="enemiesOnScreen" sid="4718331082805744" static="0" type="number">0</variable>
                 <event-block sid="8860192286470366">
