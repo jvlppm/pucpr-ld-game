@@ -5,7 +5,7 @@
     <events>
         <include>Utils</include>
         <include>Camera</include>
-        <event-group collapsed="1" description="" sid="6773088495970466" title="Balloon">
+        <event-group description="" sid="6773088495970466" title="Balloon">
             <sub-events>
                 <event-block sid="1755681182641615">
                     <conditions>
@@ -72,6 +72,10 @@
                         <event-block sid="1140119623031024">
                             <conditions>
                                 <condition id="1" name="On any key pressed" sid="9987741443494835" type="Keyboard" />
+                                <condition id="-2" name="Compare Y" sid="760148598705779" type="Balloon">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Y co-ordinate">Balloon.VisibleY</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="-11" name="Add to" sid="385591119408046" type="Messages">
@@ -199,7 +203,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="8Direction" id="8" name="Set enabled" sid="5430085889670611" type="Player">
+                        <action behavior="8Direction" id="8" name="Set enabled" sid="3814321011488541" type="Player">
                             <param id="0" name="State">1</param>
                         </action>
                     </actions>
@@ -209,7 +213,7 @@
                         <condition id="-22" name="Else" sid="8392509844057057" type="System" />
                     </conditions>
                     <actions>
-                        <action behavior="8Direction" id="8" name="Set enabled" sid="1173883529244684" type="Player">
+                        <action behavior="8Direction" id="8" name="Set enabled" sid="9441717059178134" type="Player">
                             <param id="0" name="State">0</param>
                         </action>
                     </actions>
@@ -1042,7 +1046,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="7871028774943537" title="Player">
+        <event-group collapsed="1" description="" sid="7871028774943537" title="Player">
             <sub-events>
                 <event-block sid="8280718908687473">
                     <conditions>
@@ -1226,7 +1230,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="8Direction" id="4" name="Set max speed" sid="8288816612706959" type="Player">
+                        <action behavior="8Direction" id="4" name="Set max speed" sid="6476332528580009" type="Player">
                             <param id="0" name="Max Speed">130</param>
                         </action>
                     </actions>
@@ -1236,7 +1240,7 @@
                         <condition id="-22" name="Else" sid="710024685774647" type="System" />
                     </conditions>
                     <actions>
-                        <action behavior="8Direction" id="4" name="Set max speed" sid="991629096817473" type="Player">
+                        <action behavior="8Direction" id="4" name="Set max speed" sid="3916966811724728" type="Player">
                             <param id="0" name="Max Speed">80</param>
                         </action>
                     </actions>
@@ -1250,10 +1254,10 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="8Direction" id="2" name="Set ignoring input" sid="9231179624468136" type="Player">
+                        <action behavior="Fade" id="1" name="Start fade" sid="9776229295678376" type="FinalFade" />
+                        <action behavior="8Direction" id="2" name="Set ignoring input" sid="702978952208833" type="Player">
                             <param id="0" name="Input">1</param>
                         </action>
-                        <action behavior="Fade" id="1" name="Start fade" sid="9776229295678376" type="FinalFade" />
                     </actions>
                 </event-block>
                 <event-block sid="4218467260755689">
@@ -1292,7 +1296,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-group collapsed="1" description="" sid="6454508332916548" title="Knife">
+                <event-group description="" sid="6454508332916548" title="Knife">
                     <sub-events>
                         <event-block collapsed="1" sid="4064754307868574">
                             <conditions>
@@ -1416,6 +1420,12 @@
                                             <param id="0" name="Instance variable">Health</param>
                                             <param id="1" name="Value">5</param>
                                         </action>
+                                        <action behavior="8Direction" id="9" name="Set vector X" sid="9584150200478362" type="Character">
+                                            <param id="0" name="Vector X">Function.Call(&quot;LengthDir&quot;, &quot;x&quot;, 100, angle(Knife.X, Knife.Y, Character.X, Character.Y))</param>
+                                        </action>
+                                        <action behavior="8Direction" id="10" name="Set vector Y" sid="361340291936977" type="Character">
+                                            <param id="0" name="Vector Y">Function.Call(&quot;LengthDir&quot;, &quot;y&quot;, 100, angle(Knife.X, Knife.Y, Character.X, Character.Y))</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
@@ -1492,6 +1502,12 @@
                                 <action id="-12" name="Subtract from" sid="3433670883948858" type="Character">
                                     <param id="0" name="Instance variable">Health</param>
                                     <param id="1" name="Value">1</param>
+                                </action>
+                                <action behavior="8Direction" id="9" name="Set vector X" sid="7967158853987824" type="Character">
+                                    <param id="0" name="Vector X">Function.Call(&quot;LengthDir&quot;, &quot;x&quot;, 100, angle(Bullet.X, Bullet.Y, Character.X, Character.Y))</param>
+                                </action>
+                                <action behavior="8Direction" id="10" name="Set vector Y" sid="9058323516951169" type="Character">
+                                    <param id="0" name="Vector Y">Function.Call(&quot;LengthDir&quot;, &quot;y&quot;, 100, angle(Bullet.X, Bullet.Y, Character.X, Character.Y))</param>
                                 </action>
                             </actions>
                         </event-block>

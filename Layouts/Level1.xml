@@ -590,6 +590,17 @@
                                 <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>200</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>360 degree (smooth)</set-angle>
+                                <default-controls>No</default-controls>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
                         <behavior-instance type="LineOfSight">
                             <properties>
                                 <obstacles>Solids</obstacles>
@@ -623,7 +634,7 @@
                     </properties>
                     <instance-variables>
                         <AutoEnable>true</AutoEnable>
-                        <Health>1</Health>
+                        <Health>2</Health>
                         <Holding>-1</Holding>
                         <Following>false</Following>
                         <KeepWalking>false</KeepWalking>
@@ -655,6 +666,17 @@
                         </behavior-instance>
                         <behavior-instance type="Solid">
                             <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>200</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>360 degree (smooth)</set-angle>
+                                <default-controls>No</default-controls>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -936,6 +958,17 @@
                                 <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>200</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>360 degree (smooth)</set-angle>
+                                <default-controls>No</default-controls>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
                         <behavior-instance type="LineOfSight">
                             <properties>
                                 <obstacles>Solids</obstacles>
@@ -1048,10 +1081,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>248</x>
+                        <x>104</x>
                         <y>664</y>
                         <z>0</z>
-                        <width>512</width>
+                        <width>656</width>
                         <height>16</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -1068,7 +1101,7 @@
                     </properties>
                     <instance-variables>
                         <AutoEnable>true</AutoEnable>
-                        <Health>1</Health>
+                        <Health>2</Health>
                         <Holding>-1</Holding>
                         <Following>false</Following>
                         <KeepWalking>false</KeepWalking>
@@ -1100,6 +1133,17 @@
                         </behavior-instance>
                         <behavior-instance type="Solid">
                             <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>200</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>360 degree (smooth)</set-angle>
+                                <default-controls>No</default-controls>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -1150,7 +1194,7 @@
                     </properties>
                     <instance-variables>
                         <AutoEnable>true</AutoEnable>
-                        <Health>1</Health>
+                        <Health>2</Health>
                         <Holding>-1</Holding>
                         <Following>false</Following>
                         <KeepWalking>false</KeepWalking>
@@ -1182,6 +1226,17 @@
                         </behavior-instance>
                         <behavior-instance type="Solid">
                             <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>200</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>360 degree (smooth)</set-angle>
+                                <default-controls>No</default-controls>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -1293,7 +1348,7 @@
                     </properties>
                     <instance-variables>
                         <AutoEnable>true</AutoEnable>
-                        <Health>1</Health>
+                        <Health>2</Health>
                         <Holding>-1</Holding>
                         <Following>false</Following>
                         <KeepWalking>false</KeepWalking>
@@ -1325,6 +1380,17 @@
                         </behavior-instance>
                         <behavior-instance type="Solid">
                             <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>200</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>360 degree (smooth)</set-angle>
+                                <default-controls>No</default-controls>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -1375,7 +1441,7 @@
                     </properties>
                     <instance-variables>
                         <AutoEnable>true</AutoEnable>
-                        <Health>1</Health>
+                        <Health>2</Health>
                         <Holding>-1</Holding>
                         <Following>false</Following>
                         <KeepWalking>true</KeepWalking>
@@ -1407,6 +1473,17 @@
                         </behavior-instance>
                         <behavior-instance type="Solid">
                             <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>200</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>360 degree (smooth)</set-angle>
+                                <default-controls>No</default-controls>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -1567,6 +1644,17 @@
                                 <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>200</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>360 degree (smooth)</set-angle>
+                                <default-controls>No</default-controls>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
                         <behavior-instance type="LineOfSight">
                             <properties>
                                 <obstacles>Solids</obstacles>
@@ -1600,7 +1688,7 @@
                     </properties>
                     <instance-variables>
                         <AutoEnable>true</AutoEnable>
-                        <Health>1</Health>
+                        <Health>2</Health>
                         <Holding>-1</Holding>
                         <Following>false</Following>
                         <KeepWalking>false</KeepWalking>
@@ -1632,6 +1720,17 @@
                         </behavior-instance>
                         <behavior-instance type="Solid">
                             <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>200</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>360 degree (smooth)</set-angle>
+                                <default-controls>No</default-controls>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -1682,7 +1781,7 @@
                     </properties>
                     <instance-variables>
                         <AutoEnable>true</AutoEnable>
-                        <Health>1</Health>
+                        <Health>2</Health>
                         <Holding>-1</Holding>
                         <Following>false</Following>
                         <KeepWalking>false</KeepWalking>
@@ -1714,6 +1813,17 @@
                         </behavior-instance>
                         <behavior-instance type="Solid">
                             <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>200</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>360 degree (smooth)</set-angle>
+                                <default-controls>No</default-controls>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -1764,7 +1874,7 @@
                     </properties>
                     <instance-variables>
                         <AutoEnable>true</AutoEnable>
-                        <Health>1</Health>
+                        <Health>2</Health>
                         <Holding>-1</Holding>
                         <Following>false</Following>
                         <KeepWalking>false</KeepWalking>
@@ -1796,6 +1906,17 @@
                         </behavior-instance>
                         <behavior-instance type="Solid">
                             <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>200</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>360 degree (smooth)</set-angle>
+                                <default-controls>No</default-controls>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -1846,7 +1967,7 @@
                     </properties>
                     <instance-variables>
                         <AutoEnable>true</AutoEnable>
-                        <Health>1</Health>
+                        <Health>2</Health>
                         <Holding>-1</Holding>
                         <Following>false</Following>
                         <KeepWalking>false</KeepWalking>
@@ -1878,6 +1999,17 @@
                         </behavior-instance>
                         <behavior-instance type="Solid">
                             <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>200</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>360 degree (smooth)</set-angle>
+                                <default-controls>No</default-controls>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -1928,7 +2060,7 @@
                     </properties>
                     <instance-variables>
                         <AutoEnable>true</AutoEnable>
-                        <Health>1</Health>
+                        <Health>2</Health>
                         <Holding>-1</Holding>
                         <Following>false</Following>
                         <KeepWalking>false</KeepWalking>
@@ -1960,6 +2092,17 @@
                         </behavior-instance>
                         <behavior-instance type="Solid">
                             <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>200</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>360 degree (smooth)</set-angle>
+                                <default-controls>No</default-controls>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -2308,6 +2451,17 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>200</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>360 degree (smooth)</set-angle>
+                                <default-controls>No</default-controls>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
                         <behavior-instance type="LineOfSight">
                             <properties>
                                 <obstacles>Solids</obstacles>
@@ -2341,7 +2495,7 @@
                     </properties>
                     <instance-variables>
                         <AutoEnable>true</AutoEnable>
-                        <Health>1</Health>
+                        <Health>2</Health>
                         <Holding>-1</Holding>
                         <Following>false</Following>
                         <KeepWalking>false</KeepWalking>
@@ -2373,6 +2527,17 @@
                         </behavior-instance>
                         <behavior-instance type="Solid">
                             <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>200</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>360 degree (smooth)</set-angle>
+                                <default-controls>No</default-controls>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -2423,7 +2588,7 @@
                     </properties>
                     <instance-variables>
                         <AutoEnable>true</AutoEnable>
-                        <Health>1</Health>
+                        <Health>2</Health>
                         <Holding>-1</Holding>
                         <Following>false</Following>
                         <KeepWalking>false</KeepWalking>
@@ -2455,6 +2620,17 @@
                         </behavior-instance>
                         <behavior-instance type="Solid">
                             <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>200</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>360 degree (smooth)</set-angle>
+                                <default-controls>No</default-controls>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -2505,7 +2681,7 @@
                     </properties>
                     <instance-variables>
                         <AutoEnable>true</AutoEnable>
-                        <Health>1</Health>
+                        <Health>2</Health>
                         <Holding>-1</Holding>
                         <Following>false</Following>
                         <KeepWalking>false</KeepWalking>
@@ -2537,6 +2713,17 @@
                         </behavior-instance>
                         <behavior-instance type="Solid">
                             <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>200</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>360 degree (smooth)</set-angle>
+                                <default-controls>No</default-controls>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -2694,6 +2881,17 @@
                                 <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>200</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>360 degree (smooth)</set-angle>
+                                <default-controls>No</default-controls>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
                         <behavior-instance type="LineOfSight">
                             <properties>
                                 <obstacles>Solids</obstacles>
@@ -2756,6 +2954,17 @@
                         </behavior-instance>
                         <behavior-instance type="Solid">
                             <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>200</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>360 degree (smooth)</set-angle>
+                                <default-controls>No</default-controls>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -2824,6 +3033,17 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>200</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>360 degree (smooth)</set-angle>
+                                <default-controls>No</default-controls>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
                         <behavior-instance type="LineOfSight">
                             <properties>
                                 <obstacles>Solids</obstacles>
@@ -2889,6 +3109,17 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>200</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>360 degree (smooth)</set-angle>
+                                <default-controls>No</default-controls>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
                         <behavior-instance type="LineOfSight">
                             <properties>
                                 <obstacles>Solids</obstacles>
@@ -2922,7 +3153,7 @@
                     </properties>
                     <instance-variables>
                         <AutoEnable>true</AutoEnable>
-                        <Health>1</Health>
+                        <Health>2</Health>
                         <Holding>-1</Holding>
                         <Following>false</Following>
                         <KeepWalking>false</KeepWalking>
@@ -2954,6 +3185,17 @@
                         </behavior-instance>
                         <behavior-instance type="Solid">
                             <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>200</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>360 degree (smooth)</set-angle>
+                                <default-controls>No</default-controls>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -3004,7 +3246,7 @@
                     </properties>
                     <instance-variables>
                         <AutoEnable>true</AutoEnable>
-                        <Health>1</Health>
+                        <Health>2</Health>
                         <Holding>-1</Holding>
                         <Following>false</Following>
                         <KeepWalking>false</KeepWalking>
@@ -3036,6 +3278,17 @@
                         </behavior-instance>
                         <behavior-instance type="Solid">
                             <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>200</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>360 degree (smooth)</set-angle>
+                                <default-controls>No</default-controls>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -3086,7 +3339,7 @@
                     </properties>
                     <instance-variables>
                         <AutoEnable>true</AutoEnable>
-                        <Health>1</Health>
+                        <Health>2</Health>
                         <Holding>-1</Holding>
                         <Following>false</Following>
                         <KeepWalking>false</KeepWalking>
@@ -3118,6 +3371,17 @@
                         </behavior-instance>
                         <behavior-instance type="Solid">
                             <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>200</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>360 degree (smooth)</set-angle>
+                                <default-controls>No</default-controls>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -3168,7 +3432,7 @@
                     </properties>
                     <instance-variables>
                         <AutoEnable>true</AutoEnable>
-                        <Health>1</Health>
+                        <Health>2</Health>
                         <Holding>-1</Holding>
                         <Following>false</Following>
                         <KeepWalking>false</KeepWalking>
@@ -3200,6 +3464,17 @@
                         </behavior-instance>
                         <behavior-instance type="Solid">
                             <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>200</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>360 degree (smooth)</set-angle>
+                                <default-controls>No</default-controls>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -3250,7 +3525,7 @@
                     </properties>
                     <instance-variables>
                         <AutoEnable>true</AutoEnable>
-                        <Health>1</Health>
+                        <Health>2</Health>
                         <Holding>-1</Holding>
                         <Following>false</Following>
                         <KeepWalking>false</KeepWalking>
@@ -3282,6 +3557,17 @@
                         </behavior-instance>
                         <behavior-instance type="Solid">
                             <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>200</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>360 degree (smooth)</set-angle>
+                                <default-controls>No</default-controls>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -3332,7 +3618,7 @@
                     </properties>
                     <instance-variables>
                         <AutoEnable>true</AutoEnable>
-                        <Health>1</Health>
+                        <Health>2</Health>
                         <Holding>-1</Holding>
                         <Following>false</Following>
                         <KeepWalking>false</KeepWalking>
@@ -3364,6 +3650,17 @@
                         </behavior-instance>
                         <behavior-instance type="Solid">
                             <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>200</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>360 degree (smooth)</set-angle>
+                                <default-controls>No</default-controls>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -3414,7 +3711,7 @@
                     </properties>
                     <instance-variables>
                         <AutoEnable>true</AutoEnable>
-                        <Health>1</Health>
+                        <Health>2</Health>
                         <Holding>-1</Holding>
                         <Following>false</Following>
                         <KeepWalking>false</KeepWalking>
@@ -3446,6 +3743,17 @@
                         </behavior-instance>
                         <behavior-instance type="Solid">
                             <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>200</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>360 degree (smooth)</set-angle>
+                                <default-controls>No</default-controls>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -3496,7 +3804,7 @@
                     </properties>
                     <instance-variables>
                         <AutoEnable>true</AutoEnable>
-                        <Health>1</Health>
+                        <Health>2</Health>
                         <Holding>-1</Holding>
                         <Following>false</Following>
                         <KeepWalking>false</KeepWalking>
@@ -3528,6 +3836,17 @@
                         </behavior-instance>
                         <behavior-instance type="Solid">
                             <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>200</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>360 degree (smooth)</set-angle>
+                                <default-controls>No</default-controls>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -3578,7 +3897,7 @@
                     </properties>
                     <instance-variables>
                         <AutoEnable>true</AutoEnable>
-                        <Health>1</Health>
+                        <Health>2</Health>
                         <Holding>-1</Holding>
                         <Following>false</Following>
                         <KeepWalking>false</KeepWalking>
@@ -3610,6 +3929,17 @@
                         </behavior-instance>
                         <behavior-instance type="Solid">
                             <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>200</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>360 degree (smooth)</set-angle>
+                                <default-controls>No</default-controls>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -3660,7 +3990,7 @@
                     </properties>
                     <instance-variables>
                         <AutoEnable>true</AutoEnable>
-                        <Health>1</Health>
+                        <Health>2</Health>
                         <Holding>-1</Holding>
                         <Following>false</Following>
                         <KeepWalking>false</KeepWalking>
@@ -3692,6 +4022,17 @@
                         </behavior-instance>
                         <behavior-instance type="Solid">
                             <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>200</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>360 degree (smooth)</set-angle>
+                                <default-controls>No</default-controls>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -3951,7 +4292,7 @@
                     </properties>
                     <instance-variables>
                         <AutoEnable>true</AutoEnable>
-                        <Health>1</Health>
+                        <Health>2</Health>
                         <Holding>-1</Holding>
                         <Following>false</Following>
                         <KeepWalking>false</KeepWalking>
@@ -3983,6 +4324,17 @@
                         </behavior-instance>
                         <behavior-instance type="Solid">
                             <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>200</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>360 degree (smooth)</set-angle>
+                                <default-controls>No</default-controls>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -4033,7 +4385,7 @@
                     </properties>
                     <instance-variables>
                         <AutoEnable>true</AutoEnable>
-                        <Health>1</Health>
+                        <Health>2</Health>
                         <Holding>-1</Holding>
                         <Following>false</Following>
                         <KeepWalking>false</KeepWalking>
@@ -4065,6 +4417,17 @@
                         </behavior-instance>
                         <behavior-instance type="Solid">
                             <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>200</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>360 degree (smooth)</set-angle>
+                                <default-controls>No</default-controls>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -4115,7 +4478,7 @@
                     </properties>
                     <instance-variables>
                         <AutoEnable>true</AutoEnable>
-                        <Health>1</Health>
+                        <Health>2</Health>
                         <Holding>-1</Holding>
                         <Following>false</Following>
                         <KeepWalking>false</KeepWalking>
@@ -4147,6 +4510,17 @@
                         </behavior-instance>
                         <behavior-instance type="Solid">
                             <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>200</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>360 degree (smooth)</set-angle>
+                                <default-controls>No</default-controls>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -4197,7 +4571,7 @@
                     </properties>
                     <instance-variables>
                         <AutoEnable>true</AutoEnable>
-                        <Health>1</Health>
+                        <Health>2</Health>
                         <Holding>-1</Holding>
                         <Following>false</Following>
                         <KeepWalking>false</KeepWalking>
@@ -4229,6 +4603,17 @@
                         </behavior-instance>
                         <behavior-instance type="Solid">
                             <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>200</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>360 degree (smooth)</set-angle>
+                                <default-controls>No</default-controls>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -4311,6 +4696,17 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>200</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>360 degree (smooth)</set-angle>
+                                <default-controls>No</default-controls>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
                         <behavior-instance type="LineOfSight">
                             <properties>
                                 <obstacles>Solids</obstacles>
@@ -4346,6 +4742,39 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>2.946433783</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="SimpleWall" uid="96">
+                    <properties>
+                        <left-margin>0</left-margin>
+                        <right-margin>0</right-margin>
+                        <top-margin>0</top-margin>
+                        <bottom-margin>0</bottom-margin>
+                        <edges>Stretch</edges>
+                        <fill>Stretch</fill>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                        <seams>Overlap</seams>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>104</x>
+                        <y>616</y>
+                        <z>0</z>
+                        <width>16</width>
+                        <height>48</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
                         <opacity>1</opacity>
                     </world>
                 </instance>

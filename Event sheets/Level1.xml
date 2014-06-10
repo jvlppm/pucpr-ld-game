@@ -73,7 +73,7 @@
                             <param id="0" name="Instance variable">AutoEnable</param>
                             <param id="1" name="Value">0</param>
                         </action>
-                        <action behavior="8Direction" id="8" name="Set enabled" sid="7991151956449249" type="Player">
+                        <action behavior="8Direction" id="8" name="Set enabled" sid="55189731672537" type="Player">
                             <param id="0" name="State">0</param>
                         </action>
                     </actions>
@@ -158,10 +158,10 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="4921246366619843" title="Gun gift">
+        <event-group description="" sid="4921246366619843" title="Gun gift">
             <sub-events>
                 <variable constant="0" name="enemiesOnScreen" sid="4718331082805744" static="0" type="number">0</variable>
-                <event-block sid="8860192286470366">
+                <event-block collapsed="1" sid="8860192286470366">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="8719359496320166" type="Player">
                             <param id="0" name="Object">Victim</param>
@@ -169,12 +169,12 @@
                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="540434433584671" type="Player">
                             <param id="0" name="Instance variable">CarryingGun</param>
                         </condition>
-                        <condition behavior="Bullet" id="0" name="Compare speed" sid="58873318555351" type="Victim">
+                        <condition behavior="Bullet" disabled="1" id="0" name="Compare speed" sid="58873318555351" type="Victim">
                             <param id="0" name="Comparison">0</param>
                             <param id="1" name="Speed">0</param>
                         </condition>
                         <condition id="-14" name="Pick by unique ID" sid="4677829952858737" type="Victim">
-                            <param id="0" name="Unique ID">4</param>
+                            <param id="0" name="Unique ID">44</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -194,7 +194,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="8854730596936841">
+                        <event-block collapsed="1" sid="8854730596936841">
                             <conditions>
                                 <condition id="-22" name="Else" sid="149261610951563" type="System" />
                             </conditions>
