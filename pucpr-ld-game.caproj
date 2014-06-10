@@ -21,6 +21,7 @@
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
         <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
@@ -51,7 +52,7 @@
         <prop name="Sampling">Point</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
-    <object-folder expanded="0">
+    <object-folder expanded="1">
         <object-type name="Player" sid="4051500685572501">
             <plugin id="Sprite" />
             <instance-variables>
@@ -147,6 +148,12 @@
                             <point x="1" y="0" />
                         </collision-poly>
                     </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Dead" pingpong="0" repeatcount="1" repeatto="0" sid="1246902550592073" speed="5">
+                    <frame duration="1" hotspotX="7.8125" hotspotY="7.8125" />
+                </animation>
+                <animation framecount="1" loop="0" name="Squashed" pingpong="0" repeatcount="1" repeatto="0" sid="6131889865487997" speed="5">
+                    <frame duration="1" hotspotX="7.8125" hotspotY="7.8125" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -428,6 +435,32 @@
                             <point x="1" y="1" />
                         </collision-poly>
                     </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="InitialFade" sid="6769345420399949">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="8290730497436522">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4849029094970238" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="FinalFade" sid="2020677740914041">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="3019429452008753">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9637114132142327" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>

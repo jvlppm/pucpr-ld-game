@@ -557,7 +557,7 @@
                     </properties>
                     <instance-variables>
                         <AutoEnable>true</AutoEnable>
-                        <Health>1</Health>
+                        <Health>10</Health>
                         <Running>false</Running>
                         <MaxSpeed>50</MaxSpeed>
                     </instance-variables>
@@ -903,7 +903,7 @@
                     </properties>
                     <instance-variables>
                         <AutoEnable>false</AutoEnable>
-                        <Health>1</Health>
+                        <Health>10</Health>
                         <Running>false</Running>
                         <MaxSpeed>50</MaxSpeed>
                     </instance-variables>
@@ -1534,7 +1534,7 @@
                     </properties>
                     <instance-variables>
                         <AutoEnable>false</AutoEnable>
-                        <Health>1</Health>
+                        <Health>10</Health>
                         <Running>false</Running>
                         <MaxSpeed>10</MaxSpeed>
                     </instance-variables>
@@ -2042,7 +2042,7 @@
                     </properties>
                     <instance-variables>
                         <AutoEnable>true</AutoEnable>
-                        <Health>1</Health>
+                        <Health>10</Health>
                         <CarryingKnife>false</CarryingKnife>
                         <HoldingKnife>false</HoldingKnife>
                         <CarryingGun>false</CarryingGun>
@@ -2094,8 +2094,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>896</x>
-                        <y>736</y>
+                        <x>40</x>
+                        <y>120</y>
                         <z>0</z>
                         <width>16</width>
                         <height>16</height>
@@ -2661,7 +2661,7 @@
                     </properties>
                     <instance-variables>
                         <AutoEnable>false</AutoEnable>
-                        <Health>1</Health>
+                        <Health>10</Health>
                         <Running>false</Running>
                         <MaxSpeed>50</MaxSpeed>
                     </instance-variables>
@@ -4507,6 +4507,72 @@
                         <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="InitialFade" uid="94">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>2</fade-out-time>
+                                <destroy>No</destroy>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>128</x>
+                        <y>112</y>
+                        <z>0</z>
+                        <width>256</width>
+                        <height>224</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="FinalFade" uid="95">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>2</fade-in-time>
+                                <wait-time>1</wait-time>
+                                <fade-out-time>0.001</fade-out-time>
+                                <destroy>After fade out</destroy>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>128</x>
+                        <y>112</y>
+                        <z>0</z>
+                        <width>256</width>
+                        <height>224</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0</opacity>
                     </world>
                 </instance>
             </instances>

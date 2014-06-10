@@ -144,7 +144,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="2897060075777959" title="Characters">
+        <event-group collapsed="1" description="" sid="2897060075777959" title="Characters">
             <sub-events>
                 <event-block collapsed="1" sid="6429507390627526">
                     <conditions>
@@ -569,6 +569,10 @@
                         <action id="-8" name="Set angle" sid="2684831201144417" type="Zombie">
                             <param id="0" name="Angle">angle(Zombie.X, Zombie.Y, Character.X, Character.Y)</param>
                         </action>
+                        <action id="-12" name="Subtract from" sid="8724385663598527" type="Character">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block collapsed="1" sid="6161878113429321">
@@ -870,7 +874,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="1746198295301054" title="InvisibleMan">
+        <event-group collapsed="1" description="" sid="1746198295301054" title="InvisibleMan">
             <sub-events>
                 <event-block sid="8372894496072236">
                     <conditions>
@@ -1038,7 +1042,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="7871028774943537" title="Player">
+        <event-group description="" sid="7871028774943537" title="Player">
             <sub-events>
                 <event-block sid="8280718908687473">
                     <conditions>
@@ -1050,6 +1054,11 @@
                         </condition>
                         <condition id="-8" name="Is boolean instance variable set" sid="9247062216808947" type="Player">
                             <param id="0" name="Instance variable">HoldingKnife</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="7244224611413852" type="Player">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -1079,6 +1088,11 @@
                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="408557440313148" type="Player">
                             <param id="0" name="Instance variable">HoldingKnife</param>
                         </condition>
+                        <condition id="-7" name="Compare instance variable" sid="57115545914913" type="Player">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-13" name="Set boolean" sid="9677900557923006" type="Player">
@@ -1104,6 +1118,11 @@
                         </condition>
                         <condition id="-7" name="Compare instance variable" sid="3500884186671823" type="Player">
                             <param id="0" name="Instance variable">SimpleBullets</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="5979936400008094" type="Player">
+                            <param id="0" name="Instance variable">Health</param>
                             <param id="1" name="Comparison">4</param>
                             <param id="2" name="Value">0</param>
                         </condition>
@@ -1180,6 +1199,11 @@
                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="2197136174959661" type="Player">
                             <param id="0" name="Instance variable">HoldingGun</param>
                         </condition>
+                        <condition id="-7" name="Compare instance variable" sid="594551590011734" type="Player">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-13" name="Set boolean" sid="9047041307140641" type="Player">
@@ -1215,6 +1239,29 @@
                         <action behavior="8Direction" id="4" name="Set max speed" sid="991629096817473" type="Player">
                             <param id="0" name="Max Speed">80</param>
                         </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3712788234800309">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="4255895298332425" type="Player">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="2" name="Set ignoring input" sid="9231179624468136" type="Player">
+                            <param id="0" name="Input">1</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="9776229295678376" type="FinalFade" />
+                    </actions>
+                </event-block>
+                <event-block sid="4218467260755689">
+                    <conditions>
+                        <condition behavior="Fade" id="0" name="On fade out finished" sid="9466521910715355" type="FinalFade" />
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Restart layout" sid="4446848117981179" type="System" />
                     </actions>
                 </event-block>
             </sub-events>
