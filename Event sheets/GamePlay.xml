@@ -5,7 +5,7 @@
     <events>
         <include>Utils</include>
         <include>Camera</include>
-        <event-group description="" sid="6773088495970466" title="Balloon">
+        <event-group collapsed="1" description="" sid="6773088495970466" title="Balloon">
             <sub-events>
                 <event-block sid="1755681182641615">
                     <conditions>
@@ -148,7 +148,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="2897060075777959" title="Characters">
+        <event-group description="" sid="2897060075777959" title="Characters">
             <sub-events>
                 <event-block collapsed="1" sid="6429507390627526">
                     <conditions>
@@ -252,6 +252,9 @@
                         <action id="4" name="Set animation" sid="2969297058111159" type="Character">
                             <param id="0" name="Animation">&quot;Dead&quot;</param>
                             <param id="1" name="From">1</param>
+                        </action>
+                        <action behavior="8Direction" id="8" name="Set enabled" sid="885581008437747" type="Character">
+                            <param id="0" name="State">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -549,7 +552,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-13" name="Set boolean" sid="6786075232568224" type="Character">
+                        <action disabled="1" id="-13" name="Set boolean" sid="6786075232568224" type="Character">
                             <param id="0" name="Instance variable">AutoEnable</param>
                             <param id="1" name="Value">0</param>
                         </action>
@@ -561,10 +564,18 @@
                             <param id="0" name="Instance variable">Holding</param>
                             <param id="1" name="Value">Character.UID</param>
                         </action>
+                        <action id="-10" name="Set value" sid="1054802453553944" type="Zombie">
+                            <param id="0" name="Instance variable">HoldX</param>
+                            <param id="1" name="Value">Character.X</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="5726668563297888" type="Zombie">
+                            <param id="0" name="Instance variable">HoldY</param>
+                            <param id="1" name="Value">Character.Y</param>
+                        </action>
                         <action behavior="Sine" id="0" name="Set active" sid="1158397562513376" type="Character">
                             <param id="0" name="State">1</param>
                         </action>
-                        <action behavior="Bullet" id="5" name="Set enabled" sid="2684671191408064" type="Character">
+                        <action behavior="Bullet" disabled="1" id="5" name="Set enabled" sid="2684671191408064" type="Character">
                             <param id="0" name="State">0</param>
                         </action>
                         <action behavior="Bullet" id="5" name="Set enabled" sid="1638344797867103" type="Zombie">
@@ -573,7 +584,7 @@
                         <action id="-8" name="Set angle" sid="2684831201144417" type="Zombie">
                             <param id="0" name="Angle">angle(Zombie.X, Zombie.Y, Character.X, Character.Y)</param>
                         </action>
-                        <action id="-12" name="Subtract from" sid="8724385663598527" type="Character">
+                        <action disabled="1" id="-12" name="Subtract from" sid="8724385663598527" type="Character">
                             <param id="0" name="Instance variable">Health</param>
                             <param id="1" name="Value">1</param>
                         </action>
@@ -596,7 +607,7 @@
                             <param id="0" name="Instance variable">Holding</param>
                             <param id="1" name="Value">-1</param>
                         </action>
-                        <action id="-13" name="Set boolean" sid="5587902954441136" type="Character">
+                        <action disabled="1" id="-13" name="Set boolean" sid="5587902954441136" type="Character">
                             <param id="0" name="Instance variable">AutoEnable</param>
                             <param id="1" name="Value">1</param>
                         </action>
@@ -607,7 +618,7 @@
                         <action behavior="Sine" id="0" name="Set active" sid="844276943980011" type="Character">
                             <param id="0" name="State">0</param>
                         </action>
-                        <action behavior="Bullet" id="5" name="Set enabled" sid="1451248643632821" type="Character">
+                        <action behavior="Bullet" disabled="1" id="5" name="Set enabled" sid="1451248643632821" type="Character">
                             <param id="0" name="State">1</param>
                         </action>
                         <action id="-10" name="Set value" sid="1589709759369264" type="Zombie">
@@ -675,6 +686,28 @@
                     </conditions>
                     <actions>
                         <action behavior="Pathfinding" id="1" name="Move along path" sid="9810645901238683" type="Zombie" />
+                    </actions>
+                </event-block>
+                <event-block sid="4324840078489887">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="7292872579562534" type="System">
+                            <param id="0" name="Object">Zombie</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="1135305714073343" type="Character">
+                            <param id="0" name="Unique ID">Zombie.Holding</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="4901705873845822" type="Character">
+                            <param id="0" name="X">Zombie.HoldX + Character.Sine.Value</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="2902904824734663" type="Character">
+                            <param id="0" name="Y">Zombie.HoldY + Character.Sine.Value</param>
+                        </action>
+                        <action id="-12" name="Subtract from" sid="4460749865104301" type="Character">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Value">dt * 2</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -1046,8 +1079,17 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="7871028774943537" title="Player">
+        <event-group description="" sid="7871028774943537" title="Player">
             <sub-events>
+                <event-block sid="1225327048404472">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="2779321727857248" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="7045334246491602" type="Ammo" />
+                        <action id="-9" name="Destroy" sid="4113286106014193" type="BulletCount" />
+                    </actions>
+                </event-block>
                 <event-block sid="8280718908687473">
                     <conditions>
                         <condition id="0" name="On key pressed" sid="1089611285238527" type="Keyboard">
@@ -1120,7 +1162,7 @@
                         <condition id="-8" name="Is boolean instance variable set" sid="7614508555794209" type="Player">
                             <param id="0" name="Instance variable">HoldingGun</param>
                         </condition>
-                        <condition id="-7" name="Compare instance variable" sid="3500884186671823" type="Player">
+                        <condition disabled="1" id="-7" name="Compare instance variable" sid="3500884186671823" type="Player">
                             <param id="0" name="Instance variable">SimpleBullets</param>
                             <param id="1" name="Comparison">4</param>
                             <param id="2" name="Value">0</param>
@@ -1556,7 +1598,7 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="569804434613888" title="HUD">
+        <event-group description="" sid="569804434613888" title="HUD">
             <sub-events>
                 <event-block collapsed="1" sid="1517814329212286">
                     <conditions>

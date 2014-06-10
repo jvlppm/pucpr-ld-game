@@ -507,7 +507,7 @@
                         <x>248</x>
                         <y>0</y>
                         <z>0</z>
-                        <width>200</width>
+                        <width>112</width>
                         <height>88</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -540,7 +540,7 @@
                         <x>248</x>
                         <y>136</y>
                         <z>0</z>
-                        <width>200</width>
+                        <width>112</width>
                         <height>88</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -613,7 +613,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>464</x>
+                        <x>368</x>
                         <y>112</y>
                         <z>0</z>
                         <width>16</width>
@@ -639,6 +639,8 @@
                         <Following>false</Following>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
+                        <HoldX>0</HoldX>
+                        <HoldY>0</HoldY>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -706,7 +708,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>392</x>
+                        <x>344</x>
                         <y>112</y>
                         <z>0</z>
                         <width>16</width>
@@ -1106,6 +1108,8 @@
                         <Following>false</Following>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
+                        <HoldX>0</HoldX>
+                        <HoldY>0</HoldY>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -1199,6 +1203,8 @@
                         <Following>false</Following>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
+                        <HoldX>0</HoldX>
+                        <HoldY>0</HoldY>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -1266,8 +1272,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>560</x>
-                        <y>208</y>
+                        <x>592</x>
+                        <y>200</y>
                         <z>0</z>
                         <width>16</width>
                         <height>16</height>
@@ -1353,6 +1359,8 @@
                         <Following>false</Following>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
+                        <HoldX>0</HoldX>
+                        <HoldY>0</HoldY>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -1446,6 +1454,8 @@
                         <Following>false</Following>
                         <KeepWalking>true</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
+                        <HoldX>0</HoldX>
+                        <HoldY>0</HoldY>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -1693,6 +1703,8 @@
                         <Following>false</Following>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
+                        <HoldX>0</HoldX>
+                        <HoldY>0</HoldY>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -1786,6 +1798,8 @@
                         <Following>false</Following>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
+                        <HoldX>0</HoldX>
+                        <HoldY>0</HoldY>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -1879,6 +1893,8 @@
                         <Following>false</Following>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
+                        <HoldX>0</HoldX>
+                        <HoldY>0</HoldY>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -1972,6 +1988,8 @@
                         <Following>false</Following>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
+                        <HoldX>0</HoldX>
+                        <HoldY>0</HoldY>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -2065,6 +2083,8 @@
                         <Following>false</Following>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
+                        <HoldX>0</HoldX>
+                        <HoldY>0</HoldY>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -2500,6 +2520,8 @@
                         <Following>false</Following>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
+                        <HoldX>0</HoldX>
+                        <HoldY>0</HoldY>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -2593,6 +2615,8 @@
                         <Following>false</Following>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
+                        <HoldX>0</HoldX>
+                        <HoldY>0</HoldY>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -2686,6 +2710,8 @@
                         <Following>false</Following>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
+                        <HoldX>0</HoldX>
+                        <HoldY>0</HoldY>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -3158,6 +3184,8 @@
                         <Following>false</Following>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
+                        <HoldX>0</HoldX>
+                        <HoldY>0</HoldY>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -3251,6 +3279,8 @@
                         <Following>false</Following>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
+                        <HoldX>0</HoldX>
+                        <HoldY>0</HoldY>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -3344,6 +3374,8 @@
                         <Following>false</Following>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
+                        <HoldX>0</HoldX>
+                        <HoldY>0</HoldY>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -3437,6 +3469,8 @@
                         <Following>false</Following>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
+                        <HoldX>0</HoldX>
+                        <HoldY>0</HoldY>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -3530,6 +3564,8 @@
                         <Following>false</Following>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
+                        <HoldX>0</HoldX>
+                        <HoldY>0</HoldY>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -3623,6 +3659,8 @@
                         <Following>false</Following>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
+                        <HoldX>0</HoldX>
+                        <HoldY>0</HoldY>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -3716,6 +3754,8 @@
                         <Following>false</Following>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
+                        <HoldX>0</HoldX>
+                        <HoldY>0</HoldY>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -3809,6 +3849,8 @@
                         <Following>false</Following>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
+                        <HoldX>0</HoldX>
+                        <HoldY>0</HoldY>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -3902,6 +3944,8 @@
                         <Following>false</Following>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
+                        <HoldX>0</HoldX>
+                        <HoldY>0</HoldY>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -3995,6 +4039,8 @@
                         <Following>false</Following>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
+                        <HoldX>0</HoldX>
+                        <HoldY>0</HoldY>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -4297,6 +4343,8 @@
                         <Following>false</Following>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
+                        <HoldX>0</HoldX>
+                        <HoldY>0</HoldY>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -4390,6 +4438,8 @@
                         <Following>false</Following>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
+                        <HoldX>0</HoldX>
+                        <HoldY>0</HoldY>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -4483,6 +4533,8 @@
                         <Following>false</Following>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
+                        <HoldX>0</HoldX>
+                        <HoldY>0</HoldY>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -4576,6 +4628,8 @@
                         <Following>false</Following>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
+                        <HoldX>0</HoldX>
+                        <HoldY>0</HoldY>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">

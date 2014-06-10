@@ -161,7 +161,7 @@
         <event-group description="" sid="4921246366619843" title="Gun gift">
             <sub-events>
                 <variable constant="0" name="enemiesOnScreen" sid="4718331082805744" static="0" type="number">0</variable>
-                <event-block collapsed="1" sid="8860192286470366">
+                <event-block sid="8860192286470366">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="8719359496320166" type="Player">
                             <param id="0" name="Object">Victim</param>
@@ -185,6 +185,12 @@
                                     <param id="0" name="Instance variable">Health</param>
                                     <param id="1" name="Comparison">3</param>
                                     <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="1" name="Is overlapping another object" sid="2365289550650655" type="Player">
+                                    <param id="0" name="Object">Area</param>
+                                </condition>
+                                <condition id="1" inverted="1" name="Is overlapping another object" sid="7412510950704774" type="GoodGuy">
+                                    <param id="0" name="Object">Area</param>
                                 </condition>
                             </conditions>
                             <actions>

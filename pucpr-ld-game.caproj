@@ -87,6 +87,8 @@
                 <instance-variable name="Following" sid="2882520862406413" type="boolean" />
                 <instance-variable name="KeepWalking" sid="1377474675507507" type="boolean" />
                 <instance-variable name="ReleaseDelay" sid="7765719751362868" type="number" />
+                <instance-variable name="HoldX" sid="4145982478475171" type="number" />
+                <instance-variable name="HoldY" sid="5463669859336924" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="LineOfSight" sid="7446818715432655">
