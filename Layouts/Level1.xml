@@ -1998,7 +1998,7 @@
                         <OverrideSpriteState>#</OverrideSpriteState>
                         <CarryingKnife>false</CarryingKnife>
                         <HoldingKnife>false</HoldingKnife>
-                        <CarryingGun>false</CarryingGun>
+                        <CarryingGun>true</CarryingGun>
                         <HoldingGun>false</HoldingGun>
                         <SimpleBullets>6</SimpleBullets>
                         <CanRun>false</CanRun>
@@ -2117,7 +2117,7 @@
                     <behavior-instances>
                         <behavior-instance type="Bullet">
                             <properties>
-                                <speed>400</speed>
+                                <speed>1600</speed>
                                 <acceleration>0</acceleration>
                                 <gravity>0</gravity>
                                 <bounce-off-solids>No</bounce-off-solids>
