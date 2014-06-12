@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Sprites</name>
+    <events>
+        <event-block sid="3531218074828626">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="928852909925968" type="System" />
+                <condition id="-7" name="Compare instance variable" sid="6038352996390969" type="SpriteChar">
+                    <param id="0" name="Instance variable">Owner</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="2012485996130252" type="Character">
+                    <param id="0" name="Unique ID">SpriteChar.Owner</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="6089285104901324" type="Character">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9740166611721054">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="7365897846999041" type="SpriteChar">
+                    <param id="0" name="Instance variable">Owner</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="7859639328788178" type="Character">
+                    <param id="0" name="Unique ID">SpriteChar.Owner</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="525350191272598" type="SpriteChar">
+                    <param id="0" name="Object">Character</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="3748022691098214">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="2428989027051346" type="SpriteChar">
+                            <param id="0" name="Instance variable">UpDownAvailable</param>
+                        </condition>
+                        <condition id="-11" name="Is within angle" sid="268439444134266" type="Character">
+                            <param id="0" name="Within">45</param>
+                            <param id="1" name="Angle">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="917818478537402" type="SpriteChar">
+                            <param id="0" name="Animation">Character.SpriteState &amp; &quot;Right&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2978643366377293">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="8482911036131506" type="SpriteChar">
+                            <param id="0" name="Instance variable">UpDownAvailable</param>
+                        </condition>
+                        <condition id="-11" name="Is within angle" sid="4075791626345116" type="Character">
+                            <param id="0" name="Within">45</param>
+                            <param id="1" name="Angle">90</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="3030639849871364" type="SpriteChar">
+                            <param id="0" name="Animation">Character.SpriteState &amp; &quot;Down&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="251012270433662">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="4135375813781664" type="SpriteChar">
+                            <param id="0" name="Instance variable">UpDownAvailable</param>
+                        </condition>
+                        <condition id="-11" name="Is within angle" sid="3025323025805792" type="Character">
+                            <param id="0" name="Within">45</param>
+                            <param id="1" name="Angle">180</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="847487587413595" type="SpriteChar">
+                            <param id="0" name="Animation">Character.SpriteState &amp; &quot;Left&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4307665026565526">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="9010898545232198" type="SpriteChar">
+                            <param id="0" name="Instance variable">UpDownAvailable</param>
+                        </condition>
+                        <condition id="-11" name="Is within angle" sid="6641034276634841" type="Character">
+                            <param id="0" name="Within">45</param>
+                            <param id="1" name="Angle">270</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="8708447239020384" type="SpriteChar">
+                            <param id="0" name="Animation">Character.SpriteState &amp; &quot;Up&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

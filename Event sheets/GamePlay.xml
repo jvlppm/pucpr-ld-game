@@ -6,7 +6,8 @@
         <variable constant="0" name="LastDialog" sid="84189112809969" static="0" type="number">-1</variable>
         <include>Utils</include>
         <include>Camera</include>
-        <event-group description="" sid="6773088495970466" title="Balloon">
+        <include>Sprites</include>
+        <event-group collapsed="1" description="" sid="6773088495970466" title="Balloon">
             <sub-events>
                 <event-block sid="1755681182641615">
                     <conditions>
@@ -192,7 +193,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="2897060075777959" title="Characters">
+        <event-group collapsed="1" description="" sid="2897060075777959" title="Characters">
             <sub-events>
                 <event-block sid="2747026023799614">
                     <conditions>
@@ -297,7 +298,7 @@
                 </event-block>
                 <variable constant="0" name="solid1" sid="752557890398827" static="0" type="number">0</variable>
                 <variable constant="0" name="solid2" sid="2324655875346492" static="0" type="number">0</variable>
-                <event-block sid="6072204862819491">
+                <event-block collapsed="1" sid="6072204862819491">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="7996809888709004" type="Character">
                             <param id="0" name="Object">Character</param>
@@ -434,9 +435,9 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="3766674772289778" title="Victims">
+        <event-group collapsed="1" description="" sid="3766674772289778" title="Victims">
             <sub-events>
-                <event-block sid="4706235495098837">
+                <event-block collapsed="1" sid="4706235495098837">
                     <conditions>
                         <condition id="-3" name="Is on-screen" sid="658511659056421" type="Victim" />
                         <condition id="-8" name="Is boolean instance variable set" sid="1875791766255387" type="Victim">
@@ -718,7 +719,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="3052503956438317" title="Zombies">
+        <event-group collapsed="1" description="" sid="3052503956438317" title="Zombies">
             <sub-events>
                 <event-block sid="5032556258015384">
                     <conditions>
@@ -872,7 +873,7 @@
                         <action behavior="Pathfinding" id="2" name="Stop" sid="5530335594236213" type="Zombie" />
                     </actions>
                 </event-block>
-                <event-block sid="6161878113429321">
+                <event-block collapsed="1" sid="6161878113429321">
                     <conditions>
                         <condition id="0" name="On function" sid="9989210086701573" type="Function">
                             <param id="0" name="Name">&quot;ZombieRelease&quot;</param>
@@ -972,7 +973,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="9438648782380541" title="Snipers">
+        <event-group collapsed="1" description="" sid="9438648782380541" title="Snipers">
             <sub-events>
                 <event-block sid="6870329120158633">
                     <conditions>
@@ -1171,7 +1172,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="1746198295301054" title="InvisibleMan">
+        <event-group collapsed="1" description="" sid="1746198295301054" title="InvisibleMan">
             <sub-events>
                 <event-block sid="8372894496072236">
                     <conditions>
@@ -1403,7 +1404,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="2187940477451241">
+                <event-block collapsed="1" sid="2187940477451241">
                     <conditions>
                         <condition id="0" name="On key pressed" sid="1695418716870088" type="Keyboard">
                             <param id="0" name="Key">88 (X)</param>
@@ -1562,9 +1563,31 @@
                         <action id="-26" name="Restart layout" sid="4446848117981179" type="System" />
                     </actions>
                 </event-block>
+                <event-block sid="2447350897024885">
+                    <conditions>
+                        <condition behavior="8Direction" id="0" name="Is moving" sid="6869679160792044" type="Player" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="8035749464900837" type="Player">
+                            <param id="0" name="Instance variable">SpriteState</param>
+                            <param id="1" name="Value">&quot;Walking&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9399795650872755">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="8852414533208686" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="472012140797434" type="Player">
+                            <param id="0" name="Instance variable">SpriteState</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="3193611664449879" title="Weapons">
+        <event-group collapsed="1" description="" sid="3193611664449879" title="Weapons">
             <sub-events>
                 <event-block sid="1870731739834124">
                     <conditions>
@@ -1590,9 +1613,9 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-group description="" sid="6454508332916548" title="Knife">
+                <event-group collapsed="1" description="" sid="6454508332916548" title="Knife">
                     <sub-events>
-                        <event-block sid="4064754307868574">
+                        <event-block collapsed="1" sid="4064754307868574">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="6048919233397953" type="Knife">
                                     <param id="0" name="Instance variable">Owner</param>
@@ -1732,7 +1755,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="8165322307502895" title="Gun">
+                <event-group collapsed="1" description="" sid="8165322307502895" title="Gun">
                     <sub-events>
                         <event-block sid="3967618514829974">
                             <conditions>
@@ -1862,9 +1885,9 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group description="" sid="569804434613888" title="HUD">
+        <event-group collapsed="1" description="" sid="569804434613888" title="HUD">
             <sub-events>
-                <event-block sid="1517814329212286">
+                <event-block collapsed="1" sid="1517814329212286">
                     <conditions>
                         <condition id="-8" name="Is boolean instance variable set" sid="3850111470731568" type="Player">
                             <param id="0" name="Instance variable">CarryingKnife</param>

@@ -558,6 +558,7 @@
                     <instance-variables>
                         <Health>10</Health>
                         <ForceEnabled>false</ForceEnabled>
+                        <SpriteState></SpriteState>
                         <Safe>false</Safe>
                         <Message>-1</Message>
                         <Running>false</Running>
@@ -629,6 +630,7 @@
                     <instance-variables>
                         <Health>2</Health>
                         <ForceEnabled>false</ForceEnabled>
+                        <SpriteState></SpriteState>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -900,6 +902,7 @@
                     <instance-variables>
                         <Health>10</Health>
                         <ForceEnabled>false</ForceEnabled>
+                        <SpriteState></SpriteState>
                         <Safe>false</Safe>
                         <Message>0</Message>
                         <Running>false</Running>
@@ -1070,6 +1073,7 @@
                     <instance-variables>
                         <Health>2</Health>
                         <ForceEnabled>false</ForceEnabled>
+                        <SpriteState></SpriteState>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -1143,6 +1147,7 @@
                     <instance-variables>
                         <Health>2</Health>
                         <ForceEnabled>false</ForceEnabled>
+                        <SpriteState></SpriteState>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -1277,6 +1282,7 @@
                     <instance-variables>
                         <Health>2</Health>
                         <ForceEnabled>false</ForceEnabled>
+                        <SpriteState></SpriteState>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -1350,6 +1356,7 @@
                     <instance-variables>
                         <Health>2</Health>
                         <ForceEnabled>false</ForceEnabled>
+                        <SpriteState></SpriteState>
                         <Holding>-1</Holding>
                         <KeepWalking>true</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -1500,6 +1507,7 @@
                     <instance-variables>
                         <Health>10</Health>
                         <ForceEnabled>false</ForceEnabled>
+                        <SpriteState></SpriteState>
                         <Safe>false</Safe>
                         <Message>1</Message>
                         <Running>false</Running>
@@ -1571,6 +1579,7 @@
                     <instance-variables>
                         <Health>2</Health>
                         <ForceEnabled>false</ForceEnabled>
+                        <SpriteState></SpriteState>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -1644,6 +1653,7 @@
                     <instance-variables>
                         <Health>2</Health>
                         <ForceEnabled>false</ForceEnabled>
+                        <SpriteState></SpriteState>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -1717,6 +1727,7 @@
                     <instance-variables>
                         <Health>2</Health>
                         <ForceEnabled>false</ForceEnabled>
+                        <SpriteState></SpriteState>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -1790,6 +1801,7 @@
                     <instance-variables>
                         <Health>2</Health>
                         <ForceEnabled>false</ForceEnabled>
+                        <SpriteState></SpriteState>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -1863,6 +1875,7 @@
                     <instance-variables>
                         <Health>2</Health>
                         <ForceEnabled>false</ForceEnabled>
+                        <SpriteState></SpriteState>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -1968,6 +1981,7 @@
                     <instance-variables>
                         <Health>10</Health>
                         <ForceEnabled>false</ForceEnabled>
+                        <SpriteState></SpriteState>
                         <CarryingKnife>false</CarryingKnife>
                         <HoldingKnife>false</HoldingKnife>
                         <CarryingGun>false</CarryingGun>
@@ -2214,6 +2228,7 @@
                     <instance-variables>
                         <Health>1</Health>
                         <ForceEnabled>false</ForceEnabled>
+                        <SpriteState></SpriteState>
                         <State></State>
                     </instance-variables>
                     <behavior-instances>
@@ -2283,6 +2298,7 @@
                     <instance-variables>
                         <Health>2</Health>
                         <ForceEnabled>false</ForceEnabled>
+                        <SpriteState></SpriteState>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -2356,6 +2372,7 @@
                     <instance-variables>
                         <Health>2</Health>
                         <ForceEnabled>false</ForceEnabled>
+                        <SpriteState></SpriteState>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -2429,6 +2446,7 @@
                     <instance-variables>
                         <Health>2</Health>
                         <ForceEnabled>false</ForceEnabled>
+                        <SpriteState></SpriteState>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -2576,6 +2594,7 @@
                     <instance-variables>
                         <Health>10</Health>
                         <ForceEnabled>false</ForceEnabled>
+                        <SpriteState></SpriteState>
                         <Safe>false</Safe>
                         <Message>2</Message>
                         <Running>false</Running>
@@ -2647,6 +2666,7 @@
                     <instance-variables>
                         <Health>1</Health>
                         <ForceEnabled>false</ForceEnabled>
+                        <SpriteState></SpriteState>
                         <State></State>
                     </instance-variables>
                     <behavior-instances>
@@ -2716,6 +2736,7 @@
                     <instance-variables>
                         <Health>1</Health>
                         <ForceEnabled>false</ForceEnabled>
+                        <SpriteState></SpriteState>
                         <State></State>
                     </instance-variables>
                     <behavior-instances>
@@ -2785,6 +2806,7 @@
                     <instance-variables>
                         <Health>1</Health>
                         <ForceEnabled>false</ForceEnabled>
+                        <SpriteState></SpriteState>
                         <State></State>
                     </instance-variables>
                     <behavior-instances>
@@ -2854,6 +2876,7 @@
                     <instance-variables>
                         <Health>2</Health>
                         <ForceEnabled>false</ForceEnabled>
+                        <SpriteState></SpriteState>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -2927,6 +2950,7 @@
                     <instance-variables>
                         <Health>2</Health>
                         <ForceEnabled>false</ForceEnabled>
+                        <SpriteState></SpriteState>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -3000,6 +3024,7 @@
                     <instance-variables>
                         <Health>2</Health>
                         <ForceEnabled>false</ForceEnabled>
+                        <SpriteState></SpriteState>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -3073,6 +3098,7 @@
                     <instance-variables>
                         <Health>2</Health>
                         <ForceEnabled>false</ForceEnabled>
+                        <SpriteState></SpriteState>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -3146,6 +3172,7 @@
                     <instance-variables>
                         <Health>2</Health>
                         <ForceEnabled>false</ForceEnabled>
+                        <SpriteState></SpriteState>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -3219,6 +3246,7 @@
                     <instance-variables>
                         <Health>2</Health>
                         <ForceEnabled>false</ForceEnabled>
+                        <SpriteState></SpriteState>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -3292,6 +3320,7 @@
                     <instance-variables>
                         <Health>2</Health>
                         <ForceEnabled>false</ForceEnabled>
+                        <SpriteState></SpriteState>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -3365,6 +3394,7 @@
                     <instance-variables>
                         <Health>2</Health>
                         <ForceEnabled>false</ForceEnabled>
+                        <SpriteState></SpriteState>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -3438,6 +3468,7 @@
                     <instance-variables>
                         <Health>2</Health>
                         <ForceEnabled>false</ForceEnabled>
+                        <SpriteState></SpriteState>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -3511,6 +3542,7 @@
                     <instance-variables>
                         <Health>2</Health>
                         <ForceEnabled>false</ForceEnabled>
+                        <SpriteState></SpriteState>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -3793,6 +3825,7 @@
                     <instance-variables>
                         <Health>2</Health>
                         <ForceEnabled>false</ForceEnabled>
+                        <SpriteState></SpriteState>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -3866,6 +3899,7 @@
                     <instance-variables>
                         <Health>2</Health>
                         <ForceEnabled>false</ForceEnabled>
+                        <SpriteState></SpriteState>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -3939,6 +3973,7 @@
                     <instance-variables>
                         <Health>2</Health>
                         <ForceEnabled>false</ForceEnabled>
+                        <SpriteState></SpriteState>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -4012,6 +4047,7 @@
                     <instance-variables>
                         <Health>2</Health>
                         <ForceEnabled>false</ForceEnabled>
+                        <SpriteState></SpriteState>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -4085,6 +4121,7 @@
                     <instance-variables>
                         <Health>10</Health>
                         <ForceEnabled>false</ForceEnabled>
+                        <SpriteState></SpriteState>
                         <Following>false</Following>
                     </instance-variables>
                     <behavior-instances>
@@ -4198,6 +4235,32 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="PlayerSprite" uid="98">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Right</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Owner>0</Owner>
+                        <UpDownAvailable>true</UpDownAvailable>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>8</x>
+                        <y>-216</y>
+                        <z>0</z>
+                        <width>128</width>
+                        <height>128</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.796875</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
