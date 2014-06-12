@@ -76,6 +76,10 @@
                         <action behavior="8Direction" id="8" name="Set enabled" sid="4446171424059695" type="Player">
                             <param id="0" name="State">0</param>
                         </action>
+                        <action id="-10" name="Set value" sid="4109167091930869" type="Player">
+                            <param id="0" name="Instance variable">OverrideSpriteState</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
                         <action id="-13" name="Set boolean" sid="6030921332409409" type="Victim">
                             <param id="0" name="Instance variable">ForceEnabled</param>
                             <param id="1" name="Value">1</param>
@@ -115,6 +119,10 @@
                         <action id="-13" name="Set boolean" sid="2225575980043884" type="Victim">
                             <param id="0" name="Instance variable">ForceEnabled</param>
                             <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="5805635809179838" type="Player">
+                            <param id="0" name="Instance variable">OverrideSpriteState</param>
+                            <param id="1" name="Value">&quot;#&quot;</param>
                         </action>
                     </actions>
                 </event-block>

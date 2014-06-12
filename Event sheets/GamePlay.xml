@@ -1565,7 +1565,7 @@
                 </event-block>
                 <event-block sid="2447350897024885">
                     <conditions>
-                        <condition behavior="8Direction" id="0" name="Is moving" sid="6869679160792044" type="Player" />
+                        <condition behavior="8Direction" id="0" name="Is moving" sid="8995456273105795" type="Player" />
                     </conditions>
                     <actions>
                         <action id="-10" name="Set value" sid="8035749464900837" type="Player">
@@ -1576,7 +1576,7 @@
                 </event-block>
                 <event-block sid="9399795650872755">
                     <conditions>
-                        <condition id="-22" name="Else" sid="8852414533208686" type="System" />
+                        <condition id="-22" name="Else" sid="9270621755181139" type="System" />
                     </conditions>
                     <actions>
                         <action id="-10" name="Set value" sid="472012140797434" type="Player">

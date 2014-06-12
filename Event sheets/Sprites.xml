@@ -28,6 +28,9 @@
                     <param id="1" name="Comparison">5</param>
                     <param id="2" name="Value">0</param>
                 </condition>
+                <condition id="-11" name="For Each" sid="8841812286627079" type="System">
+                    <param id="0" name="Object">SpriteChar</param>
+                </condition>
                 <condition id="-14" name="Pick by unique ID" sid="7859639328788178" type="Character">
                     <param id="0" name="Unique ID">SpriteChar.Owner</param>
                 </condition>
@@ -39,6 +42,33 @@
                 </action>
             </actions>
             <sub-events>
+                <variable constant="0" name="spriteState" sid="7752569110345093" static="0" type="text"></variable>
+                <event-block sid="5672290182893346">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="8500317726260792" type="Character">
+                            <param id="0" name="Instance variable">OverrideSpriteState</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">&quot;#&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="6524971069487793" type="System">
+                            <param id="0" name="Variable">spriteState</param>
+                            <param id="1" name="Value">Character.OverrideSpriteState</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7040946967498487">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="6114041703207994" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="7822686715307955" type="System">
+                            <param id="0" name="Variable">spriteState</param>
+                            <param id="1" name="Value">Character.SpriteState</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="3748022691098214">
                     <conditions>
                         <condition id="-8" name="Is boolean instance variable set" sid="2428989027051346" type="SpriteChar">
@@ -51,7 +81,7 @@
                     </conditions>
                     <actions>
                         <action id="4" name="Set animation" sid="917818478537402" type="SpriteChar">
-                            <param id="0" name="Animation">Character.SpriteState &amp; &quot;Right&quot;</param>
+                            <param id="0" name="Animation">spriteState &amp; &quot;Right&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
@@ -68,7 +98,7 @@
                     </conditions>
                     <actions>
                         <action id="4" name="Set animation" sid="3030639849871364" type="SpriteChar">
-                            <param id="0" name="Animation">Character.SpriteState &amp; &quot;Down&quot;</param>
+                            <param id="0" name="Animation">spriteState &amp; &quot;Down&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
@@ -85,7 +115,7 @@
                     </conditions>
                     <actions>
                         <action id="4" name="Set animation" sid="847487587413595" type="SpriteChar">
-                            <param id="0" name="Animation">Character.SpriteState &amp; &quot;Left&quot;</param>
+                            <param id="0" name="Animation">spriteState &amp; &quot;Left&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
@@ -102,7 +132,7 @@
                     </conditions>
                     <actions>
                         <action id="4" name="Set animation" sid="8708447239020384" type="SpriteChar">
-                            <param id="0" name="Animation">Character.SpriteState &amp; &quot;Up&quot;</param>
+                            <param id="0" name="Animation">spriteState &amp; &quot;Up&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>

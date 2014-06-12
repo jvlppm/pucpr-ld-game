@@ -539,6 +539,19 @@
                         </collision-poly>
                     </frame>
                 </animation>
+                <animation framecount="1" loop="0" name="GunLeft" pingpong="0" repeatcount="1" repeatto="0" sid="4187972251360162" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.796875" />
+                </animation>
+                <animation framecount="1" loop="0" name="GunRight" pingpong="0" repeatcount="1" repeatto="0" sid="8305863066001754" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.796875">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
             </animation-folder>
         </object-type>
     </object-folder>
@@ -555,6 +568,7 @@
                 <instance-variable name="Health" sid="6424499004099243" type="number" />
                 <instance-variable name="ForceEnabled" sid="1677941639145354" type="boolean" />
                 <instance-variable name="SpriteState" sid="2808408447623304" type="string" />
+                <instance-variable name="OverrideSpriteState" sid="6014315263812143" type="string" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Sine" sid="2951143800245884">

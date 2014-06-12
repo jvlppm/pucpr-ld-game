@@ -559,6 +559,7 @@
                         <Health>10</Health>
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
+                        <OverrideSpriteState>#</OverrideSpriteState>
                         <Safe>false</Safe>
                         <Message>-1</Message>
                         <Running>false</Running>
@@ -631,6 +632,7 @@
                         <Health>2</Health>
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
+                        <OverrideSpriteState>#</OverrideSpriteState>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -903,6 +905,7 @@
                         <Health>10</Health>
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
+                        <OverrideSpriteState>#</OverrideSpriteState>
                         <Safe>false</Safe>
                         <Message>0</Message>
                         <Running>false</Running>
@@ -1074,6 +1077,7 @@
                         <Health>2</Health>
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
+                        <OverrideSpriteState>#</OverrideSpriteState>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -1148,6 +1152,7 @@
                         <Health>2</Health>
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
+                        <OverrideSpriteState>#</OverrideSpriteState>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -1283,6 +1288,7 @@
                         <Health>2</Health>
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
+                        <OverrideSpriteState>#</OverrideSpriteState>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -1357,6 +1363,7 @@
                         <Health>2</Health>
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
+                        <OverrideSpriteState>#</OverrideSpriteState>
                         <Holding>-1</Holding>
                         <KeepWalking>true</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -1508,6 +1515,7 @@
                         <Health>10</Health>
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
+                        <OverrideSpriteState>#</OverrideSpriteState>
                         <Safe>false</Safe>
                         <Message>1</Message>
                         <Running>false</Running>
@@ -1580,6 +1588,7 @@
                         <Health>2</Health>
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
+                        <OverrideSpriteState>#</OverrideSpriteState>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -1654,6 +1663,7 @@
                         <Health>2</Health>
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
+                        <OverrideSpriteState>#</OverrideSpriteState>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -1728,6 +1738,7 @@
                         <Health>2</Health>
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
+                        <OverrideSpriteState>#</OverrideSpriteState>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -1802,6 +1813,7 @@
                         <Health>2</Health>
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
+                        <OverrideSpriteState>#</OverrideSpriteState>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -1876,6 +1888,7 @@
                         <Health>2</Health>
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
+                        <OverrideSpriteState>#</OverrideSpriteState>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -1982,6 +1995,7 @@
                         <Health>10</Health>
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
+                        <OverrideSpriteState>#</OverrideSpriteState>
                         <CarryingKnife>false</CarryingKnife>
                         <HoldingKnife>false</HoldingKnife>
                         <CarryingGun>false</CarryingGun>
@@ -2229,6 +2243,7 @@
                         <Health>1</Health>
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
+                        <OverrideSpriteState>#</OverrideSpriteState>
                         <State></State>
                     </instance-variables>
                     <behavior-instances>
@@ -2299,6 +2314,7 @@
                         <Health>2</Health>
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
+                        <OverrideSpriteState>#</OverrideSpriteState>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -2373,6 +2389,7 @@
                         <Health>2</Health>
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
+                        <OverrideSpriteState>#</OverrideSpriteState>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -2447,6 +2464,7 @@
                         <Health>2</Health>
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
+                        <OverrideSpriteState>#</OverrideSpriteState>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -2595,6 +2613,7 @@
                         <Health>10</Health>
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
+                        <OverrideSpriteState>#</OverrideSpriteState>
                         <Safe>false</Safe>
                         <Message>2</Message>
                         <Running>false</Running>
@@ -2667,6 +2686,7 @@
                         <Health>1</Health>
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
+                        <OverrideSpriteState>#</OverrideSpriteState>
                         <State></State>
                     </instance-variables>
                     <behavior-instances>
@@ -2737,6 +2757,7 @@
                         <Health>1</Health>
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
+                        <OverrideSpriteState>#</OverrideSpriteState>
                         <State></State>
                     </instance-variables>
                     <behavior-instances>
@@ -2807,6 +2828,7 @@
                         <Health>1</Health>
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
+                        <OverrideSpriteState>#</OverrideSpriteState>
                         <State></State>
                     </instance-variables>
                     <behavior-instances>
@@ -2877,6 +2899,7 @@
                         <Health>2</Health>
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
+                        <OverrideSpriteState>#</OverrideSpriteState>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -2951,6 +2974,7 @@
                         <Health>2</Health>
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
+                        <OverrideSpriteState>#</OverrideSpriteState>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -3025,6 +3049,7 @@
                         <Health>2</Health>
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
+                        <OverrideSpriteState>#</OverrideSpriteState>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -3099,6 +3124,7 @@
                         <Health>2</Health>
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
+                        <OverrideSpriteState>#</OverrideSpriteState>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -3173,6 +3199,7 @@
                         <Health>2</Health>
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
+                        <OverrideSpriteState>#</OverrideSpriteState>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -3247,6 +3274,7 @@
                         <Health>2</Health>
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
+                        <OverrideSpriteState>#</OverrideSpriteState>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -3321,6 +3349,7 @@
                         <Health>2</Health>
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
+                        <OverrideSpriteState>#</OverrideSpriteState>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -3395,6 +3424,7 @@
                         <Health>2</Health>
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
+                        <OverrideSpriteState>#</OverrideSpriteState>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -3469,6 +3499,7 @@
                         <Health>2</Health>
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
+                        <OverrideSpriteState>#</OverrideSpriteState>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -3543,6 +3574,7 @@
                         <Health>2</Health>
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
+                        <OverrideSpriteState>#</OverrideSpriteState>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -3826,6 +3858,7 @@
                         <Health>2</Health>
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
+                        <OverrideSpriteState>#</OverrideSpriteState>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -3900,6 +3933,7 @@
                         <Health>2</Health>
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
+                        <OverrideSpriteState>#</OverrideSpriteState>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -3974,6 +4008,7 @@
                         <Health>2</Health>
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
+                        <OverrideSpriteState>#</OverrideSpriteState>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -4048,6 +4083,7 @@
                         <Health>2</Health>
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
+                        <OverrideSpriteState>#</OverrideSpriteState>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -4122,6 +4158,7 @@
                         <Health>10</Health>
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
+                        <OverrideSpriteState>#</OverrideSpriteState>
                         <Following>false</Following>
                     </instance-variables>
                     <behavior-instances>
