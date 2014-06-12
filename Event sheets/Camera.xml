@@ -18,7 +18,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="5498755554358997">
+        <event-block collapsed="1" sid="5498755554358997">
             <conditions>
                 <condition id="-36" name="Pick overlapping point" sid="5432879488429826" type="System">
                     <param id="0" name="Object">Area</param>
@@ -86,57 +86,81 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="1351790345458537">
+        <event-block sid="6776404151726763">
             <conditions>
-                <condition id="-1" name="Compare X" sid="5721256016428912" type="Camera">
-                    <param id="0" name="Comparison">2</param>
-                    <param id="1" name="X co-ordinate">Camera.DesiredX</param>
+                <condition id="-8" name="Compare two values" sid="4922956105178003" type="System">
+                    <param id="0" name="First value">abs(Camera.X - Camera.DesiredX)</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Second value">50</param>
                 </condition>
             </conditions>
-            <actions>
-                <action behavior="8Direction" id="7" name="Simulate control" sid="7600041153213402" type="Camera">
-                    <param id="0" name="Control">1</param>
-                </action>
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block sid="1351790345458537">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="5721256016428912" type="Camera">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">Camera.DesiredX</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="7600041153213402" type="Camera">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9575796167368303">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="5417435803163737" type="Camera">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">Camera.DesiredX</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="3300216415211726" type="Camera">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
-        <event-block sid="9575796167368303">
+        <event-block sid="2512159550368291">
             <conditions>
-                <condition id="-1" name="Compare X" sid="5417435803163737" type="Camera">
-                    <param id="0" name="Comparison">4</param>
-                    <param id="1" name="X co-ordinate">Camera.DesiredX</param>
+                <condition id="-8" name="Compare two values" sid="6648053428648909" type="System">
+                    <param id="0" name="First value">abs(Camera.Y - Camera.DesiredY)</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Second value">50</param>
                 </condition>
             </conditions>
-            <actions>
-                <action behavior="8Direction" id="7" name="Simulate control" sid="3300216415211726" type="Camera">
-                    <param id="0" name="Control">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="1885619434778945">
-            <conditions>
-                <condition id="-2" name="Compare Y" sid="1526276257142397" type="Camera">
-                    <param id="0" name="Comparison">2</param>
-                    <param id="1" name="Y co-ordinate">Camera.DesiredY</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="8Direction" id="7" name="Simulate control" sid="6601359648339549" type="Camera">
-                    <param id="0" name="Control">3</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="7290481959706368">
-            <conditions>
-                <condition id="-2" name="Compare Y" sid="9366017819943559" type="Camera">
-                    <param id="0" name="Comparison">4</param>
-                    <param id="1" name="Y co-ordinate">Camera.DesiredY</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="8Direction" id="7" name="Simulate control" sid="660990870452065" type="Camera">
-                    <param id="0" name="Control">2</param>
-                </action>
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block sid="1885619434778945">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="1526276257142397" type="Camera">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Y co-ordinate">Camera.DesiredY</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="6601359648339549" type="Camera">
+                            <param id="0" name="Control">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7290481959706368">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="9366017819943559" type="Camera">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Y co-ordinate">Camera.DesiredY</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="660990870452065" type="Camera">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="7004324399895225">
             <conditions>

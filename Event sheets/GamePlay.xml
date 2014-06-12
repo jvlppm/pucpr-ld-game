@@ -406,6 +406,16 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="9103098289926056">
+                    <conditions>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="4618884775535088" type="Character" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="14" name="Set speed" sid="5730645467440218" type="Character">
+                            <param id="0" name="Speed">0</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group collapsed="1" description="" sid="3766674772289778" title="Victims">
@@ -1142,7 +1152,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="1746198295301054" title="InvisibleMan">
+        <event-group description="" sid="1746198295301054" title="InvisibleMan">
             <sub-events>
                 <event-block sid="8372894496072236">
                     <conditions>
@@ -1187,7 +1197,9 @@
                     <actions />
                 </event-block>
                 <event-block sid="1758324003044095">
-                    <conditions />
+                    <conditions>
+                        <condition behavior="Pathfinding" id="4" inverted="1" name="Is moving along path" sid="896503402798665" type="InvisibleMan" />
+                    </conditions>
                     <actions />
                     <sub-events>
                         <event-block sid="239824608917774">
@@ -1209,7 +1221,15 @@
                             <conditions>
                                 <condition id="-22" name="Else" sid="8335755231865073" type="System" />
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="2724399648812305" type="InvisibleMan">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                                <action behavior="Pathfinding" id="0" name="Find path" sid="7651428560108546" type="InvisibleMan">
+                                    <param id="0" name="X">Player.X</param>
+                                    <param id="1" name="Y">Player.Y</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -1222,7 +1242,12 @@
                             <param id="0" name="Unique ID">Function.Param(0)</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="2142170106266392" type="InvisibleMan">
+                            <param id="0" name="X">ViewportLeft(InvisibleMan.LayerNumber)+random(WindowWidth)*0.6 + 0.2*WindowWidth</param>
+                            <param id="1" name="Y">ViewportTop(InvisibleMan.LayerNumber)+random(WindowHeight)</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block sid="1003820755162384">
                     <conditions>

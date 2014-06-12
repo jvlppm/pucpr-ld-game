@@ -582,12 +582,12 @@
                         </behavior-instance>
                         <behavior-instance type="Pathfinding">
                             <properties>
-                                <cell-size>8</cell-size>
-                                <cell-border>8</cell-border>
+                                <cell-size>64</cell-size>
+                                <cell-border>64</cell-border>
                                 <obstacles>Custom</obstacles>
                                 <max-speed>200</max-speed>
                                 <acceleration>4000</acceleration>
-                                <deceleration>8000</deceleration>
+                                <deceleration>2000</deceleration>
                                 <rotate-speed>135</rotate-speed>
                                 <rotate-object>Yes</rotate-object>
                                 <diagonals>Enabled</diagonals>
@@ -654,8 +654,8 @@
                         </behavior-instance>
                         <behavior-instance type="Pathfinding">
                             <properties>
-                                <cell-size>8</cell-size>
-                                <cell-border>8</cell-border>
+                                <cell-size>64</cell-size>
+                                <cell-border>64</cell-border>
                                 <obstacles>Custom</obstacles>
                                 <max-speed>160</max-speed>
                                 <acceleration>4000</acceleration>
@@ -922,12 +922,12 @@
                         </behavior-instance>
                         <behavior-instance type="Pathfinding">
                             <properties>
-                                <cell-size>8</cell-size>
-                                <cell-border>8</cell-border>
+                                <cell-size>64</cell-size>
+                                <cell-border>64</cell-border>
                                 <obstacles>Custom</obstacles>
                                 <max-speed>200</max-speed>
                                 <acceleration>4000</acceleration>
-                                <deceleration>8000</deceleration>
+                                <deceleration>2000</deceleration>
                                 <rotate-speed>135</rotate-speed>
                                 <rotate-object>Yes</rotate-object>
                                 <diagonals>Enabled</diagonals>
@@ -1093,8 +1093,8 @@
                         </behavior-instance>
                         <behavior-instance type="Pathfinding">
                             <properties>
-                                <cell-size>8</cell-size>
-                                <cell-border>8</cell-border>
+                                <cell-size>64</cell-size>
+                                <cell-border>64</cell-border>
                                 <obstacles>Custom</obstacles>
                                 <max-speed>160</max-speed>
                                 <acceleration>4000</acceleration>
@@ -1165,8 +1165,8 @@
                         </behavior-instance>
                         <behavior-instance type="Pathfinding">
                             <properties>
-                                <cell-size>8</cell-size>
-                                <cell-border>8</cell-border>
+                                <cell-size>64</cell-size>
+                                <cell-border>64</cell-border>
                                 <obstacles>Custom</obstacles>
                                 <max-speed>160</max-speed>
                                 <acceleration>4000</acceleration>
@@ -1298,8 +1298,8 @@
                         </behavior-instance>
                         <behavior-instance type="Pathfinding">
                             <properties>
-                                <cell-size>8</cell-size>
-                                <cell-border>8</cell-border>
+                                <cell-size>64</cell-size>
+                                <cell-border>64</cell-border>
                                 <obstacles>Custom</obstacles>
                                 <max-speed>160</max-speed>
                                 <acceleration>4000</acceleration>
@@ -1370,8 +1370,8 @@
                         </behavior-instance>
                         <behavior-instance type="Pathfinding">
                             <properties>
-                                <cell-size>8</cell-size>
-                                <cell-border>8</cell-border>
+                                <cell-size>64</cell-size>
+                                <cell-border>64</cell-border>
                                 <obstacles>Custom</obstacles>
                                 <max-speed>160</max-speed>
                                 <acceleration>4000</acceleration>
@@ -1517,12 +1517,12 @@
                         </behavior-instance>
                         <behavior-instance type="Pathfinding">
                             <properties>
-                                <cell-size>8</cell-size>
-                                <cell-border>8</cell-border>
+                                <cell-size>64</cell-size>
+                                <cell-border>64</cell-border>
                                 <obstacles>Custom</obstacles>
                                 <max-speed>200</max-speed>
                                 <acceleration>4000</acceleration>
-                                <deceleration>8000</deceleration>
+                                <deceleration>2000</deceleration>
                                 <rotate-speed>135</rotate-speed>
                                 <rotate-object>Yes</rotate-object>
                                 <diagonals>Enabled</diagonals>
@@ -1589,8 +1589,8 @@
                         </behavior-instance>
                         <behavior-instance type="Pathfinding">
                             <properties>
-                                <cell-size>8</cell-size>
-                                <cell-border>8</cell-border>
+                                <cell-size>64</cell-size>
+                                <cell-border>64</cell-border>
                                 <obstacles>Custom</obstacles>
                                 <max-speed>160</max-speed>
                                 <acceleration>4000</acceleration>
@@ -1661,8 +1661,8 @@
                         </behavior-instance>
                         <behavior-instance type="Pathfinding">
                             <properties>
-                                <cell-size>8</cell-size>
-                                <cell-border>8</cell-border>
+                                <cell-size>64</cell-size>
+                                <cell-border>64</cell-border>
                                 <obstacles>Custom</obstacles>
                                 <max-speed>160</max-speed>
                                 <acceleration>4000</acceleration>
@@ -1733,8 +1733,8 @@
                         </behavior-instance>
                         <behavior-instance type="Pathfinding">
                             <properties>
-                                <cell-size>8</cell-size>
-                                <cell-border>8</cell-border>
+                                <cell-size>64</cell-size>
+                                <cell-border>64</cell-border>
                                 <obstacles>Custom</obstacles>
                                 <max-speed>160</max-speed>
                                 <acceleration>4000</acceleration>
@@ -1805,8 +1805,8 @@
                         </behavior-instance>
                         <behavior-instance type="Pathfinding">
                             <properties>
-                                <cell-size>8</cell-size>
-                                <cell-border>8</cell-border>
+                                <cell-size>64</cell-size>
+                                <cell-border>64</cell-border>
                                 <obstacles>Custom</obstacles>
                                 <max-speed>160</max-speed>
                                 <acceleration>4000</acceleration>
@@ -1877,8 +1877,8 @@
                         </behavior-instance>
                         <behavior-instance type="Pathfinding">
                             <properties>
-                                <cell-size>8</cell-size>
-                                <cell-border>8</cell-border>
+                                <cell-size>64</cell-size>
+                                <cell-border>64</cell-border>
                                 <obstacles>Custom</obstacles>
                                 <max-speed>160</max-speed>
                                 <acceleration>4000</acceleration>
@@ -1982,8 +1982,8 @@
                         </behavior-instance>
                         <behavior-instance type="Pathfinding">
                             <properties>
-                                <cell-size>8</cell-size>
-                                <cell-border>8</cell-border>
+                                <cell-size>64</cell-size>
+                                <cell-border>64</cell-border>
                                 <obstacles>Custom</obstacles>
                                 <max-speed>200</max-speed>
                                 <acceleration>4000</acceleration>
@@ -2017,8 +2017,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>160</x>
-                        <y>480</y>
+                        <x>136</x>
+                        <y>456</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -2222,8 +2222,8 @@
                         </behavior-instance>
                         <behavior-instance type="Pathfinding">
                             <properties>
-                                <cell-size>8</cell-size>
-                                <cell-border>8</cell-border>
+                                <cell-size>64</cell-size>
+                                <cell-border>64</cell-border>
                                 <obstacles>Custom</obstacles>
                                 <max-speed>200</max-speed>
                                 <acceleration>1000</acceleration>
@@ -2294,8 +2294,8 @@
                         </behavior-instance>
                         <behavior-instance type="Pathfinding">
                             <properties>
-                                <cell-size>8</cell-size>
-                                <cell-border>8</cell-border>
+                                <cell-size>64</cell-size>
+                                <cell-border>64</cell-border>
                                 <obstacles>Custom</obstacles>
                                 <max-speed>160</max-speed>
                                 <acceleration>4000</acceleration>
@@ -2366,8 +2366,8 @@
                         </behavior-instance>
                         <behavior-instance type="Pathfinding">
                             <properties>
-                                <cell-size>8</cell-size>
-                                <cell-border>8</cell-border>
+                                <cell-size>64</cell-size>
+                                <cell-border>64</cell-border>
                                 <obstacles>Custom</obstacles>
                                 <max-speed>160</max-speed>
                                 <acceleration>4000</acceleration>
@@ -2438,8 +2438,8 @@
                         </behavior-instance>
                         <behavior-instance type="Pathfinding">
                             <properties>
-                                <cell-size>8</cell-size>
-                                <cell-border>8</cell-border>
+                                <cell-size>64</cell-size>
+                                <cell-border>64</cell-border>
                                 <obstacles>Custom</obstacles>
                                 <max-speed>160</max-speed>
                                 <acceleration>4000</acceleration>
@@ -2582,12 +2582,12 @@
                         </behavior-instance>
                         <behavior-instance type="Pathfinding">
                             <properties>
-                                <cell-size>8</cell-size>
-                                <cell-border>8</cell-border>
+                                <cell-size>64</cell-size>
+                                <cell-border>64</cell-border>
                                 <obstacles>Custom</obstacles>
                                 <max-speed>200</max-speed>
                                 <acceleration>4000</acceleration>
-                                <deceleration>8000</deceleration>
+                                <deceleration>2000</deceleration>
                                 <rotate-speed>135</rotate-speed>
                                 <rotate-object>Yes</rotate-object>
                                 <diagonals>Enabled</diagonals>
@@ -2650,8 +2650,8 @@
                         </behavior-instance>
                         <behavior-instance type="Pathfinding">
                             <properties>
-                                <cell-size>8</cell-size>
-                                <cell-border>8</cell-border>
+                                <cell-size>64</cell-size>
+                                <cell-border>64</cell-border>
                                 <obstacles>Custom</obstacles>
                                 <max-speed>200</max-speed>
                                 <acceleration>1000</acceleration>
@@ -2718,8 +2718,8 @@
                         </behavior-instance>
                         <behavior-instance type="Pathfinding">
                             <properties>
-                                <cell-size>8</cell-size>
-                                <cell-border>8</cell-border>
+                                <cell-size>64</cell-size>
+                                <cell-border>64</cell-border>
                                 <obstacles>Custom</obstacles>
                                 <max-speed>200</max-speed>
                                 <acceleration>1000</acceleration>
@@ -2786,8 +2786,8 @@
                         </behavior-instance>
                         <behavior-instance type="Pathfinding">
                             <properties>
-                                <cell-size>8</cell-size>
-                                <cell-border>8</cell-border>
+                                <cell-size>64</cell-size>
+                                <cell-border>64</cell-border>
                                 <obstacles>Custom</obstacles>
                                 <max-speed>200</max-speed>
                                 <acceleration>1000</acceleration>
@@ -2858,8 +2858,8 @@
                         </behavior-instance>
                         <behavior-instance type="Pathfinding">
                             <properties>
-                                <cell-size>8</cell-size>
-                                <cell-border>8</cell-border>
+                                <cell-size>64</cell-size>
+                                <cell-border>64</cell-border>
                                 <obstacles>Custom</obstacles>
                                 <max-speed>160</max-speed>
                                 <acceleration>4000</acceleration>
@@ -2930,8 +2930,8 @@
                         </behavior-instance>
                         <behavior-instance type="Pathfinding">
                             <properties>
-                                <cell-size>8</cell-size>
-                                <cell-border>8</cell-border>
+                                <cell-size>64</cell-size>
+                                <cell-border>64</cell-border>
                                 <obstacles>Custom</obstacles>
                                 <max-speed>160</max-speed>
                                 <acceleration>4000</acceleration>
@@ -3002,8 +3002,8 @@
                         </behavior-instance>
                         <behavior-instance type="Pathfinding">
                             <properties>
-                                <cell-size>8</cell-size>
-                                <cell-border>8</cell-border>
+                                <cell-size>64</cell-size>
+                                <cell-border>64</cell-border>
                                 <obstacles>Custom</obstacles>
                                 <max-speed>160</max-speed>
                                 <acceleration>4000</acceleration>
@@ -3074,8 +3074,8 @@
                         </behavior-instance>
                         <behavior-instance type="Pathfinding">
                             <properties>
-                                <cell-size>8</cell-size>
-                                <cell-border>8</cell-border>
+                                <cell-size>64</cell-size>
+                                <cell-border>64</cell-border>
                                 <obstacles>Custom</obstacles>
                                 <max-speed>160</max-speed>
                                 <acceleration>4000</acceleration>
@@ -3146,8 +3146,8 @@
                         </behavior-instance>
                         <behavior-instance type="Pathfinding">
                             <properties>
-                                <cell-size>8</cell-size>
-                                <cell-border>8</cell-border>
+                                <cell-size>64</cell-size>
+                                <cell-border>64</cell-border>
                                 <obstacles>Custom</obstacles>
                                 <max-speed>160</max-speed>
                                 <acceleration>4000</acceleration>
@@ -3218,8 +3218,8 @@
                         </behavior-instance>
                         <behavior-instance type="Pathfinding">
                             <properties>
-                                <cell-size>8</cell-size>
-                                <cell-border>8</cell-border>
+                                <cell-size>64</cell-size>
+                                <cell-border>64</cell-border>
                                 <obstacles>Custom</obstacles>
                                 <max-speed>160</max-speed>
                                 <acceleration>4000</acceleration>
@@ -3290,8 +3290,8 @@
                         </behavior-instance>
                         <behavior-instance type="Pathfinding">
                             <properties>
-                                <cell-size>8</cell-size>
-                                <cell-border>8</cell-border>
+                                <cell-size>64</cell-size>
+                                <cell-border>64</cell-border>
                                 <obstacles>Custom</obstacles>
                                 <max-speed>160</max-speed>
                                 <acceleration>4000</acceleration>
@@ -3362,8 +3362,8 @@
                         </behavior-instance>
                         <behavior-instance type="Pathfinding">
                             <properties>
-                                <cell-size>8</cell-size>
-                                <cell-border>8</cell-border>
+                                <cell-size>64</cell-size>
+                                <cell-border>64</cell-border>
                                 <obstacles>Custom</obstacles>
                                 <max-speed>160</max-speed>
                                 <acceleration>4000</acceleration>
@@ -3434,8 +3434,8 @@
                         </behavior-instance>
                         <behavior-instance type="Pathfinding">
                             <properties>
-                                <cell-size>8</cell-size>
-                                <cell-border>8</cell-border>
+                                <cell-size>64</cell-size>
+                                <cell-border>64</cell-border>
                                 <obstacles>Custom</obstacles>
                                 <max-speed>160</max-speed>
                                 <acceleration>4000</acceleration>
@@ -3506,8 +3506,8 @@
                         </behavior-instance>
                         <behavior-instance type="Pathfinding">
                             <properties>
-                                <cell-size>8</cell-size>
-                                <cell-border>8</cell-border>
+                                <cell-size>64</cell-size>
+                                <cell-border>64</cell-border>
                                 <obstacles>Custom</obstacles>
                                 <max-speed>160</max-speed>
                                 <acceleration>4000</acceleration>
@@ -3787,8 +3787,8 @@
                         </behavior-instance>
                         <behavior-instance type="Pathfinding">
                             <properties>
-                                <cell-size>8</cell-size>
-                                <cell-border>8</cell-border>
+                                <cell-size>64</cell-size>
+                                <cell-border>64</cell-border>
                                 <obstacles>Custom</obstacles>
                                 <max-speed>160</max-speed>
                                 <acceleration>4000</acceleration>
@@ -3859,8 +3859,8 @@
                         </behavior-instance>
                         <behavior-instance type="Pathfinding">
                             <properties>
-                                <cell-size>8</cell-size>
-                                <cell-border>8</cell-border>
+                                <cell-size>64</cell-size>
+                                <cell-border>64</cell-border>
                                 <obstacles>Custom</obstacles>
                                 <max-speed>160</max-speed>
                                 <acceleration>4000</acceleration>
@@ -3931,8 +3931,8 @@
                         </behavior-instance>
                         <behavior-instance type="Pathfinding">
                             <properties>
-                                <cell-size>8</cell-size>
-                                <cell-border>8</cell-border>
+                                <cell-size>64</cell-size>
+                                <cell-border>64</cell-border>
                                 <obstacles>Custom</obstacles>
                                 <max-speed>160</max-speed>
                                 <acceleration>4000</acceleration>
@@ -4003,8 +4003,8 @@
                         </behavior-instance>
                         <behavior-instance type="Pathfinding">
                             <properties>
-                                <cell-size>8</cell-size>
-                                <cell-border>8</cell-border>
+                                <cell-size>64</cell-size>
+                                <cell-border>64</cell-border>
                                 <obstacles>Custom</obstacles>
                                 <max-speed>160</max-speed>
                                 <acceleration>4000</acceleration>
@@ -4071,8 +4071,8 @@
                         </behavior-instance>
                         <behavior-instance type="Pathfinding">
                             <properties>
-                                <cell-size>8</cell-size>
-                                <cell-border>8</cell-border>
+                                <cell-size>64</cell-size>
+                                <cell-border>64</cell-border>
                                 <obstacles>Custom</obstacles>
                                 <max-speed>200</max-speed>
                                 <acceleration>1000</acceleration>
@@ -4196,7 +4196,7 @@
                     <behavior-instances>
                         <behavior-instance type="8Direction">
                             <properties>
-                                <max-speed>400</max-speed>
+                                <max-speed>1600</max-speed>
                                 <acceleration>100000</acceleration>
                                 <deceleration>500</deceleration>
                                 <directions>Up &amp; down</directions>
