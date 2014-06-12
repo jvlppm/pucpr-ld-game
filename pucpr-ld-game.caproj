@@ -34,8 +34,8 @@
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
     <window-size>
-        <width>256</width>
-        <height>224</height>
+        <width>1024</width>
+        <height>896</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <first-layout>Level1</first-layout>
@@ -64,6 +64,11 @@
                 <instance-variable name="SimpleBullets" sid="7815243517570491" type="number" />
                 <instance-variable name="CanRun" sid="9795597917221542" type="boolean" />
             </instance-variables>
+            <behaviors>
+                <behavior-type name="8Direction" sid="2041450922399645">
+                    <behavior id="EightDir" />
+                </behavior-type>
+            </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8094744416390986" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
@@ -85,20 +90,11 @@
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="Holding" sid="1188791282992054" type="number" />
-                <instance-variable name="Following" sid="2882520862406413" type="boolean" />
                 <instance-variable name="KeepWalking" sid="1377474675507507" type="boolean" />
                 <instance-variable name="ReleaseDelay" sid="7765719751362868" type="number" />
                 <instance-variable name="HoldX" sid="4145982478475171" type="number" />
                 <instance-variable name="HoldY" sid="5463669859336924" type="number" />
             </instance-variables>
-            <behaviors>
-                <behavior-type name="LineOfSight" sid="7446818715432655">
-                    <behavior id="LOS" />
-                </behavior-type>
-                <behavior-type name="Pathfinding" sid="3723338676093225">
-                    <behavior id="Pathfinding" />
-                </behavior-type>
-            </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9332596063506549" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -128,14 +124,10 @@
         <object-type name="Victim" sid="4013219929640056">
             <plugin id="Sprite" />
             <instance-variables>
-                <instance-variable name="Running" sid="1004775502044393" type="boolean" />
-                <instance-variable name="MaxSpeed" sid="7344284322092775" type="number" />
+                <instance-variable name="Safe" sid="5472275369076046" type="boolean" />
+                <instance-variable name="Message" sid="321222840005357" type="number" />
+                <instance-variable name="Running" sid="9267928845515074" type="boolean" />
             </instance-variables>
-            <behaviors>
-                <behavior-type name="LineOfSight" sid="1163388097903242">
-                    <behavior id="LOS" />
-                </behavior-type>
-            </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6822876255319023" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
@@ -328,11 +320,6 @@
             <instance-variables>
                 <instance-variable name="State" sid="7597800653910547" type="string" />
             </instance-variables>
-            <behaviors>
-                <behavior-type name="LineOfSight" sid="9023976020226963">
-                    <behavior id="LOS" />
-                </behavior-type>
-            </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8580303210951498" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -406,14 +393,6 @@
             <instance-variables>
                 <instance-variable name="Following" sid="2159532537051284" type="boolean" />
             </instance-variables>
-            <behaviors>
-                <behavior-type name="LineOfSight" sid="6169391813788431">
-                    <behavior id="LOS" />
-                </behavior-type>
-                <behavior-type name="Pathfinding" sid="6608797829317436">
-                    <behavior id="Pathfinding" />
-                </behavior-type>
-            </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3135610700871283" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -494,21 +473,20 @@
                 <member>Zombie</member>
             </members>
             <instance-variables>
-                <instance-variable name="AutoEnable" sid="4540364648721086" type="boolean" />
                 <instance-variable name="Health" sid="6424499004099243" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Sine" sid="2951143800245884">
                     <behavior id="Sin" />
                 </behavior-type>
-                <behavior-type name="Bullet" sid="9177077586611152">
-                    <behavior id="Bullet" />
-                </behavior-type>
                 <behavior-type name="Solid" sid="3543027168510246">
                     <behavior id="solid" />
                 </behavior-type>
-                <behavior-type name="8Direction" sid="5575498940316596">
-                    <behavior id="EightDir" />
+                <behavior-type name="Pathfinding" sid="3973018318863802">
+                    <behavior id="Pathfinding" />
+                </behavior-type>
+                <behavior-type name="LineOfSight" sid="7131070273075499">
+                    <behavior id="LOS" />
                 </behavior-type>
             </behaviors>
         </family>
@@ -566,7 +544,7 @@
     <layout-folder expanded="1">
         <layout>Level1.xml</layout>
     </layout-folder>
-    <event-folder expanded="0">
+    <event-folder expanded="1">
         <event-sheet>GamePlay.xml</event-sheet>
         <event-sheet>Camera.xml</event-sheet>
         <event-sheet>Level1.xml</event-sheet>

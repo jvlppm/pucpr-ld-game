@@ -25,7 +25,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block collapsed="1" sid="6941332416979838">
+        <event-block sid="6941332416979838">
             <conditions>
                 <condition id="0" name="On function" sid="2373435769899891" type="Function">
                     <param id="0" name="Name">&quot;AverageAngle&quot;</param>
@@ -72,7 +72,7 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block collapsed="1" sid="9649514433048088">
+        <event-block sid="9649514433048088">
             <conditions>
                 <condition id="0" name="On function" sid="2696215776225985" type="Function">
                     <param id="0" name="Name">&quot;LengthDir&quot;</param>

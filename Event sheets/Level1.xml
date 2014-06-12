@@ -3,15 +3,22 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Level1</name>
     <events>
+        <variable constant="0" name="InitialY" sid="650160359719648" static="0" type="number">0</variable>
+        <variable constant="0" name="InitialX" sid="9201512452587402" static="0" type="number">0</variable>
         <include>GamePlay</include>
-        <variable constant="0" name="KnifeGiftState" sid="5779240340133855" static="0" type="text">Waiting</variable>
-        <variable constant="0" name="GunGiftState" sid="190061791786403" static="0" type="text"></variable>
-        <variable constant="0" name="RunGiftState" sid="4966071885260411" static="0" type="text"></variable>
         <event-block sid="4232379297267838">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="8253620963330933" type="System" />
             </conditions>
             <actions>
+                <action id="-9" name="Set value" sid="4105073171335674" type="System">
+                    <param id="0" name="Variable">InitialX</param>
+                    <param id="1" name="Value">Player.X</param>
+                </action>
+                <action id="-9" name="Set value" sid="4326598344957899" type="System">
+                    <param id="0" name="Variable">InitialY</param>
+                    <param id="1" name="Value">Player.Y</param>
+                </action>
                 <action id="1" name="Set size" sid="2050482943818811" type="Messages">
                     <param id="0" name="Width">3</param>
                     <param id="1" name="Height">3</param>
@@ -47,97 +54,42 @@
                     <param id="1" name="Y">1</param>
                     <param id="2" name="Value">&quot;Corra com a&#x0D;&#x0A;tecla Shift&quot;</param>
                 </action>
-                <action behavior="Pathfinding" id="5" name="Add obstacle" sid="200426955542396" type="Zombie">
-                    <param id="0" name="Obstacle">Wall</param>
-                </action>
                 <action behavior="Fade" id="1" name="Start fade" sid="10435654694156" type="InitialFade" />
             </actions>
         </event-block>
-        <event-group collapsed="1" description="" sid="800431554552432" title="Knife gift">
+        <event-group description="" sid="800431554552432" title="Knife gift">
             <sub-events>
                 <event-block sid="9257388658206582">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="9669466948122158" type="Player">
                             <param id="0" name="Object">KnifeArea</param>
                         </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-16" name="Wait" sid="4610889130255208" type="System">
-                            <param id="0" name="Seconds">1</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="8656922230648761" type="System">
-                            <param id="0" name="Variable">KnifeGiftState</param>
-                            <param id="1" name="Value">&quot;WalkingToPlayer&quot;</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="7654061892360665" type="Player">
-                            <param id="0" name="Instance variable">AutoEnable</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action behavior="8Direction" id="8" name="Set enabled" sid="55189731672537" type="Player">
-                            <param id="0" name="State">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block collapsed="1" sid="714641610770229">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="5647267543469205" type="System">
-                            <param id="0" name="Variable">KnifeGiftState</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;WalkingToPlayer&quot;</param>
-                        </condition>
-                        <condition id="-14" name="Pick by unique ID" sid="3954115392726549" type="Victim">
+                        <condition id="-14" name="Pick by unique ID" sid="2475572254238738" type="Victim">
                             <param id="0" name="Unique ID">29</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-8" name="Set angle" sid="559263619008334" type="Victim">
-                            <param id="0" name="Angle">angle(Victim.X, Victim.Y, Player.X, Player.Y)</param>
+                        <action id="-9" name="Destroy" sid="9028332435183625" type="KnifeArea" />
+                        <action id="-16" name="Wait" sid="4610889130255208" type="System">
+                            <param id="0" name="Seconds">1</param>
                         </action>
-                        <action behavior="Bullet" id="0" name="Set speed" sid="83682435566614" type="Victim">
-                            <param id="0" name="Speed">60</param>
+                        <action behavior="8Direction" id="8" name="Set enabled" sid="4446171424059695" type="Player">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="9748285227892052" type="Victim">
+                            <param id="0" name="X">Player.X</param>
+                            <param id="1" name="Y">Player.Y</param>
                         </action>
                     </actions>
-                    <sub-events>
-                        <event-block sid="1664582419455802">
-                            <conditions>
-                                <condition id="0" name="On collision with another object" sid="6822542998626666" type="Victim">
-                                    <param id="0" name="Object">Player</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Bullet" id="0" name="Set speed" sid="3412112021703272" type="Victim">
-                                    <param id="0" name="Speed">0</param>
-                                </action>
-                                <action id="-13" name="Set boolean" sid="4446490205919945" type="Victim">
-                                    <param id="0" name="Instance variable">AutoEnable</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action behavior="Bullet" id="5" name="Set enabled" sid="7130424683684334" type="Victim">
-                                    <param id="0" name="State">0</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="9485464255789083" type="Messages">
-                                    <param id="0" name="Instance variable">Message</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="-9" name="Destroy" sid="2224066587487838" type="KnifeArea" />
-                                <action id="-9" name="Set value" sid="2924961583342239" type="System">
-                                    <param id="0" name="Variable">KnifeGiftState</param>
-                                    <param id="1" name="Value">&quot;Done&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
                 </event-block>
-                <event-block sid="9626025539833608">
+                <event-block sid="1655349663285031">
                     <conditions>
-                        <condition id="-14" name="Compare variable" sid="8397681847917546" type="System">
-                            <param id="0" name="Variable">KnifeGiftState</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;Done&quot;</param>
+                        <condition id="0" name="On function" sid="7645856837445285" type="Function">
+                            <param id="0" name="Name">&quot;DialogCompleted&quot;</param>
                         </condition>
-                        <condition id="-7" name="Compare instance variable" sid="287518790101309" type="Messages">
-                            <param id="0" name="Instance variable">Message</param>
-                            <param id="1" name="Comparison">2</param>
+                        <condition id="1" name="Compare parameter" sid="4014684553993689" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
@@ -150,124 +102,24 @@
                             <param id="0" name="Instance variable">HoldingKnife</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-9" name="Set value" sid="1361022029658602" type="System">
-                            <param id="0" name="Variable">KnifeGiftState</param>
-                            <param id="1" name="Value">&quot;Completed&quot;</param>
+                        <action behavior="8Direction" id="8" name="Set enabled" sid="3711158395708267" type="Player">
+                            <param id="0" name="State">1</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="4921246366619843" title="Gun gift">
+        <event-group description="" sid="4921246366619843" title="Gun gift">
             <sub-events>
-                <variable constant="0" name="enemiesOnScreen" sid="4718331082805744" static="0" type="number">0</variable>
-                <event-block sid="8860192286470366">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="8719359496320166" type="Player">
-                            <param id="0" name="Object">Victim</param>
-                        </condition>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="540434433584671" type="Player">
-                            <param id="0" name="Instance variable">CarryingGun</param>
-                        </condition>
-                        <condition behavior="Bullet" disabled="1" id="0" name="Compare speed" sid="58873318555351" type="Victim">
-                            <param id="0" name="Comparison">0</param>
-                            <param id="1" name="Speed">0</param>
-                        </condition>
-                        <condition id="-14" name="Pick by unique ID" sid="4677829952858737" type="Victim">
-                            <param id="0" name="Unique ID">44</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="1090568939208716">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="754241250502376" type="Victim">
-                                    <param id="0" name="Instance variable">Health</param>
-                                    <param id="1" name="Comparison">3</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                                <condition id="1" name="Is overlapping another object" sid="2365289550650655" type="Player">
-                                    <param id="0" name="Object">Area</param>
-                                </condition>
-                                <condition id="1" inverted="1" name="Is overlapping another object" sid="7412510950704774" type="GoodGuy">
-                                    <param id="0" name="Object">Area</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-13" name="Set boolean" sid="9048790038509428" type="Player">
-                                    <param id="0" name="Instance variable">CarryingGun</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block collapsed="1" sid="8854730596936841">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="149261610951563" type="System" />
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="7090039708492947">
-                                    <conditions>
-                                        <condition id="-3" name="Is on-screen" sid="3272354386424089" type="Enemy" />
-                                        <condition id="-13" name="Pick nth instance" sid="3131561173010416" type="System">
-                                            <param id="0" name="Object">Enemy</param>
-                                            <param id="1" name="Instance">0</param>
-                                        </condition>
-                                        <condition id="-14" name="Pick by unique ID" sid="1111563001535092" type="Character">
-                                            <param id="0" name="Unique ID">Enemy.UID</param>
-                                        </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="2577047685478727" type="Character">
-                                            <param id="0" name="Instance variable">Health</param>
-                                            <param id="1" name="Comparison">4</param>
-                                            <param id="2" name="Value">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-9" name="Set value" sid="8299172343211821" type="System">
-                                            <param id="0" name="Variable">enemiesOnScreen</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="9025706842164162">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="4880514644748084" type="System">
-                                            <param id="0" name="Variable">enemiesOnScreen</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">0</param>
-                                        </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="1854745658866027" type="Victim">
-                                            <param id="0" name="Instance variable">Health</param>
-                                            <param id="1" name="Comparison">4</param>
-                                            <param id="2" name="Value">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="4218079717203376" type="Messages">
-                                            <param id="0" name="Instance variable">Message</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                        <action id="-9" name="Set value" sid="5242813495488327" type="System">
-                                            <param id="0" name="Variable">GunGiftState</param>
-                                            <param id="1" name="Value">&quot;Ready&quot;</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-block>
                 <event-block sid="2664915532454441">
                     <conditions>
-                        <condition id="-14" name="Compare variable" sid="3963078117010457" type="System">
-                            <param id="0" name="Variable">GunGiftState</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;Ready&quot;</param>
+                        <condition id="0" name="On function" sid="212700957040919" type="Function">
+                            <param id="0" name="Name">&quot;DialogCompleted&quot;</param>
                         </condition>
-                        <condition id="-7" name="Compare instance variable" sid="1285422813664491" type="Messages">
-                            <param id="0" name="Instance variable">Message</param>
-                            <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Value">0</param>
+                        <condition id="1" name="Compare parameter" sid="8776704713385991" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -275,88 +127,33 @@
                             <param id="0" name="Instance variable">CarryingGun</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-9" name="Set value" sid="4371857376606433" type="System">
-                            <param id="0" name="Variable">GunGiftState</param>
-                            <param id="1" name="Value">&quot;Completed&quot;</param>
-                        </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="2268179519039859" title="Run Gift">
+        <event-group description="" sid="2268179519039859" title="Run Gift">
             <sub-events>
-                <event-block sid="7343290333555935">
+                <event-block sid="9245485113941382">
                     <conditions>
-                        <condition id="-14" name="Compare variable" sid="8784007933051848" type="System">
-                            <param id="0" name="Variable">RunGiftState</param>
+                        <condition id="0" name="On function" sid="5672706131623504" type="Function">
+                            <param id="0" name="Name">&quot;DialogCompleted&quot;</param>
+                        </condition>
+                        <condition id="1" name="Compare parameter" sid="9729000354859794" type="Function">
+                            <param id="0" name="Index">0</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;&quot;</param>
-                        </condition>
-                        <condition id="-14" name="Pick by unique ID" sid="4630395924113626" type="Victim">
-                            <param id="0" name="Unique ID">65</param>
-                        </condition>
-                        <condition id="-3" name="Is on-screen" sid="7982683468586526" type="Victim" />
-                        <condition behavior="8Direction" id="0" inverted="1" name="Is moving" sid="5432118445438376" type="Camera" />
-                    </conditions>
-                    <actions>
-                        <action id="-20" name="Rotate toward angle" sid="254153020552334" type="Victim">
-                            <param id="0" name="Degrees">3</param>
-                            <param id="1" name="Angle">angle(Victim.X, Victim.Y, Player.X, Player.Y)</param>
-                        </action>
-                        <action behavior="Bullet" id="0" name="Set speed" sid="6008890760696491" type="Victim">
-                            <param id="0" name="Speed">50</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="1940681466092289">
-                            <conditions>
-                                <condition id="0" name="On collision with another object" sid="868576894896873" type="Victim">
-                                    <param id="0" name="Object">Player</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Bullet" id="0" name="Set speed" sid="7717041710084247" type="Victim">
-                                    <param id="0" name="Speed">0</param>
-                                </action>
-                                <action id="-13" name="Set boolean" sid="9792530603227902" type="Victim">
-                                    <param id="0" name="Instance variable">AutoEnable</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action behavior="Bullet" id="5" name="Set enabled" sid="3293929381178473" type="Victim">
-                                    <param id="0" name="State">0</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="6753227323944691" type="Messages">
-                                    <param id="0" name="Instance variable">Message</param>
-                                    <param id="1" name="Value">2</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="7628244175858771" type="System">
-                                    <param id="0" name="Variable">RunGiftState</param>
-                                    <param id="1" name="Value">&quot;Done&quot;</param>
-                                </action>
-                                <action id="-13" name="Set boolean" sid="1020604916377381" type="Player">
-                                    <param id="0" name="Instance variable">CanRun</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="4665437654236879">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="3805000443099199" type="System" />
-                        <condition id="-14" name="Pick by unique ID" sid="4570382486451272" type="Victim">
-                            <param id="0" name="Unique ID">65</param>
+                            <param id="2" name="Value">2</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Bullet" id="0" name="Set speed" sid="5455624302572587" type="Victim">
-                            <param id="0" name="Speed">0</param>
+                        <action id="-13" name="Set boolean" sid="3692375921884354" type="Player">
+                            <param id="0" name="Instance variable">CanRun</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="5492905900470633" title="Dinner">
+        <event-group description="" sid="5492905900470633" title="Dinner">
             <sub-events>
                 <event-block sid="1427902067996916">
                     <conditions>
@@ -370,11 +167,7 @@
                             <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action behavior="Bullet" id="5" name="Set enabled" sid="3022941495342069" type="Zombie">
-                            <param id="0" name="State">0</param>
-                        </action>
-                    </actions>
+                    <actions />
                     <sub-events>
                         <event-block sid="3330606072165584">
                             <conditions>
@@ -383,7 +176,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="Pathfinding" id="0" name="Find path" sid="2405862763685527" type="Zombie">
+                                <action behavior="Pathfinding" id="0" name="Find path" sid="5557248413364002" type="Zombie">
                                     <param id="0" name="X">Player.X</param>
                                     <param id="1" name="Y">Player.Y</param>
                                 </action>
@@ -398,7 +191,6 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Pathfinding" id="2" name="Stop" sid="19180576076653" type="Zombie" />
                         <action disabled="1" id="-9" name="Destroy" sid="2965806009251723" type="DinnerArea" />
                     </actions>
                 </event-block>
@@ -406,14 +198,7 @@
                     <conditions>
                         <condition id="-19" name="On destroyed" sid="517914791809278" type="DinnerArea" />
                     </conditions>
-                    <actions>
-                        <action behavior="Bullet" id="5" name="Set enabled" sid="5745528991998496" type="Zombie">
-                            <param id="0" name="State">1</param>
-                        </action>
-                        <action behavior="Pathfinding" id="3" name="Set enabled" sid="7998195080277826" type="Zombie">
-                            <param id="0" name="Set">0</param>
-                        </action>
-                    </actions>
+                    <actions />
                 </event-block>
                 <event-block sid="2559407607272651">
                     <conditions>
@@ -423,9 +208,7 @@
                             <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action behavior="Pathfinding" id="2" name="Stop" sid="8528391862994069" type="Zombie" />
-                    </actions>
+                    <actions />
                 </event-block>
             </sub-events>
         </event-group>

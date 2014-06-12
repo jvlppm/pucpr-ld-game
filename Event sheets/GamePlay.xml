@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>GamePlay</name>
     <events>
+        <variable constant="0" name="LastDialog" sid="84189112809969" static="0" type="number">-1</variable>
         <include>Utils</include>
         <include>Camera</include>
         <event-group collapsed="1" description="" sid="6773088495970466" title="Balloon">
@@ -36,10 +37,6 @@
                     <actions>
                         <action id="0" name="Set text" sid="7060292305672026" type="BalloonText">
                             <param id="0" name="Text">Messages.At(Messages.Message, Messages.Index)</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="4526364845056258" type="Player">
-                            <param id="0" name="Instance variable">AutoEnable</param>
-                            <param id="1" name="Value">0</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -98,10 +95,6 @@
                                             <param id="0" name="Instance variable">Message</param>
                                             <param id="1" name="Value">-1</param>
                                         </action>
-                                        <action id="-13" name="Set boolean" sid="5573795289503759" type="Player">
-                                            <param id="0" name="Instance variable">AutoEnable</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
                                         <action id="-10" name="Set value" sid="959565781022128" type="Messages">
                                             <param id="0" name="Instance variable">Index</param>
                                             <param id="1" name="Value">0</param>
@@ -146,76 +139,73 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-            </sub-events>
-        </event-group>
-        <event-group collapsed="1" description="" sid="2897060075777959" title="Characters">
-            <sub-events>
-                <event-block collapsed="1" sid="6429507390627526">
+                <event-block sid="4702507437012252">
                     <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="9606856087968288" type="Character">
-                            <param id="0" name="Instance variable">AutoEnable</param>
+                        <condition id="-14" name="Compare variable" sid="7070826580652659" type="System">
+                            <param id="0" name="Variable">LastDialog</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">Messages.Message</param>
                         </condition>
-                        <condition id="-11" name="For Each" sid="4680673911537968" type="System">
-                            <param id="0" name="Object">Character</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="853795155706787">
-                            <conditions>
-                                <condition behavior="8Direction" id="1" name="Compare speed" sid="4568382050836169" type="Camera">
-                                    <param id="0" name="Comparison">2</param>
-                                    <param id="1" name="Speed">1</param>
-                                </condition>
-                                <condition id="-3" name="Is on-screen" sid="1765133814437218" type="Character" />
-                                <condition id="-7" name="Compare instance variable" sid="6279757004825179" type="Character">
-                                    <param id="0" name="Instance variable">Health</param>
-                                    <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Bullet" id="5" name="Set enabled" sid="2213488802749908" type="Character">
-                                    <param id="0" name="State">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="1219888893175615">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="8143413496183939" type="System" />
-                            </conditions>
-                            <actions>
-                                <action behavior="Bullet" id="5" name="Set enabled" sid="10172761207788" type="Character">
-                                    <param id="0" name="State">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="33976300699042">
-                    <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="9844189528466002" type="Player">
-                            <param id="0" name="Instance variable">AutoEnable</param>
-                        </condition>
-                        <condition behavior="8Direction" id="1" name="Compare speed" sid="8554597378772326" type="Camera">
-                            <param id="0" name="Comparison">2</param>
-                            <param id="1" name="Speed">1</param>
+                        <condition id="-8" name="Compare two values" sid="4038900939636685" type="System">
+                            <param id="0" name="First value">Messages.Message</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="8Direction" id="8" name="Set enabled" sid="3814321011488541" type="Player">
-                            <param id="0" name="State">1</param>
+                        <action id="0" name="Call function" sid="76103435612278" type="Function">
+                            <param id="0" name="Name">&quot;DialogStarted&quot;</param>
+                            <param id="1" name="Parameter {n}">Messages.Message</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="8672916273063104">
+                <event-block sid="6270132286812625">
                     <conditions>
-                        <condition id="-22" name="Else" sid="8392509844057057" type="System" />
+                        <condition id="-14" name="Compare variable" sid="3809632586717697" type="System">
+                            <param id="0" name="Variable">LastDialog</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">Messages.Message</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="2617394567985435" type="System">
+                            <param id="0" name="First value">Messages.Message</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
-                        <action behavior="8Direction" id="8" name="Set enabled" sid="9441717059178134" type="Player">
-                            <param id="0" name="State">0</param>
+                        <action id="0" name="Call function" sid="339640915277156" type="Function">
+                            <param id="0" name="Name">&quot;DialogCompleted&quot;</param>
+                            <param id="1" name="Parameter {n}">LastDialog</param>
                         </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6014474495389857">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="6547425579679625" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="2599472161814022" type="System">
+                            <param id="0" name="Variable">LastDialog</param>
+                            <param id="1" name="Value">Messages.Message</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="2897060075777959" title="Characters">
+            <sub-events>
+                <event-block sid="2747026023799614">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="5328620491563456" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="LineOfSight" id="2" name="Add obstacle" sid="7215148226454913" type="Character">
+                            <param id="0" name="Obstacle">Wall</param>
+                        </action>
+                        <action behavior="Pathfinding" id="5" name="Add obstacle" sid="2036355355421125" type="Character">
+                            <param id="0" name="Obstacle">Wall</param>
+                        </action>
+                        <action behavior="Pathfinding" id="4" name="Regenerate obstacle map" sid="7817724900881832" type="Character" />
                     </actions>
                 </event-block>
                 <event-block disabled="1" sid="8531452890494635">
@@ -252,9 +242,6 @@
                         <action id="4" name="Set animation" sid="2969297058111159" type="Character">
                             <param id="0" name="Animation">&quot;Dead&quot;</param>
                             <param id="1" name="From">1</param>
-                        </action>
-                        <action behavior="8Direction" id="8" name="Set enabled" sid="885581008437747" type="Character">
-                            <param id="0" name="State">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -300,65 +287,153 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="7861591463897327">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="0" name="On path found" sid="3881853176667559" type="Character" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="1" name="Move along path" sid="6436560352326931" type="Character" />
+                    </actions>
+                </event-block>
+                <variable constant="0" name="solid1" sid="752557890398827" static="0" type="number">0</variable>
+                <variable constant="0" name="solid2" sid="2324655875346492" static="0" type="number">0</variable>
+                <event-block collapsed="1" sid="6072204862819491">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="7996809888709004" type="Character">
+                            <param id="0" name="Object">Character</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="4501699149323765">
+                            <conditions>
+                                <condition id="-13" name="Pick nth instance" sid="241544802382894" type="System">
+                                    <param id="0" name="Object">Character</param>
+                                    <param id="1" name="Instance">0</param>
+                                </condition>
+                                <condition behavior="Solid" id="0" name="Is enabled" sid="631606033915743" type="Character" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="3206574851038337" type="System">
+                                    <param id="0" name="Variable">solid1</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="355874411622665">
+                            <conditions>
+                                <condition id="-13" name="Pick nth instance" sid="5153193227926896" type="System">
+                                    <param id="0" name="Object">Character</param>
+                                    <param id="1" name="Instance">1</param>
+                                </condition>
+                                <condition behavior="Solid" id="0" name="Is enabled" sid="3471600818159932" type="Character" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="3817653205210135" type="System">
+                                    <param id="0" name="Variable">solid2</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4761502973109968">
+                            <conditions>
+                                <condition id="-13" name="Pick nth instance" sid="8724892855018815" type="System">
+                                    <param id="0" name="Object">Character</param>
+                                    <param id="1" name="Instance">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="1216364771774296" type="System">
+                                    <param id="0" name="Variable">solid2</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Pathfinding" id="2" name="Stop" sid="5483104245193256" type="Character" />
+                                <action behavior="Pathfinding" disabled="1" id="4" name="Regenerate obstacle map" sid="5853202973831467" type="Character" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="4835173282412841">
+                            <conditions>
+                                <condition id="-13" name="Pick nth instance" sid="9219488512218476" type="System">
+                                    <param id="0" name="Object">Character</param>
+                                    <param id="1" name="Instance">1</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="8640996198936055" type="System">
+                                    <param id="0" name="Variable">solid1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Pathfinding" id="2" name="Stop" sid="1236024645832168" type="Character" />
+                                <action behavior="Pathfinding" disabled="1" id="4" name="Regenerate obstacle map" sid="8995339998349445" type="Character" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="2034690151041541">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="4359098556955709" type="Character">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="2" name="Stop" sid="6925411101524505" type="Character" />
+                    </actions>
+                </event-block>
+                <event-block sid="7452729250779103">
+                    <conditions>
+                        <condition behavior="8Direction" id="0" name="Is moving" sid="5718351061586626" type="Camera" />
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="2" name="Set ignoring input" sid="7527954579902497" type="Player">
+                            <param id="0" name="Input">1</param>
+                        </action>
+                        <action behavior="Pathfinding" id="14" name="Set speed" sid="8610013244896075" type="Character">
+                            <param id="0" name="Speed">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7653176657418894">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="6930785706879829" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="2" name="Set ignoring input" sid="8127361753917263" type="Player">
+                            <param id="0" name="Input">0</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group collapsed="1" description="" sid="3766674772289778" title="Victims">
             <sub-events>
-                <event-block sid="6970142373032275">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="2311614204652689" type="Victim">
-                            <param id="0" name="Object">Enemy</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="2368519640305399" type="Victim">
-                            <param id="0" name="Instance variable">Running</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="1092732215192193">
-                    <conditions>
-                        <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="6559575564674128" type="Victim">
-                            <param id="0" name="Object">Zombie</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="388711598074224" type="Victim">
-                            <param id="0" name="Instance variable">Running</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="3665040161346942">
-                    <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="9758037715962836" type="Victim">
-                            <param id="0" name="Object">Player</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                </event-block>
-                <event-block sid="4706235495098837">
+                <event-block collapsed="1" sid="4706235495098837">
                     <conditions>
                         <condition id="-3" name="Is on-screen" sid="658511659056421" type="Victim" />
+                        <condition id="-8" name="Is boolean instance variable set" sid="1875791766255387" type="Victim">
+                            <param id="0" name="Instance variable">Running</param>
+                        </condition>
+                        <condition behavior="Pathfinding" id="4" inverted="1" name="Is moving along path" sid="293347594777976" type="Victim" />
                         <condition id="-11" name="For Each" sid="8982328255764358" type="System">
                             <param id="0" name="Object">Victim</param>
-                        </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="9292031129885653" type="Victim">
-                            <param id="0" name="Instance variable">Running</param>
                         </condition>
                     </conditions>
                     <actions />
                     <sub-events>
                         <variable constant="0" name="x_component" sid="2863045986847837" static="0" type="number">0</variable>
                         <variable constant="0" name="y_component" sid="8762039936927857" static="0" type="number">0</variable>
+                        <variable constant="0" name="AverageAngle" sid="5039314281616292" static="0" type="number">0</variable>
                         <variable constant="0" name="count" sid="5621624683614894" static="0" type="number">0</variable>
                         <event-block sid="8883373093638601">
                             <conditions>
                                 <condition id="-11" name="For Each" sid="1655314597990026" type="System">
                                     <param id="0" name="Object">Enemy</param>
                                 </condition>
-                                <condition id="-8" name="Compare two values" sid="3805303534987038" type="System">
+                                <condition id="-3" name="Is on-screen" sid="4532695073128966" type="Enemy" />
+                                <condition disabled="1" id="-8" name="Compare two values" sid="3805303534987038" type="System">
                                     <param id="0" name="First value">distance(Victim.X, Victim.Y, Enemy.X, Enemy.Y)</param>
                                     <param id="1" name="Comparison">2</param>
                                     <param id="2" name="Second value">50</param>
@@ -370,11 +445,11 @@
                             <actions>
                                 <action id="-10" name="Add to" sid="7413495499100982" type="System">
                                     <param id="0" name="Variable">x_component</param>
-                                    <param id="1" name="Value">cos(angle(Victim.X, Victim.Y, Enemy.X, Enemy.Y))</param>
+                                    <param id="1" name="Value">cos(angle(Enemy.X, Enemy.Y, Victim.X, Victim.Y))</param>
                                 </action>
                                 <action id="-10" name="Add to" sid="6778603739686324" type="System">
                                     <param id="0" name="Variable">y_component</param>
-                                    <param id="1" name="Value">sin(angle(Victim.X, Victim.Y, Enemy.X, Enemy.Y))</param>
+                                    <param id="1" name="Value">sin(angle(Enemy.X, Enemy.Y, Victim.X, Victim.Y))</param>
                                 </action>
                                 <action id="-10" name="Add to" sid="9912264946036453" type="System">
                                     <param id="0" name="Variable">count</param>
@@ -383,58 +458,241 @@
                             </actions>
                         </event-block>
                         <event-block sid="9918109228565961">
-                            <conditions />
-                            <actions>
-                                <action id="-9" name="Set value" sid="2420172785526148" type="System">
-                                    <param id="0" name="Variable">x_component</param>
-                                    <param id="1" name="Value">x_component / count</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="3429353078116513" type="System">
-                                    <param id="0" name="Variable">y_component</param>
-                                    <param id="1" name="Value">y_component / count</param>
-                                </action>
-                                <action id="-8" name="Set angle" sid="4624724653915555" type="Victim">
-                                    <param id="0" name="Angle">270 - angle(0, 0, y_component, x_component)</param>
-                                </action>
-                                <action behavior="Bullet" id="0" name="Set speed" sid="2554529063315405" type="Victim">
-                                    <param id="0" name="Speed">Victim.MaxSpeed</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="3023869248624889">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="7925112190826842" type="System">
                                     <param id="0" name="Variable">count</param>
-                                    <param id="1" name="Comparison">0</param>
+                                    <param id="1" name="Comparison">4</param>
                                     <param id="2" name="Value">0</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="Bullet" id="0" name="Set speed" sid="6163844204734128" type="Victim">
-                                    <param id="0" name="Speed">0</param>
+                                <action id="-9" name="Set value" sid="3448094008699003" type="System">
+                                    <param id="0" name="Variable">AverageAngle</param>
+                                    <param id="1" name="Value">90- angle(0, 0, y_component/count, x_component/count)</param>
+                                </action>
+                                <action behavior="Pathfinding" id="0" name="Find path" sid="5987086950703232" type="Victim">
+                                    <param id="0" name="X">Victim.X + Function.Call(&quot;LengthDir&quot;, &quot;x&quot;, 30, AverageAngle)</param>
+                                    <param id="1" name="Y">Victim.Y + Function.Call(&quot;LengthDir&quot;, &quot;y&quot;, 30, AverageAngle)</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block sid="2257214021347142">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="1629289458268421" type="System">
+                            <param id="0" name="Object">Area</param>
+                        </condition>
+                        <condition id="-11" name="For Each" sid="6525644021713183" type="System">
+                            <param id="0" name="Object">Victim</param>
+                        </condition>
+                        <condition disabled="1" id="1" name="Is overlapping another object" sid="9843704477375623" type="Player">
+                            <param id="0" name="Object">Area</param>
+                        </condition>
+                        <condition id="1" name="Is overlapping another object" sid="1053485979532074" type="Victim">
+                            <param id="0" name="Object">Area</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="safe" sid="2910735561901127" static="0" type="number">1</variable>
+                        <event-block sid="1532504153114857">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="5666536240513849" type="Enemy">
+                                    <param id="0" name="Object">Area</param>
+                                </condition>
+                                <condition id="-11" name="For Each" sid="344522127811837" type="System">
+                                    <param id="0" name="Object">Enemy</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="7678274284598021" type="Character">
+                                    <param id="0" name="Unique ID">Enemy.UID</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="752104374156185" type="Character">
+                                    <param id="0" name="Instance variable">Health</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="9059183649491217" type="System">
+                                    <param id="0" name="Variable">safe</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5406953508618082">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="2738091327288413" type="System">
+                                    <param id="0" name="Variable">safe</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="2307440317461925" type="Victim">
+                                    <param id="0" name="Instance variable">Safe</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6715764408056724">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="1043239629088259" type="System">
+                                    <param id="0" name="Variable">safe</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="4138432173945327" type="Victim">
+                                    <param id="0" name="Instance variable">Safe</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="7918345533403873">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="1023544812396072" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                        <condition id="-11" name="For Each" sid="1803136302973645" type="System">
+                            <param id="0" name="Object">Victim</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="5058959468131726" type="Victim">
+                            <param id="0" name="Instance variable">Safe</param>
+                        </condition>
+                        <condition id="-3" name="Is on-screen" sid="6348832281680112" type="Victim" />
+                        <condition id="-7" name="Compare instance variable" sid="1300117504784844" type="Victim">
+                            <param id="0" name="Instance variable">Message</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="5975783062434913" type="Messages">
+                            <param id="0" name="Instance variable">Message</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="8155234181130923" type="Victim">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="7980932186443702" type="Victim">
+                            <param id="0" name="X">InitialX</param>
+                            <param id="1" name="Y">InitialY</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1251923703147604">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="1566597390238668" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                        <condition id="-11" name="For Each" sid="8352711464969065" type="System">
+                            <param id="0" name="Object">Victim</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="6344184549249513" type="Victim">
+                            <param id="0" name="Instance variable">Safe</param>
+                        </condition>
+                        <condition id="-3" name="Is on-screen" sid="7055852830634531" type="Victim" />
+                        <condition id="-7" name="Compare instance variable" sid="393543134166145" type="Victim">
+                            <param id="0" name="Instance variable">Message</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="9904956191285547" type="Messages">
+                            <param id="0" name="Instance variable">Message</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="8447938371510885" type="Victim">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="3838182067610413" type="Victim">
+                            <param id="0" name="X">Player.X</param>
+                            <param id="1" name="Y">Player.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2676508559313817">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="8262850755840782" type="Victim">
+                            <param id="0" name="Object">Player</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="7625292939407939" type="Victim">
+                            <param id="0" name="Instance variable">Safe</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="9188745851885653" type="Victim">
+                            <param id="0" name="Instance variable">Message</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="9428238162491768" type="Messages">
+                            <param id="0" name="Instance variable">Message</param>
+                            <param id="1" name="Value">Victim.Message</param>
+                        </action>
+                        <action id="0" name="Call function" sid="7125879997351789" type="Function">
+                            <param id="0" name="Name">&quot;VictimSafe&quot;</param>
+                            <param id="1" name="Parameter {n}">Victim.UID</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="8723528417059505" type="Victim">
+                            <param id="0" name="Instance variable">Message</param>
+                            <param id="1" name="Value">-1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3595759109256556">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="1456710612013809" type="Victim">
+                            <param id="0" name="Object">Player</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="2" name="Stop" sid="2539264762267222" type="Victim" />
+                        <action behavior="Pathfinding" disabled="1" id="4" name="Regenerate obstacle map" sid="8880309695253612" type="Victim" />
+                    </actions>
+                </event-block>
+                <event-block sid="5181034978579049">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="2282206727687105" type="Victim">
+                            <param id="0" name="Object">Enemy</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="3997203135807211" type="Victim">
+                            <param id="0" name="Instance variable">Running</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6513159862760713">
+                    <conditions>
+                        <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="6521525957534517" type="Victim">
+                            <param id="0" name="Object">Enemy</param>
+                        </condition>
+                        <condition id="-3" name="Is on-screen" sid="1965402262761647" type="Enemy" />
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="-13" name="Set boolean" sid="3318732929487649" type="Victim">
+                            <param id="0" name="Instance variable">Running</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group collapsed="1" description="" sid="3052503956438317" title="Zombies">
             <sub-events>
-                <event-block sid="2747026023799614">
-                    <conditions>
-                        <condition id="-2" name="On start of layout" sid="5328620491563456" type="System" />
-                    </conditions>
-                    <actions>
-                        <action behavior="LineOfSight" id="2" name="Add obstacle" sid="1801982842913132" type="Zombie">
-                            <param id="0" name="Obstacle">Wall</param>
-                        </action>
-                        <action behavior="Pathfinding" id="5" name="Add obstacle" sid="6163048643323379" type="Zombie">
-                            <param id="0" name="Obstacle">Wall</param>
-                        </action>
-                        <action behavior="Pathfinding" id="4" name="Regenerate obstacle map" sid="4892120239729108" type="Zombie" />
-                    </actions>
-                </event-block>
                 <event-block sid="5032556258015384">
                     <conditions>
                         <condition id="9" name="Is overlapping at offset" sid="5661433258847534" type="Zombie">
@@ -492,71 +750,55 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block collapsed="1" sid="3011547771811964">
+                <event-block sid="3011547771811964">
                     <conditions>
+                        <condition id="-6" name="Every X seconds" sid="9130189046828305" type="System">
+                            <param id="0" name="Interval (seconds)">0.1</param>
+                        </condition>
                         <condition id="-11" name="For Each" sid="4081659821480804" type="System">
                             <param id="0" name="Object">Zombie</param>
                         </condition>
+                        <condition id="-15" name="Pick nearest/furthest" sid="5655291172079003" type="GoodGuy">
+                            <param id="0" name="Which">0</param>
+                            <param id="1" name="X">Zombie.X</param>
+                            <param id="2" name="Y">Zombie.Y</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="1483123731536603" type="Zombie">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-3" name="Is on-screen" sid="1164320351851821" type="Zombie" />
+                        <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="5761741511082024" type="Zombie">
+                            <param id="0" name="Object">GoodGuy</param>
+                        </condition>
+                        <condition id="-3" name="Is on-screen" sid="9944639276474629" type="GoodGuy" />
+                        <condition disabled="1" id="-13" name="Pick nth instance" sid="4051531230720905" type="System">
+                            <param id="0" name="Object">GoodGuy</param>
+                            <param id="1" name="Instance">0</param>
+                        </condition>
+                        <condition disabled="1" id="-14" name="Pick by unique ID" sid="7067220532922365" type="Character">
+                            <param id="0" name="Unique ID">GoodGuy.UID</param>
+                        </condition>
+                        <condition behavior="Sine" disabled="1" id="0" inverted="1" name="Is active" sid="6700788079223877" type="Character" />
+                        <condition id="-7" name="Compare instance variable" sid="8154297185845189" type="Zombie">
+                            <param id="0" name="Instance variable">ReleaseDelay</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="2249365369903218" type="Zombie">
+                            <param id="0" name="Instance variable">Holding</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="1897773520524168">
-                            <conditions>
-                                <condition id="-3" name="Is on-screen" sid="1164320351851821" type="Zombie" />
-                                <condition id="-7" name="Compare instance variable" sid="1483123731536603" type="Zombie">
-                                    <param id="0" name="Instance variable">Health</param>
-                                    <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="4055011458893377" type="Zombie">
-                                    <param id="0" name="Object">GoodGuy</param>
-                                </condition>
-                                <condition id="-3" name="Is on-screen" sid="9944639276474629" type="GoodGuy" />
-                                <condition id="-13" name="Pick nth instance" sid="5896171138686972" type="System">
-                                    <param id="0" name="Object">GoodGuy</param>
-                                    <param id="1" name="Instance">0</param>
-                                </condition>
-                                <condition id="-14" name="Pick by unique ID" sid="7402167463437018" type="Character">
-                                    <param id="0" name="Unique ID">GoodGuy.UID</param>
-                                </condition>
-                                <condition behavior="Sine" id="0" inverted="1" name="Is active" sid="6700788079223877" type="Character" />
-                                <condition id="-7" name="Compare instance variable" sid="8154297185845189" type="Zombie">
-                                    <param id="0" name="Instance variable">ReleaseDelay</param>
-                                    <param id="1" name="Comparison">3</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Bullet" id="0" name="Set speed" sid="9416666472783391" type="Zombie">
-                                    <param id="0" name="Speed">40</param>
-                                </action>
-                                <action id="-8" name="Set angle" sid="2521059445827661" type="Zombie">
-                                    <param id="0" name="Angle">angle(Zombie.X, Zombie.Y, GoodGuy.X, GoodGuy.Y)</param>
-                                </action>
-                                <action id="-13" name="Set boolean" sid="2969633999135346" type="Zombie">
-                                    <param id="0" name="Instance variable">Following</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="5492314109396737">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="1731997867988263" type="System" />
-                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="7594739965999439" type="Zombie">
-                                    <param id="0" name="Instance variable">KeepWalking</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Bullet" id="0" name="Set speed" sid="7890903541871821" type="Zombie">
-                                    <param id="0" name="Speed">0</param>
-                                </action>
-                                <action id="-13" name="Set boolean" sid="7063691312794825" type="Zombie">
-                                    <param id="0" name="Instance variable">Following</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
+                    <actions>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="2722100475811576" type="Zombie">
+                            <param id="0" name="X">GoodGuy.X</param>
+                            <param id="1" name="Y">GoodGuy.Y</param>
+                        </action>
+                        <action id="-24" name="Stop loop" sid="1422524353875925" type="System" />
+                    </actions>
                 </event-block>
                 <event-block sid="5715188491627261">
                     <conditions>
@@ -576,14 +818,6 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action disabled="1" id="-13" name="Set boolean" sid="6786075232568224" type="Character">
-                            <param id="0" name="Instance variable">AutoEnable</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="793357632506115" type="Zombie">
-                            <param id="0" name="Instance variable">AutoEnable</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
                         <action id="-10" name="Set value" sid="4150268351383997" type="Zombie">
                             <param id="0" name="Instance variable">Holding</param>
                             <param id="1" name="Value">Character.UID</param>
@@ -599,12 +833,6 @@
                         <action behavior="Sine" id="0" name="Set active" sid="1158397562513376" type="Character">
                             <param id="0" name="State">1</param>
                         </action>
-                        <action behavior="Bullet" disabled="1" id="5" name="Set enabled" sid="2684671191408064" type="Character">
-                            <param id="0" name="State">0</param>
-                        </action>
-                        <action behavior="Bullet" id="5" name="Set enabled" sid="1638344797867103" type="Zombie">
-                            <param id="0" name="State">0</param>
-                        </action>
                         <action id="-8" name="Set angle" sid="2684831201144417" type="Zombie">
                             <param id="0" name="Angle">angle(Zombie.X, Zombie.Y, Character.X, Character.Y)</param>
                         </action>
@@ -612,6 +840,7 @@
                             <param id="0" name="Instance variable">Health</param>
                             <param id="1" name="Value">1</param>
                         </action>
+                        <action behavior="Pathfinding" id="2" name="Stop" sid="5530335594236213" type="Zombie" />
                     </actions>
                 </event-block>
                 <event-block collapsed="1" sid="6161878113429321">
@@ -631,19 +860,8 @@
                             <param id="0" name="Instance variable">Holding</param>
                             <param id="1" name="Value">-1</param>
                         </action>
-                        <action disabled="1" id="-13" name="Set boolean" sid="5587902954441136" type="Character">
-                            <param id="0" name="Instance variable">AutoEnable</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="6168518124121981" type="Zombie">
-                            <param id="0" name="Instance variable">AutoEnable</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
                         <action behavior="Sine" id="0" name="Set active" sid="844276943980011" type="Character">
                             <param id="0" name="State">0</param>
-                        </action>
-                        <action behavior="Bullet" disabled="1" id="5" name="Set enabled" sid="1451248643632821" type="Character">
-                            <param id="0" name="State">1</param>
                         </action>
                         <action id="-10" name="Set value" sid="1589709759369264" type="Zombie">
                             <param id="0" name="Instance variable">ReleaseDelay</param>
@@ -674,13 +892,10 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="484197694518535">
+                <event-block disabled="1" sid="484197694518535">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="3512342995677946" type="Zombie">
                             <param id="0" name="Object">ChangeDirection</param>
-                        </condition>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="7168828544640383" type="Zombie">
-                            <param id="0" name="Instance variable">Following</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -702,14 +917,6 @@
                             <param id="0" name="Instance variable">ReleaseDelay</param>
                             <param id="1" name="Value">dt</param>
                         </action>
-                    </actions>
-                </event-block>
-                <event-block sid="9866441491046362">
-                    <conditions>
-                        <condition behavior="Pathfinding" id="0" name="On path found" sid="3915430543899456" type="Zombie" />
-                    </conditions>
-                    <actions>
-                        <action behavior="Pathfinding" id="1" name="Move along path" sid="9810645901238683" type="Zombie" />
                     </actions>
                 </event-block>
                 <event-block sid="4324840078489887">
@@ -941,12 +1148,7 @@
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="4561100097074711" type="System" />
                     </conditions>
-                    <actions>
-                        <action behavior="Pathfinding" id="5" name="Add obstacle" sid="2844587729392942" type="InvisibleMan">
-                            <param id="0" name="Obstacle">Wall</param>
-                        </action>
-                        <action behavior="Pathfinding" id="4" name="Regenerate obstacle map" sid="9442727150707392" type="InvisibleMan" />
-                    </actions>
+                    <actions />
                 </event-block>
                 <event-block sid="8838717090453826">
                     <conditions>
@@ -969,7 +1171,6 @@
                         <condition id="-4" name="Trigger once while true" sid="1391259584634985" type="System" />
                     </conditions>
                     <actions>
-                        <action behavior="Pathfinding" id="2" name="Stop" sid="9914234947577369" type="InvisibleMan" />
                         <action id="-16" name="Set opacity" sid="3374205126310904" type="InvisibleMan">
                             <param id="0" name="Opacity">100</param>
                         </action>
@@ -977,21 +1178,16 @@
                 </event-block>
                 <event-block sid="4324656161830704">
                     <conditions>
-                        <condition behavior="Pathfinding" id="0" name="On path found" sid="139349264197762" type="InvisibleMan" />
                         <condition id="-7" name="Compare instance variable" sid="3429764310942575" type="InvisibleMan">
                             <param id="0" name="Instance variable">Health</param>
                             <param id="1" name="Comparison">4</param>
                             <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action behavior="Pathfinding" id="1" name="Move along path" sid="1844460773148972" type="InvisibleMan" />
-                    </actions>
+                    <actions />
                 </event-block>
                 <event-block sid="1758324003044095">
-                    <conditions>
-                        <condition behavior="Pathfinding" id="5" name="On arrived" sid="2464856863114327" type="InvisibleMan" />
-                    </conditions>
+                    <conditions />
                     <actions />
                     <sub-events>
                         <event-block sid="239824608917774">
@@ -1013,12 +1209,7 @@
                             <conditions>
                                 <condition id="-22" name="Else" sid="8335755231865073" type="System" />
                             </conditions>
-                            <actions>
-                                <action behavior="Pathfinding" id="0" name="Find path" sid="8745479849182988" type="InvisibleMan">
-                                    <param id="0" name="X">Player.X</param>
-                                    <param id="1" name="Y">Player.Y</param>
-                                </action>
-                            </actions>
+                            <actions />
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -1031,12 +1222,7 @@
                             <param id="0" name="Unique ID">Function.Param(0)</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action behavior="Pathfinding" id="0" name="Find path" sid="6592093249657284" type="InvisibleMan">
-                            <param id="0" name="X">ViewportLeft(InvisibleMan.LayerNumber) + random((ViewportRight(InvisibleMan.LayerNumber)) - (ViewportLeft(InvisibleMan.LayerNumber)))</param>
-                            <param id="1" name="Y">ViewportTop(InvisibleMan.LayerNumber) + random((ViewportBottom(InvisibleMan.LayerNumber)) - (ViewportTop(InvisibleMan.LayerNumber)))</param>
-                        </action>
-                    </actions>
+                    <actions />
                 </event-block>
                 <event-block sid="1003820755162384">
                     <conditions>
@@ -1097,13 +1283,11 @@
                             <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action behavior="Pathfinding" id="2" name="Stop" sid="8831302050581065" type="InvisibleMan" />
-                    </actions>
+                    <actions />
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="7871028774943537" title="Player">
+        <event-group description="" sid="7871028774943537" title="Player">
             <sub-events>
                 <event-block sid="1225327048404472">
                     <conditions>
@@ -1296,8 +1480,8 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="8Direction" id="4" name="Set max speed" sid="6476332528580009" type="Player">
-                            <param id="0" name="Max Speed">130</param>
+                        <action behavior="8Direction" id="4" name="Set max speed" sid="7549239714891313" type="Player">
+                            <param id="0" name="Max Speed">520</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1306,8 +1490,8 @@
                         <condition id="-22" name="Else" sid="710024685774647" type="System" />
                     </conditions>
                     <actions>
-                        <action behavior="8Direction" id="4" name="Set max speed" sid="3916966811724728" type="Player">
-                            <param id="0" name="Max Speed">80</param>
+                        <action behavior="8Direction" id="4" name="Set max speed" sid="4502868647806233" type="Player">
+                            <param id="0" name="Max Speed">320</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1321,7 +1505,7 @@
                     </conditions>
                     <actions>
                         <action behavior="Fade" id="1" name="Start fade" sid="9776229295678376" type="FinalFade" />
-                        <action behavior="8Direction" id="2" name="Set ignoring input" sid="702978952208833" type="Player">
+                        <action behavior="8Direction" id="2" name="Set ignoring input" sid="8518413716796701" type="Player">
                             <param id="0" name="Input">1</param>
                         </action>
                     </actions>
@@ -1336,7 +1520,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="3193611664449879" title="Weapons">
+        <event-group collapsed="1" description="" sid="3193611664449879" title="Weapons">
             <sub-events>
                 <event-block sid="1870731739834124">
                     <conditions>
@@ -1362,7 +1546,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-group description="" sid="6454508332916548" title="Knife">
+                <event-group collapsed="1" description="" sid="6454508332916548" title="Knife">
                     <sub-events>
                         <event-block collapsed="1" sid="4064754307868574">
                             <conditions>
@@ -1486,12 +1670,6 @@
                                             <param id="0" name="Instance variable">Health</param>
                                             <param id="1" name="Value">5</param>
                                         </action>
-                                        <action behavior="8Direction" id="9" name="Set vector X" sid="9584150200478362" type="Character">
-                                            <param id="0" name="Vector X">Function.Call(&quot;LengthDir&quot;, &quot;x&quot;, 100, angle(Knife.X, Knife.Y, Character.X, Character.Y))</param>
-                                        </action>
-                                        <action behavior="8Direction" id="10" name="Set vector Y" sid="361340291936977" type="Character">
-                                            <param id="0" name="Vector Y">Function.Call(&quot;LengthDir&quot;, &quot;y&quot;, 100, angle(Knife.X, Knife.Y, Character.X, Character.Y))</param>
-                                        </action>
                                         <action id="0" name="Spawn another object" sid="9256314656324696" type="Knife">
                                             <param id="0" name="Object">DirectionalBlood</param>
                                             <param id="1" name="Layer">Character.LayerNumber</param>
@@ -1510,7 +1688,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="8165322307502895" title="Gun">
+                <event-group collapsed="1" description="" sid="8165322307502895" title="Gun">
                     <sub-events>
                         <event-block sid="3967618514829974">
                             <conditions>
@@ -1589,12 +1767,6 @@
                                     <param id="0" name="Instance variable">Health</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action behavior="8Direction" id="9" name="Set vector X" sid="7967158853987824" type="Character">
-                                    <param id="0" name="Vector X">Function.Call(&quot;LengthDir&quot;, &quot;x&quot;, 100, angle(Bullet.X, Bullet.Y, Character.X, Character.Y))</param>
-                                </action>
-                                <action behavior="8Direction" id="10" name="Set vector Y" sid="9058323516951169" type="Character">
-                                    <param id="0" name="Vector Y">Function.Call(&quot;LengthDir&quot;, &quot;y&quot;, 100, angle(Player.X, Player.Y, Character.X, Character.Y))</param>
-                                </action>
                                 <action disabled="1" id="-10" name="Set value" sid="2800362580297623" type="DirectionalBlood">
                                     <param id="0" name="Instance variable">Owner</param>
                                     <param id="1" name="Value">Character.UID</param>
@@ -1646,7 +1818,7 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group description="" sid="569804434613888" title="HUD">
+        <event-group collapsed="1" description="" sid="569804434613888" title="HUD">
             <sub-events>
                 <event-block collapsed="1" sid="1517814329212286">
                     <conditions>
