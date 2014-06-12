@@ -16,6 +16,9 @@
                     <param id="0" name="Instance variable">DesiredY</param>
                     <param id="1" name="Value">Player.Y</param>
                 </action>
+                <action disabled="1" id="-16" name="Set opacity" sid="9295457789093004" type="Camera">
+                    <param id="0" name="Opacity">50</param>
+                </action>
             </actions>
         </event-block>
         <event-block collapsed="1" sid="5498755554358997">
@@ -26,72 +29,114 @@
                     <param id="2" name="Y">Camera.DesiredY</param>
                 </condition>
             </conditions>
-            <actions />
+            <actions>
+                <action disabled="1" id="-16" name="Set opacity" sid="3592329371000787" type="Camera">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+            </actions>
             <sub-events>
                 <event-block sid="3174747019150563">
                     <conditions>
-                        <condition id="-1" name="Compare X" sid="1439401461652879" type="Camera">
-                            <param id="0" name="Comparison">2</param>
-                            <param id="1" name="X co-ordinate">Area.X + (ViewportRight(Camera.LayerNumber) - ViewportLeft(Camera.LayerNumber)) / 2</param>
+                        <condition id="-7" name="Compare instance variable" sid="1439401461652879" type="Camera">
+                            <param id="0" name="Instance variable">DesiredX</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">Area.X + ScreenWidth / 2</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-10" name="Set value" sid="9736818472137176" type="Camera">
                             <param id="0" name="Instance variable">DesiredX</param>
-                            <param id="1" name="Value">Area.X + (ViewportRight(Camera.LayerNumber) - ViewportLeft(Camera.LayerNumber)) / 2</param>
+                            <param id="1" name="Value">Area.X + ScreenWidth / 2</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="1714767879500181">
                     <conditions>
-                        <condition id="-1" name="Compare X" sid="1306327340987269" type="Camera">
-                            <param id="0" name="Comparison">4</param>
-                            <param id="1" name="X co-ordinate">Area.X + Area.Width - (ViewportRight(Camera.LayerNumber) - ViewportLeft(Camera.LayerNumber)) / 2</param>
+                        <condition id="-7" name="Compare instance variable" sid="1079594568197279" type="Camera">
+                            <param id="0" name="Instance variable">DesiredX</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">Area.X + Area.Width - ScreenWidth / 2</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-10" name="Set value" sid="3786653745296872" type="Camera">
                             <param id="0" name="Instance variable">DesiredX</param>
-                            <param id="1" name="Value">Area.X + Area.Width - (ViewportRight(Camera.LayerNumber) - ViewportLeft(Camera.LayerNumber)) / 2</param>
+                            <param id="1" name="Value">Area.X + Area.Width - ScreenWidth / 2</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="4448359620665018">
                     <conditions>
-                        <condition id="-2" name="Compare Y" sid="2167689797984226" type="Camera">
-                            <param id="0" name="Comparison">2</param>
-                            <param id="1" name="Y co-ordinate">Area.Y + (ViewportBottom(Camera.LayerNumber) - ViewportTop(Camera.LayerNumber)) / 2</param>
+                        <condition id="-7" name="Compare instance variable" sid="7661506017106095" type="Camera">
+                            <param id="0" name="Instance variable">DesiredY</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">Area.Y + ScreenHeight / 2</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-10" name="Set value" sid="5540562991398958" type="Camera">
                             <param id="0" name="Instance variable">DesiredY</param>
-                            <param id="1" name="Value">Area.Y + (ViewportBottom(Camera.LayerNumber) - ViewportTop(Camera.LayerNumber)) / 2</param>
+                            <param id="1" name="Value">Area.Y + ScreenHeight / 2</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="3239968992990446">
                     <conditions>
-                        <condition id="-2" name="Compare Y" sid="1030574155367217" type="Camera">
-                            <param id="0" name="Comparison">4</param>
-                            <param id="1" name="Y co-ordinate">Area.Y + Area.Height - (ViewportBottom(Camera.LayerNumber) - ViewportTop(Camera.LayerNumber)) / 2</param>
+                        <condition id="-7" name="Compare instance variable" sid="1530393183029094" type="Camera">
+                            <param id="0" name="Instance variable">DesiredY</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">Area.Y + Area.Height - ScreenHeight / 2</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-10" name="Set value" sid="4365036205606546" type="Camera">
                             <param id="0" name="Instance variable">DesiredY</param>
-                            <param id="1" name="Value">Area.Y + Area.Height - (ViewportBottom(Camera.LayerNumber) - ViewportTop(Camera.LayerNumber)) / 2</param>
+                            <param id="1" name="Value">Area.Y + Area.Height - ScreenHeight / 2</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="2427823917225865">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="8015001320245615" type="System">
+                    <param id="0" name="First value">abs(Camera.X - Camera.DesiredX)</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Second value">5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="7217474796816395" type="Camera">
+                    <param id="0" name="X">Camera.DesiredX</param>
+                </action>
+                <action behavior="8Direction" id="9" name="Set vector X" sid="6959497420030414" type="Camera">
+                    <param id="0" name="Vector X">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6728529400095238">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="7924895661875991" type="System">
+                    <param id="0" name="First value">abs(Camera.Y - Camera.DesiredY)</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Second value">5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="3996788333196653" type="Camera">
+                    <param id="0" name="Y">Camera.DesiredY</param>
+                </action>
+                <action behavior="8Direction" id="10" name="Set vector Y" sid="6986810236916996" type="Camera">
+                    <param id="0" name="Vector Y">0</param>
+                </action>
+            </actions>
         </event-block>
         <event-block sid="6776404151726763">
             <conditions>
                 <condition id="-8" name="Compare two values" sid="4922956105178003" type="System">
                     <param id="0" name="First value">abs(Camera.X - Camera.DesiredX)</param>
                     <param id="1" name="Comparison">4</param>
-                    <param id="2" name="Second value">50</param>
+                    <param id="2" name="Second value">5</param>
                 </condition>
             </conditions>
             <actions />
@@ -129,7 +174,7 @@
                 <condition id="-8" name="Compare two values" sid="6648053428648909" type="System">
                     <param id="0" name="First value">abs(Camera.Y - Camera.DesiredY)</param>
                     <param id="1" name="Comparison">4</param>
-                    <param id="2" name="Second value">50</param>
+                    <param id="2" name="Second value">5</param>
                 </condition>
             </conditions>
             <actions />
@@ -178,6 +223,9 @@
                 <action behavior="8Direction" id="9" name="Set vector X" sid="9390505272847055" type="Camera">
                     <param id="0" name="Vector X">0</param>
                 </action>
+                <action id="-1" name="Set X" sid="796068680997316" type="Camera">
+                    <param id="0" name="X">Camera.DesiredX</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="4858587022372848">
@@ -195,6 +243,9 @@
             <actions>
                 <action behavior="8Direction" id="9" name="Set vector X" sid="4132947764247923" type="Camera">
                     <param id="0" name="Vector X">0</param>
+                </action>
+                <action id="-1" name="Set X" sid="3210110658020327" type="Camera">
+                    <param id="0" name="X">Camera.DesiredX</param>
                 </action>
             </actions>
         </event-block>
@@ -214,6 +265,9 @@
                 <action behavior="8Direction" id="10" name="Set vector Y" sid="1359347326033391" type="Camera">
                     <param id="0" name="Vector Y">0</param>
                 </action>
+                <action id="-2" name="Set Y" sid="5481069858176926" type="Camera">
+                    <param id="0" name="Y">Camera.DesiredY</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="9976870151910146">
@@ -232,39 +286,8 @@
                 <action behavior="8Direction" id="10" name="Set vector Y" sid="8676016181554249" type="Camera">
                     <param id="0" name="Vector Y">0</param>
                 </action>
-            </actions>
-        </event-block>
-        <event-block sid="2427823917225865">
-            <conditions>
-                <condition id="-8" name="Compare two values" sid="8015001320245615" type="System">
-                    <param id="0" name="First value">abs(Camera.X - Camera.DesiredX)</param>
-                    <param id="1" name="Comparison">2</param>
-                    <param id="2" name="Second value">5</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-1" name="Set X" sid="7217474796816395" type="Camera">
-                    <param id="0" name="X">Camera.DesiredX</param>
-                </action>
-                <action behavior="8Direction" id="9" name="Set vector X" sid="6959497420030414" type="Camera">
-                    <param id="0" name="Vector X">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="6728529400095238">
-            <conditions>
-                <condition id="-8" name="Compare two values" sid="7924895661875991" type="System">
-                    <param id="0" name="First value">abs(Camera.Y - Camera.DesiredY)</param>
-                    <param id="1" name="Comparison">2</param>
-                    <param id="2" name="Second value">5</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Set Y" sid="3996788333196653" type="Camera">
+                <action id="-2" name="Set Y" sid="8289617154758141" type="Camera">
                     <param id="0" name="Y">Camera.DesiredY</param>
-                </action>
-                <action behavior="8Direction" id="10" name="Set vector Y" sid="6986810236916996" type="Camera">
-                    <param id="0" name="Vector Y">0</param>
                 </action>
             </actions>
         </event-block>

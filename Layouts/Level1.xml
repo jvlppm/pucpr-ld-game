@@ -390,7 +390,7 @@
         <layer name="Background" sid="7484313178735921">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
-            <transparent>1</transparent>
+            <transparent>0</transparent>
             <parallax>
                 <x>1</x>
                 <y>1</y>
@@ -557,6 +557,7 @@
                     </properties>
                     <instance-variables>
                         <Health>10</Health>
+                        <ForceEnabled>false</ForceEnabled>
                         <Safe>false</Safe>
                         <Message>-1</Message>
                         <Running>false</Running>
@@ -627,6 +628,7 @@
                     </properties>
                     <instance-variables>
                         <Health>2</Health>
+                        <ForceEnabled>false</ForceEnabled>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -897,6 +899,7 @@
                     </properties>
                     <instance-variables>
                         <Health>10</Health>
+                        <ForceEnabled>false</ForceEnabled>
                         <Safe>false</Safe>
                         <Message>0</Message>
                         <Running>false</Running>
@@ -1066,6 +1069,7 @@
                     </properties>
                     <instance-variables>
                         <Health>2</Health>
+                        <ForceEnabled>false</ForceEnabled>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -1138,6 +1142,7 @@
                     </properties>
                     <instance-variables>
                         <Health>2</Health>
+                        <ForceEnabled>false</ForceEnabled>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -1271,6 +1276,7 @@
                     </properties>
                     <instance-variables>
                         <Health>2</Health>
+                        <ForceEnabled>false</ForceEnabled>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -1343,6 +1349,7 @@
                     </properties>
                     <instance-variables>
                         <Health>2</Health>
+                        <ForceEnabled>false</ForceEnabled>
                         <Holding>-1</Holding>
                         <KeepWalking>true</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -1492,6 +1499,7 @@
                     </properties>
                     <instance-variables>
                         <Health>10</Health>
+                        <ForceEnabled>false</ForceEnabled>
                         <Safe>false</Safe>
                         <Message>1</Message>
                         <Running>false</Running>
@@ -1562,6 +1570,7 @@
                     </properties>
                     <instance-variables>
                         <Health>2</Health>
+                        <ForceEnabled>false</ForceEnabled>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -1634,6 +1643,7 @@
                     </properties>
                     <instance-variables>
                         <Health>2</Health>
+                        <ForceEnabled>false</ForceEnabled>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -1706,6 +1716,7 @@
                     </properties>
                     <instance-variables>
                         <Health>2</Health>
+                        <ForceEnabled>false</ForceEnabled>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -1778,6 +1789,7 @@
                     </properties>
                     <instance-variables>
                         <Health>2</Health>
+                        <ForceEnabled>false</ForceEnabled>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -1850,6 +1862,7 @@
                     </properties>
                     <instance-variables>
                         <Health>2</Health>
+                        <ForceEnabled>false</ForceEnabled>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -1954,6 +1967,7 @@
                     </properties>
                     <instance-variables>
                         <Health>10</Health>
+                        <ForceEnabled>false</ForceEnabled>
                         <CarryingKnife>false</CarryingKnife>
                         <HoldingKnife>false</HoldingKnife>
                         <CarryingGun>false</CarryingGun>
@@ -2199,6 +2213,7 @@
                     </properties>
                     <instance-variables>
                         <Health>1</Health>
+                        <ForceEnabled>false</ForceEnabled>
                         <State></State>
                     </instance-variables>
                     <behavior-instances>
@@ -2267,6 +2282,7 @@
                     </properties>
                     <instance-variables>
                         <Health>2</Health>
+                        <ForceEnabled>false</ForceEnabled>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -2339,6 +2355,7 @@
                     </properties>
                     <instance-variables>
                         <Health>2</Health>
+                        <ForceEnabled>false</ForceEnabled>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -2411,6 +2428,7 @@
                     </properties>
                     <instance-variables>
                         <Health>2</Health>
+                        <ForceEnabled>false</ForceEnabled>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -2557,6 +2575,7 @@
                     </properties>
                     <instance-variables>
                         <Health>10</Health>
+                        <ForceEnabled>false</ForceEnabled>
                         <Safe>false</Safe>
                         <Message>2</Message>
                         <Running>false</Running>
@@ -2627,6 +2646,7 @@
                     </properties>
                     <instance-variables>
                         <Health>1</Health>
+                        <ForceEnabled>false</ForceEnabled>
                         <State></State>
                     </instance-variables>
                     <behavior-instances>
@@ -2695,6 +2715,7 @@
                     </properties>
                     <instance-variables>
                         <Health>1</Health>
+                        <ForceEnabled>false</ForceEnabled>
                         <State></State>
                     </instance-variables>
                     <behavior-instances>
@@ -2763,6 +2784,7 @@
                     </properties>
                     <instance-variables>
                         <Health>1</Health>
+                        <ForceEnabled>false</ForceEnabled>
                         <State></State>
                     </instance-variables>
                     <behavior-instances>
@@ -2831,6 +2853,7 @@
                     </properties>
                     <instance-variables>
                         <Health>2</Health>
+                        <ForceEnabled>false</ForceEnabled>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -2903,6 +2926,7 @@
                     </properties>
                     <instance-variables>
                         <Health>2</Health>
+                        <ForceEnabled>false</ForceEnabled>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -2975,6 +2999,7 @@
                     </properties>
                     <instance-variables>
                         <Health>2</Health>
+                        <ForceEnabled>false</ForceEnabled>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -3047,6 +3072,7 @@
                     </properties>
                     <instance-variables>
                         <Health>2</Health>
+                        <ForceEnabled>false</ForceEnabled>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -3119,6 +3145,7 @@
                     </properties>
                     <instance-variables>
                         <Health>2</Health>
+                        <ForceEnabled>false</ForceEnabled>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -3191,6 +3218,7 @@
                     </properties>
                     <instance-variables>
                         <Health>2</Health>
+                        <ForceEnabled>false</ForceEnabled>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -3263,6 +3291,7 @@
                     </properties>
                     <instance-variables>
                         <Health>2</Health>
+                        <ForceEnabled>false</ForceEnabled>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -3335,6 +3364,7 @@
                     </properties>
                     <instance-variables>
                         <Health>2</Health>
+                        <ForceEnabled>false</ForceEnabled>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -3407,6 +3437,7 @@
                     </properties>
                     <instance-variables>
                         <Health>2</Health>
+                        <ForceEnabled>false</ForceEnabled>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -3479,6 +3510,7 @@
                     </properties>
                     <instance-variables>
                         <Health>2</Health>
+                        <ForceEnabled>false</ForceEnabled>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -3760,6 +3792,7 @@
                     </properties>
                     <instance-variables>
                         <Health>2</Health>
+                        <ForceEnabled>false</ForceEnabled>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -3832,6 +3865,7 @@
                     </properties>
                     <instance-variables>
                         <Health>2</Health>
+                        <ForceEnabled>false</ForceEnabled>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -3904,6 +3938,7 @@
                     </properties>
                     <instance-variables>
                         <Health>2</Health>
+                        <ForceEnabled>false</ForceEnabled>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -3976,6 +4011,7 @@
                     </properties>
                     <instance-variables>
                         <Health>2</Health>
+                        <ForceEnabled>false</ForceEnabled>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -4048,6 +4084,7 @@
                     </properties>
                     <instance-variables>
                         <Health>10</Health>
+                        <ForceEnabled>false</ForceEnabled>
                         <Following>false</Following>
                     </instance-variables>
                     <behavior-instances>

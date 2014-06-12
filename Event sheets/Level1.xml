@@ -61,7 +61,7 @@
             <sub-events>
                 <event-block sid="9257388658206582">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="9669466948122158" type="Player">
+                        <condition id="1" name="Is overlapping another object" sid="9669466948122158" type="Player">
                             <param id="0" name="Object">KnifeArea</param>
                         </condition>
                         <condition id="-14" name="Pick by unique ID" sid="2475572254238738" type="Victim">
@@ -70,11 +70,18 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="9028332435183625" type="KnifeArea" />
-                        <action id="-16" name="Wait" sid="4610889130255208" type="System">
-                            <param id="0" name="Seconds">1</param>
+                        <action id="-16" name="Wait" sid="3219977201480763" type="System">
+                            <param id="0" name="Seconds">1.0</param>
                         </action>
                         <action behavior="8Direction" id="8" name="Set enabled" sid="4446171424059695" type="Player">
                             <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="6030921332409409" type="Victim">
+                            <param id="0" name="Instance variable">ForceEnabled</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="Pathfinding" id="3" name="Set enabled" sid="9164704583185509" type="Victim">
+                            <param id="0" name="Set">1</param>
                         </action>
                         <action behavior="Pathfinding" id="0" name="Find path" sid="9748285227892052" type="Victim">
                             <param id="0" name="X">Player.X</param>
@@ -104,6 +111,10 @@
                         </action>
                         <action behavior="8Direction" id="8" name="Set enabled" sid="3711158395708267" type="Player">
                             <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="2225575980043884" type="Victim">
+                            <param id="0" name="Instance variable">ForceEnabled</param>
+                            <param id="1" name="Value">0</param>
                         </action>
                     </actions>
                 </event-block>
