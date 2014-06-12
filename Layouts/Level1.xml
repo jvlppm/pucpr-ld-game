@@ -1218,7 +1218,7 @@
                 </instance>
                 <instance type="Knife" uid="33">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -1235,8 +1235,8 @@
                         <x>352</x>
                         <y>-16</y>
                         <z>0</z>
-                        <width>96</width>
-                        <height>32</height>
+                        <width>24</width>
+                        <height>8</height>
                         <depth>0</depth>
                         <hotspotX>0.166666672</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -4398,8 +4398,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>96</x>
-                        <y>96</y>
+                        <x>128</x>
+                        <y>128</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -4420,8 +4420,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>192</x>
-                        <y>96</y>
+                        <x>320</x>
+                        <y>128</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -4450,8 +4450,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>172</x>
-                        <y>96</y>
+                        <x>256</x>
+                        <y>-64</y>
                         <z>0</z>
                         <width>52</width>
                         <height>32</height>
@@ -4483,14 +4483,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>512</x>
+                        <x>-576</x>
                         <y>448</y>
                         <z>0</z>
                         <width>1024</width>
                         <height>896</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -4516,14 +4516,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>512</x>
-                        <y>448</y>
+                        <x>-1120</x>
+                        <y>928</y>
                         <z>0</z>
                         <width>1024</width>
                         <height>896</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>0</opacity>
                     </world>

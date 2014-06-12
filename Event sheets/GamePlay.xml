@@ -1351,7 +1351,7 @@
                         <condition id="-8" name="Is boolean instance variable set" sid="2570044362247388" type="Player">
                             <param id="0" name="Instance variable">CarryingKnife</param>
                         </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="9247062216808947" type="Player">
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="9247062216808947" type="Player">
                             <param id="0" name="Instance variable">HoldingKnife</param>
                         </condition>
                         <condition id="-7" name="Compare instance variable" sid="7244224611413852" type="Player">
@@ -1374,9 +1374,17 @@
                             <param id="0" name="Where">1</param>
                             <param id="1" name="Object">Player</param>
                         </action>
+                        <action id="-10" name="Set value" sid="3222651610741259" type="Player">
+                            <param id="0" name="Instance variable">SpriteState</param>
+                            <param id="1" name="Value">&quot;Knife&quot;</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="6990257903733335" type="Player">
+                            <param id="0" name="Instance variable">HoldingKnife</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                     </actions>
                 </event-block>
-                <event-block sid="9246430597994552">
+                <event-block disabled="1" sid="9246430597994552">
                     <conditions>
                         <condition id="0" name="On key pressed" sid="1522872614650812" type="Keyboard">
                             <param id="0" name="Key">90 (Z)</param>
@@ -1565,10 +1573,41 @@
                 </event-block>
                 <event-block sid="2447350897024885">
                     <conditions>
-                        <condition behavior="8Direction" id="0" name="Is moving" sid="8995456273105795" type="Player" />
+                        <condition id="-8" name="Is boolean instance variable set" sid="7587003337638" type="Player">
+                            <param id="0" name="Instance variable">HoldingKnife</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-10" name="Set value" sid="8035749464900837" type="Player">
+                            <param id="0" name="Instance variable">SpriteState</param>
+                            <param id="1" name="Value">&quot;Knife&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3879758368304925">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="3056869784834812" type="System" />
+                        <condition id="-8" name="Is boolean instance variable set" sid="1925171850585601" type="Player">
+                            <param id="0" name="Instance variable">HoldingGun</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="1477638623477444" type="Player">
+                            <param id="0" name="Instance variable">SpriteState</param>
+                            <param id="1" name="Value">&quot;Gun&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4329871451266492">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="4248520139550509" type="System" />
+                        <condition behavior="8Direction" id="0" name="Is moving" sid="7619450530063876" type="Player" />
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6810015710236364" type="Player">
+                            <param id="0" name="Instance variable">HoldingKnife</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="2164403354049582" type="Player">
                             <param id="0" name="Instance variable">SpriteState</param>
                             <param id="1" name="Value">&quot;Walking&quot;</param>
                         </action>
@@ -1587,7 +1626,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="3193611664449879" title="Weapons">
+        <event-group description="" sid="3193611664449879" title="Weapons">
             <sub-events>
                 <event-block sid="1870731739834124">
                     <conditions>
@@ -1599,13 +1638,18 @@
                         <condition id="-11" name="For Each" sid="4237205213374989" type="System">
                             <param id="0" name="Object">Weapon</param>
                         </condition>
-                        <condition id="-14" name="Pick by unique ID" sid="1376139642810037" type="Character">
+                        <condition id="-7" name="Compare instance variable" sid="9650375047647596" type="SpriteChar">
+                            <param id="0" name="Instance variable">Owner</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Weapon.Owner</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="4083803452362115" type="Character">
                             <param id="0" name="Unique ID">Weapon.Owner</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-4" name="Set position to another object" sid="219662155578734" type="Weapon">
-                            <param id="0" name="Object">Character</param>
+                            <param id="0" name="Object">SpriteChar</param>
                             <param id="1" name="Image point (optional)">&quot;Weapon&quot;</param>
                         </action>
                         <action id="-8" name="Set angle" sid="9488138421858991" type="Weapon">
@@ -1613,14 +1657,17 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-group collapsed="1" description="" sid="6454508332916548" title="Knife">
+                <event-group description="" sid="6454508332916548" title="Knife">
                     <sub-events>
-                        <event-block collapsed="1" sid="4064754307868574">
+                        <event-block sid="4064754307868574">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="6048919233397953" type="Knife">
                                     <param id="0" name="Instance variable">Owner</param>
                                     <param id="1" name="Comparison">5</param>
                                     <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="1161745390752761" type="Player">
+                                    <param id="0" name="Unique ID">Knife.Owner</param>
                                 </condition>
                             </conditions>
                             <actions />
@@ -1641,6 +1688,9 @@
                                         <action id="-17" name="Move forward" sid="603118444205213" type="Knife">
                                             <param id="0" name="Distance">Knife.Distance</param>
                                         </action>
+                                        <action behavior="8Direction" id="3" name="Set speed" sid="7655980153880119" type="Player">
+                                            <param id="0" name="Speed">0</param>
+                                        </action>
                                     </actions>
                                     <sub-events>
                                         <event-block sid="9241586652948249">
@@ -1653,6 +1703,10 @@
                                             </conditions>
                                             <actions>
                                                 <action id="-9" name="Destroy" sid="8469836282091991" type="Knife" />
+                                                <action id="-13" name="Set boolean" sid="7087765297115608" type="Player">
+                                                    <param id="0" name="Instance variable">HoldingKnife</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
                                             </actions>
                                         </event-block>
                                     </sub-events>
@@ -1887,7 +1941,7 @@
         </event-group>
         <event-group collapsed="1" description="" sid="569804434613888" title="HUD">
             <sub-events>
-                <event-block collapsed="1" sid="1517814329212286">
+                <event-block sid="1517814329212286">
                     <conditions>
                         <condition id="-8" name="Is boolean instance variable set" sid="3850111470731568" type="Player">
                             <param id="0" name="Instance variable">CarryingKnife</param>
@@ -1899,7 +1953,7 @@
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="7417515627718961">
+                        <event-block disabled="1" sid="7417515627718961">
                             <conditions>
                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="434541010113335" type="Player">
                                     <param id="0" name="Instance variable">HoldingKnife</param>
@@ -1935,7 +1989,7 @@
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="4052313202705751">
+                        <event-block disabled="1" sid="4052313202705751">
                             <conditions>
                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="9451503647371119" type="Player">
                                     <param id="0" name="Instance variable">HoldingGun</param>

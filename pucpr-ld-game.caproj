@@ -72,7 +72,7 @@
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8094744416390986" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <image-point name="Weapon" x="0.4375" y="0.75" />
+                        <image-point name="Weapon" x="0.5" y="0.5" />
                     </frame>
                 </animation>
             </animation-folder>
@@ -428,7 +428,7 @@
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4849029094970238" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -441,7 +441,7 @@
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9637114132142327" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -539,10 +539,13 @@
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="1" loop="0" name="GunLeft" pingpong="0" repeatcount="1" repeatto="0" sid="4187972251360162" speed="5">
+                <animation framecount="1" loop="1" name="GunLeft" pingpong="0" repeatcount="1" repeatto="0" sid="4187972251360162" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.796875" />
                 </animation>
-                <animation framecount="1" loop="0" name="GunRight" pingpong="0" repeatcount="1" repeatto="0" sid="8305863066001754" speed="5">
+                <animation framecount="1" loop="1" name="GunUp" pingpong="0" repeatcount="1" repeatto="0" sid="8833440209954524" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.796875" />
+                </animation>
+                <animation framecount="1" loop="1" name="GunRight" pingpong="0" repeatcount="1" repeatto="0" sid="8305863066001754" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.796875">
                         <collision-poly>
                             <point x="1" y="1" />
@@ -550,6 +553,35 @@
                             <point x="0" y="0" />
                             <point x="1" y="0" />
                         </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="1" name="GunDown" pingpong="0" repeatcount="1" repeatto="0" sid="6622648038733911" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.796875" />
+                </animation>
+                <animation framecount="1" loop="1" name="KnifeLeft" pingpong="0" repeatcount="1" repeatto="0" sid="4968154215148797" speed="5">
+                    <frame duration="1" hotspotX="0.609375" hotspotY="0.8125">
+                        <image-point name="Weapon" x="0.242188" y="0.484375" />
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="1" name="KnifeUp" pingpong="0" repeatcount="1" repeatto="0" sid="8363096609348265" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.796875">
+                        <image-point name="Weapon" x="0.695313" y="0.46875" />
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="1" name="KnifeRight" pingpong="0" repeatcount="1" repeatto="0" sid="2903546099027947" speed="5">
+                    <frame duration="1" hotspotX="0.390625" hotspotY="0.8125">
+                        <image-point name="Weapon" x="0.742188" y="0.5" />
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="1" name="KnifeDown" pingpong="0" repeatcount="1" repeatto="0" sid="4901868667904202" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.796875">
+                        <image-point name="Weapon" x="0.34375" y="0.5625" />
                     </frame>
                 </animation>
             </animation-folder>
