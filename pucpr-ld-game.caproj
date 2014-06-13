@@ -63,6 +63,7 @@
                 <instance-variable name="HoldingGun" sid="9790634645902591" type="boolean" />
                 <instance-variable name="SimpleBullets" sid="7815243517570491" type="number" />
                 <instance-variable name="CanRun" sid="9795597917221542" type="boolean" />
+                <instance-variable name="InitialHealth" sid="3003028223073145" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="8Direction" sid="2041450922399645">
@@ -732,6 +733,31 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Shadow" sid="7897434489175584">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7155646862284273" speed="5">
+                    <frame duration="1" hotspotX="0.485714" hotspotY="0.258621" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="HealthIndicator" sid="794935468917557">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9630218858025013" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="Hit" pingpong="0" repeatcount="1" repeatto="0" sid="4703494078099257" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="Hurt" pingpong="0" repeatcount="1" repeatto="0" sid="4024991441358506" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="Dying" pingpong="0" repeatcount="1" repeatto="0" sid="784573257714885" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Character" plugin-id="Sprite" sid="3925885853165109">
@@ -821,6 +847,9 @@
             <instance-variables>
                 <instance-variable name="Owner" sid="8469804086614191" type="number" />
                 <instance-variable name="UpDownAvailable" sid="4935456348181045" type="boolean" />
+                <instance-variable name="Shadow" sid="1212558682612881" type="number" />
+                <instance-variable name="UseShadow" sid="9524333763244129" type="boolean" />
+                <instance-variable name="Tall" sid="1014860451334019" type="boolean" />
             </instance-variables>
         </family>
     </families>

@@ -1914,7 +1914,7 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="569804434613888" title="HUD">
+        <event-group description="" sid="569804434613888" title="HUD">
             <sub-events>
                 <event-block sid="1517814329212286">
                     <conditions>
@@ -1985,6 +1985,64 @@
                     <actions>
                         <action id="-16" name="Set opacity" sid="155256804525818" type="HUD_Gun">
                             <param id="0" name="Opacity">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5766624820445431">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="5452425266333917" type="Player">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">Player.InitialHealth * 0.75</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="3795596080972751" type="HealthIndicator">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2342171728345984">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="262334640945855" type="System" />
+                        <condition id="-7" name="Compare instance variable" sid="9173516007276657" type="Player">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">Player.InitialHealth * 0.5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="7115540748101935" type="HealthIndicator">
+                            <param id="0" name="Animation">&quot;Hit&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4163568618006938">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="102215387575147" type="System" />
+                        <condition id="-7" name="Compare instance variable" sid="5643312912222532" type="Player">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">Player.InitialHealth * 0.25</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="2630996505096646" type="HealthIndicator">
+                            <param id="0" name="Animation">&quot;Hurt&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5411540055677995">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="6695765293288921" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="3044391268294804" type="HealthIndicator">
+                            <param id="0" name="Animation">&quot;Dying&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>

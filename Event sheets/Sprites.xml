@@ -262,70 +262,191 @@
                 </action>
             </actions>
         </event-block>
-        <event-block any="1" sid="9440027548390086">
+        <event-block sid="9440027548390086">
             <conditions>
-                <condition id="2" name="Is playing" sid="4772616339111057" type="ZombieSprite">
-                    <param id="0" name="Animation">&quot;SquashedLeft&quot;</param>
+                <condition id="-11" name="For Each" sid="9680795786426501" type="System">
+                    <param id="0" name="Object">ZombieSprite</param>
                 </condition>
-                <condition id="2" name="Is playing" sid="3378132197112675" type="ZombieSprite">
-                    <param id="0" name="Animation">&quot;SquashedRight&quot;</param>
+                <condition id="-14" name="Pick by unique ID" sid="2013542022022939" type="Zombie">
+                    <param id="0" name="Unique ID">ZombieSprite.Owner</param>
                 </condition>
-                <condition id="2" name="Is playing" sid="5172363244490838" type="ZombieSprite">
-                    <param id="0" name="Animation">&quot;SquashedUp&quot;</param>
-                </condition>
-                <condition id="2" name="Is playing" sid="8724404924085686" type="ZombieSprite">
-                    <param id="0" name="Animation">&quot;SquashedDown&quot;</param>
+                <condition id="-7" name="Compare instance variable" sid="4562252012299292" type="Zombie">
+                    <param id="0" name="Instance variable">Health</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-25" name="Move to bottom" sid="4815526192272054" type="ZombieSprite" />
+                <action id="-13" name="Set boolean" sid="371456736375826" type="ZombieSprite">
+                    <param id="0" name="Instance variable">Tall</param>
+                    <param id="1" name="Value">0</param>
+                </action>
             </actions>
-        </event-block>
-        <event-block sid="5377740302768307">
-            <conditions>
-                <condition id="1" name="Is overlapping another object" sid="2638580605368923" type="PlayerSprite">
-                    <param id="0" name="Object">SpriteChar</param>
-                </condition>
-                <condition id="-14" name="Pick by unique ID" sid="7289978178595527" type="Character">
-                    <param id="0" name="Unique ID">SpriteChar.Owner</param>
-                </condition>
-            </conditions>
-            <actions />
             <sub-events>
-                <event-block sid="5306859098052813">
+                <event-block sid="7674735943860521">
                     <conditions>
-                        <condition id="-2" name="Compare Y" sid="6575321917786478" type="PlayerSprite">
-                            <param id="0" name="Comparison">2</param>
-                            <param id="1" name="Y co-ordinate">SpriteChar.Y</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="9961192574236276" type="Character">
-                            <param id="0" name="Instance variable">Health</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">0</param>
+                        <condition id="2" name="Is playing" sid="7805767797616103" type="Zombie">
+                            <param id="0" name="Animation">&quot;Squashed&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-29" name="Move to object" sid="5920136319798749" type="SpriteChar">
-                            <param id="0" name="Where">0</param>
-                            <param id="1" name="Object">PlayerSprite</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="8610472516777204">
-                    <conditions>
-                        <condition id="-2" name="Compare Y" sid="9254611500310955" type="PlayerSprite">
-                            <param id="0" name="Comparison">5</param>
-                            <param id="1" name="Y co-ordinate">SpriteChar.Y</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-29" name="Move to object" sid="5672978604983838" type="SpriteChar">
-                            <param id="0" name="Where">1</param>
-                            <param id="1" name="Object">PlayerSprite</param>
+                        <action id="-13" name="Set boolean" sid="571166372898215" type="ZombieSprite">
+                            <param id="0" name="Instance variable">UseShadow</param>
+                            <param id="1" name="Value">0</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block collapsed="1" sid="5377740302768307">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="2638580605368923" type="SpriteChar">
+                    <param id="0" name="Object">SpriteChar</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <variable constant="0" name="sp0Y" sid="4267762502556556" static="0" type="number">0</variable>
+                <variable constant="0" name="sp1Y" sid="9467845090177403" static="0" type="number">0</variable>
+                <event-block sid="9856800687433006">
+                    <conditions>
+                        <condition id="-13" name="Pick nth instance" sid="7288487247333862" type="System">
+                            <param id="0" name="Object">SpriteChar</param>
+                            <param id="1" name="Instance">0</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="1760051285847389" type="SpriteChar">
+                            <param id="0" name="Instance variable">Tall</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="9744766889854709" type="System">
+                            <param id="0" name="Variable">sp0Y</param>
+                            <param id="1" name="Value">SpriteChar.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1734282485393463">
+                    <conditions>
+                        <condition id="-13" name="Pick nth instance" sid="9242097076583797" type="System">
+                            <param id="0" name="Object">SpriteChar</param>
+                            <param id="1" name="Instance">1</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="3171139980573557" type="SpriteChar">
+                            <param id="0" name="Instance variable">Tall</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="193613475288522" type="System">
+                            <param id="0" name="Variable">sp1Y</param>
+                            <param id="1" name="Value">SpriteChar.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5306859098052813">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="6575321917786478" type="System">
+                            <param id="0" name="Variable">sp0Y</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">sp1Y</param>
+                        </condition>
+                        <condition id="-13" name="Pick nth instance" sid="9349012393462243" type="System">
+                            <param id="0" name="Object">SpriteChar</param>
+                            <param id="1" name="Instance">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-24" name="Move to top" sid="5920136319798749" type="SpriteChar" />
+                    </actions>
+                </event-block>
+                <event-block sid="9102354496235927">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="3509146795977889" type="System">
+                            <param id="0" name="Variable">sp0Y</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">sp1Y</param>
+                        </condition>
+                        <condition id="-13" name="Pick nth instance" sid="8838632113756611" type="System">
+                            <param id="0" name="Object">SpriteChar</param>
+                            <param id="1" name="Instance">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-24" name="Move to top" sid="9433730747993333" type="SpriteChar" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="3815874324825497">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="8928759548666526" type="SpriteChar">
+                    <param id="0" name="Instance variable">Shadow</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="6640632639706988" type="SpriteChar">
+                    <param id="0" name="Instance variable">UseShadow</param>
+                </condition>
+                <condition id="-11" name="For Each" sid="4621138428888724" type="System">
+                    <param id="0" name="Object">SpriteChar</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="3635877408922755" type="Shadow">
+                    <param id="0" name="Unique ID">SpriteChar.Shadow</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="3876663878976213" type="Shadow">
+                    <param id="0" name="X">SpriteChar.X</param>
+                    <param id="1" name="Y">SpriteChar.Y</param>
+                </action>
+                <action id="-25" name="Move to bottom" sid="7699318735473549" type="Shadow" />
+            </actions>
+        </event-block>
+        <event-block sid="8640345015040332">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="8506041451080314" type="SpriteChar">
+                    <param id="0" name="Instance variable">Shadow</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="3788817043207088" type="SpriteChar">
+                    <param id="0" name="Instance variable">UseShadow</param>
+                </condition>
+                <condition id="-11" name="For Each" sid="2159744792070356" type="System">
+                    <param id="0" name="Object">SpriteChar</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="4445745564367283" type="SpriteChar">
+                    <param id="0" name="Object">Shadow</param>
+                    <param id="1" name="Layer">SpriteChar.LayerNumber</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="7227568250015618" type="SpriteChar">
+                    <param id="0" name="Instance variable">Shadow</param>
+                    <param id="1" name="Value">Shadow.UID</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5767384470967891">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="1408482265344531" type="SpriteChar">
+                    <param id="0" name="Instance variable">Shadow</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="2919211439635516" type="SpriteChar">
+                    <param id="0" name="Instance variable">UseShadow</param>
+                </condition>
+                <condition id="-11" name="For Each" sid="9091261896329488" type="System">
+                    <param id="0" name="Object">SpriteChar</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="6029374385993105" type="Shadow">
+                    <param id="0" name="Unique ID">SpriteChar.Shadow</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="2445870703519718" type="Shadow" />
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>
