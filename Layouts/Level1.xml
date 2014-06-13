@@ -1998,7 +1998,7 @@
                         <OverrideSpriteState>#</OverrideSpriteState>
                         <CarryingKnife>false</CarryingKnife>
                         <HoldingKnife>false</HoldingKnife>
-                        <CarryingGun>true</CarryingGun>
+                        <CarryingGun>false</CarryingGun>
                         <HoldingGun>false</HoldingGun>
                         <SimpleBullets>6</SimpleBullets>
                         <CanRun>false</CanRun>
@@ -4302,6 +4302,32 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="ZombieSprite" uid="99">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Owner>-1</Owner>
+                        <UpDownAvailable>true</UpDownAvailable>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>928</x>
+                        <y>-224</y>
+                        <z>0</z>
+                        <width>128</width>
+                        <height>128</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.78125</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -4483,11 +4509,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-576</x>
-                        <y>448</y>
+                        <x>512</x>
+                        <y>-448</y>
                         <z>0</z>
-                        <width>1024</width>
-                        <height>896</height>
+                        <width>64</width>
+                        <height>64</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -4516,11 +4542,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-1120</x>
-                        <y>928</y>
+                        <x>640</x>
+                        <y>-448</y>
                         <z>0</z>
-                        <width>1024</width>
-                        <height>896</height>
+                        <width>64</width>
+                        <height>64</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>

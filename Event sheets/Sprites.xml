@@ -21,7 +21,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="9740166611721054">
+        <event-block collapsed="1" sid="9740166611721054">
             <conditions>
                 <condition id="-7" name="Compare instance variable" sid="7365897846999041" type="SpriteChar">
                     <param id="0" name="Instance variable">Owner</param>
@@ -134,6 +134,194 @@
                         <action id="4" name="Set animation" sid="8708447239020384" type="SpriteChar">
                             <param id="0" name="Animation">spriteState &amp; &quot;Up&quot;</param>
                             <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="6851035750198987">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="8643586117437063" type="System" />
+                <condition id="-11" name="For Each" sid="5939723563409813" type="System">
+                    <param id="0" name="Object">Zombie</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="674077230750146" type="Zombie">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="1988575824026845" type="Zombie">
+                    <param id="0" name="Object">ZombieSprite</param>
+                    <param id="1" name="Layer">Zombie.LayerNumber</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="487814715608795" type="ZombieSprite">
+                    <param id="0" name="Instance variable">Owner</param>
+                    <param id="1" name="Value">Zombie.UID</param>
+                </action>
+                <action id="-8" name="Set angle" sid="1418587044419259" type="ZombieSprite">
+                    <param id="0" name="Angle">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5473847066388631">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="7266278855802543" type="Player">
+                    <param id="0" name="Instance variable">HoldingKnife</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="8286120542917584" type="Player">
+                    <param id="0" name="Instance variable">SpriteState</param>
+                    <param id="1" name="Value">&quot;Knife&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2663489048389153">
+            <conditions>
+                <condition id="-22" name="Else" sid="1071889017600447" type="System" />
+                <condition id="-8" name="Is boolean instance variable set" sid="3644725652725935" type="Player">
+                    <param id="0" name="Instance variable">HoldingGun</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="5036551051417788" type="Player">
+                    <param id="0" name="Instance variable">SpriteState</param>
+                    <param id="1" name="Value">&quot;Gun&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1525920625414984">
+            <conditions>
+                <condition id="-22" name="Else" sid="412235680451769" type="System" />
+                <condition behavior="8Direction" id="0" name="Is moving" sid="3737441758724965" type="Player" />
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6522862112701655" type="Player">
+                    <param id="0" name="Instance variable">HoldingKnife</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="8401845606946767" type="Player">
+                    <param id="0" name="Instance variable">SpriteState</param>
+                    <param id="1" name="Value">&quot;Walking&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9869625416889976">
+            <conditions>
+                <condition id="-22" name="Else" sid="2273577313581572" type="System" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="134753091306418" type="Player">
+                    <param id="0" name="Instance variable">SpriteState</param>
+                    <param id="1" name="Value">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block collapsed="1" sid="6775790614916596">
+            <conditions>
+                <condition id="2" name="Is playing" sid="1479042616866037" type="Zombie">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="3074202493853263">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="4" name="Is moving along path" sid="1813297300496552" type="Zombie" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="81524046864766" type="Zombie">
+                            <param id="0" name="Instance variable">SpriteState</param>
+                            <param id="1" name="Value">&quot;Walking&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="281038592807847">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="4" inverted="1" name="Is moving along path" sid="3285246576607111" type="Zombie" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="9999788467280808" type="Zombie">
+                            <param id="0" name="Instance variable">SpriteState</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="938423880011262">
+            <conditions>
+                <condition id="2" inverted="1" name="Is playing" sid="1206809450926465" type="Zombie">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="1652893014127256" type="Zombie">
+                    <param id="0" name="Instance variable">SpriteState</param>
+                    <param id="1" name="Value">Zombie.AnimationName</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="9440027548390086">
+            <conditions>
+                <condition id="2" name="Is playing" sid="4772616339111057" type="ZombieSprite">
+                    <param id="0" name="Animation">&quot;SquashedLeft&quot;</param>
+                </condition>
+                <condition id="2" name="Is playing" sid="3378132197112675" type="ZombieSprite">
+                    <param id="0" name="Animation">&quot;SquashedRight&quot;</param>
+                </condition>
+                <condition id="2" name="Is playing" sid="5172363244490838" type="ZombieSprite">
+                    <param id="0" name="Animation">&quot;SquashedUp&quot;</param>
+                </condition>
+                <condition id="2" name="Is playing" sid="8724404924085686" type="ZombieSprite">
+                    <param id="0" name="Animation">&quot;SquashedDown&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Move to bottom" sid="4815526192272054" type="ZombieSprite" />
+            </actions>
+        </event-block>
+        <event-block sid="5377740302768307">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="2638580605368923" type="PlayerSprite">
+                    <param id="0" name="Object">SpriteChar</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="7289978178595527" type="Character">
+                    <param id="0" name="Unique ID">SpriteChar.Owner</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="5306859098052813">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="6575321917786478" type="PlayerSprite">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Y co-ordinate">SpriteChar.Y</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="9961192574236276" type="Character">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-29" name="Move to object" sid="5920136319798749" type="SpriteChar">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Object">PlayerSprite</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8610472516777204">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="9254611500310955" type="PlayerSprite">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Y co-ordinate">SpriteChar.Y</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-29" name="Move to object" sid="5672978604983838" type="SpriteChar">
+                            <param id="0" name="Where">1</param>
+                            <param id="1" name="Object">PlayerSprite</param>
                         </action>
                     </actions>
                 </event-block>
