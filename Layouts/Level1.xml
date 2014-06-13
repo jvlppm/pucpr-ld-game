@@ -2027,7 +2027,7 @@
                         <OverrideSpriteState>#</OverrideSpriteState>
                         <CarryingKnife>false</CarryingKnife>
                         <HoldingKnife>false</HoldingKnife>
-                        <CarryingGun>false</CarryingGun>
+                        <CarryingGun>true</CarryingGun>
                         <HoldingGun>false</HoldingGun>
                         <SimpleBullets>6</SimpleBullets>
                         <CanRun>false</CanRun>
@@ -2176,29 +2176,21 @@
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
+                        <collisions>Disabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <MaxY>0</MaxY>
+                    </instance-variables>
                     <behavior-instances>
-                        <behavior-instance type="Sine">
+                        <behavior-instance type="Platform">
                             <properties>
-                                <active-on-start>Yes</active-on-start>
-                                <movement>Size</movement>
-                                <wave>Sine</wave>
-                                <period>1</period>
-                                <period-random>0</period-random>
-                                <period-offset>0</period-offset>
-                                <period-offset-random>0</period-offset-random>
-                                <magnitude>5</magnitude>
-                                <magnitude-random>0</magnitude-random>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Bullet">
-                            <properties>
-                                <speed>32</speed>
-                                <acceleration>0</acceleration>
-                                <gravity>0</gravity>
-                                <bounce-off-solids>No</bounce-off-solids>
-                                <set-angle>No</set-angle>
+                                <max-speed>1000</max-speed>
+                                <acceleration>1500</acceleration>
+                                <deceleration>0</deceleration>
+                                <jump-strength>650</jump-strength>
+                                <gravity>500</gravity>
+                                <max-fall-speed>1000</max-fall-speed>
+                                <default-controls>No</default-controls>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -2209,8 +2201,8 @@
                         <x>224</x>
                         <y>-24</y>
                         <z>0</z>
-                        <width>16</width>
-                        <height>8</height>
+                        <width>8</width>
+                        <height>4</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>

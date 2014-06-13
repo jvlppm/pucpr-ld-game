@@ -25,6 +25,7 @@
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
         <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
@@ -274,12 +275,12 @@
         </object-type>
         <object-type name="BulletShell" sid="1109555315407983">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="MaxY" sid="332580810706712" type="number" />
+            </instance-variables>
             <behaviors>
-                <behavior-type name="Sine" sid="6099314650074718">
-                    <behavior id="Sin" />
-                </behavior-type>
-                <behavior-type name="Bullet" sid="7889623976150186">
-                    <behavior id="Bullet" />
+                <behavior-type name="Platform" sid="8535638935765896">
+                    <behavior id="Platform" />
                 </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
