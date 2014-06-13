@@ -421,6 +421,124 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="AguaTerra" uid="107">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>5104</x>
+                        <y>1344</y>
+                        <z>0</z>
+                        <width>2016</width>
+                        <height>832</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="WaterBubble" uid="108">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>5408</x>
+                        <y>1184</y>
+                        <z>0</z>
+                        <width>64</width>
+                        <height>64</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0.5</opacity>
+                    </world>
+                </instance>
+                <instance type="AguaTerraOverlay" uid="109">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>5104</x>
+                        <y>1344</y>
+                        <z>0</z>
+                        <width>2016</width>
+                        <height>832</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Floor2" uid="111">
+                    <properties>
+                        <left-margin>0</left-margin>
+                        <right-margin>0</right-margin>
+                        <top-margin>0</top-margin>
+                        <bottom-margin>0</bottom-margin>
+                        <edges>Tile</edges>
+                        <fill>Tile</fill>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                        <seams>Overlap</seams>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>3104</x>
+                        <y>928</y>
+                        <z>0</z>
+                        <width>992</width>
+                        <height>1760</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Floor3" uid="112">
+                    <properties>
+                        <left-margin>0</left-margin>
+                        <right-margin>0</right-margin>
+                        <top-margin>0</top-margin>
+                        <bottom-margin>0</bottom-margin>
+                        <edges>Tile</edges>
+                        <fill>Tile</fill>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                        <seams>Overlap</seams>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>0</x>
+                        <y>1792</y>
+                        <z>0</z>
+                        <width>3072</width>
+                        <height>896</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -438,6 +556,28 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
+                <instance type="AguaTerraOpacity" uid="110">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>5104</x>
+                        <y>1344</y>
+                        <z>0</z>
+                        <width>2016</width>
+                        <height>832</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0.300000012</opacity>
+                    </world>
+                </instance>
                 <instance type="DinnerArea" uid="92">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
@@ -590,6 +730,7 @@
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
                         <KnockBack>0</KnockBack>
+                        <KnockBackAngle>0</KnockBackAngle>
                         <Safe>false</Safe>
                         <Message>-1</Message>
                         <Running>false</Running>
@@ -664,6 +805,7 @@
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
                         <KnockBack>0</KnockBack>
+                        <KnockBackAngle>0</KnockBackAngle>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -939,6 +1081,7 @@
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
                         <KnockBack>0</KnockBack>
+                        <KnockBackAngle>0</KnockBackAngle>
                         <Safe>false</Safe>
                         <Message>0</Message>
                         <Running>false</Running>
@@ -1112,6 +1255,7 @@
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
                         <KnockBack>0</KnockBack>
+                        <KnockBackAngle>0</KnockBackAngle>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -1189,6 +1333,7 @@
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
                         <KnockBack>0</KnockBack>
+                        <KnockBackAngle>0</KnockBackAngle>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -1327,6 +1472,7 @@
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
                         <KnockBack>0</KnockBack>
+                        <KnockBackAngle>0</KnockBackAngle>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -1404,6 +1550,7 @@
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
                         <KnockBack>0</KnockBack>
+                        <KnockBackAngle>0</KnockBackAngle>
                         <Holding>-1</Holding>
                         <KeepWalking>true</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -1558,6 +1705,7 @@
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
                         <KnockBack>0</KnockBack>
+                        <KnockBackAngle>0</KnockBackAngle>
                         <Safe>false</Safe>
                         <Message>1</Message>
                         <Running>false</Running>
@@ -1607,8 +1755,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2720</x>
-                        <y>1504</y>
+                        <x>2688</x>
+                        <y>1056</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -1632,6 +1780,7 @@
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
                         <KnockBack>0</KnockBack>
+                        <KnockBackAngle>0</KnockBackAngle>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -1684,8 +1833,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2720</x>
-                        <y>1408</y>
+                        <x>2688</x>
+                        <y>960</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -1709,6 +1858,7 @@
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
                         <KnockBack>0</KnockBack>
+                        <KnockBackAngle>0</KnockBackAngle>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -1761,8 +1911,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2784</x>
-                        <y>1600</y>
+                        <x>2752</x>
+                        <y>1152</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -1786,6 +1936,7 @@
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
                         <KnockBack>0</KnockBack>
+                        <KnockBackAngle>0</KnockBackAngle>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -1863,6 +2014,7 @@
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
                         <KnockBack>0</KnockBack>
+                        <KnockBackAngle>0</KnockBackAngle>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -1940,6 +2092,7 @@
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
                         <KnockBack>0</KnockBack>
+                        <KnockBackAngle>0</KnockBackAngle>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -2049,9 +2202,10 @@
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
                         <KnockBack>0</KnockBack>
-                        <CarryingKnife>true</CarryingKnife>
+                        <KnockBackAngle>0</KnockBackAngle>
+                        <CarryingKnife>false</CarryingKnife>
                         <HoldingKnife>false</HoldingKnife>
-                        <CarryingGun>true</CarryingGun>
+                        <CarryingGun>false</CarryingGun>
                         <HoldingGun>false</HoldingGun>
                         <SimpleBullets>6</SimpleBullets>
                         <CanRun>false</CanRun>
@@ -2113,8 +2267,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>4576</x>
-                        <y>1216</y>
+                        <x>128</x>
+                        <y>448</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -2186,8 +2340,8 @@
                         <x>800</x>
                         <y>-24</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>24</width>
+                        <height>24</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -2291,6 +2445,7 @@
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
                         <KnockBack>0</KnockBack>
+                        <KnockBackAngle>0</KnockBackAngle>
                         <State></State>
                     </instance-variables>
                     <behavior-instances>
@@ -2338,15 +2493,15 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>152</x>
-                        <y>1924</y>
+                        <x>224</x>
+                        <y>2496</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
+                        <angle>-1.183660269</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
@@ -2363,6 +2518,7 @@
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
                         <KnockBack>0</KnockBack>
+                        <KnockBackAngle>0</KnockBackAngle>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -2415,15 +2571,15 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>448</x>
-                        <y>1920</y>
+                        <x>128</x>
+                        <y>1952</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
-                        <angle>3.141592741</angle>
+                        <angle>0.037577499</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
@@ -2440,6 +2596,7 @@
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
                         <KnockBack>0</KnockBack>
+                        <KnockBackAngle>0</KnockBackAngle>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -2517,6 +2674,7 @@
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
                         <KnockBack>0</KnockBack>
+                        <KnockBackAngle>0</KnockBackAngle>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -2569,15 +2727,15 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>864</x>
-                        <y>2624</y>
+                        <x>768</x>
+                        <y>2496</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
-                        <angle>3.141592741</angle>
+                        <angle>2.622072697</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
@@ -2631,7 +2789,7 @@
                     <behavior-instances>
                         <behavior-instance type="Bullet">
                             <properties>
-                                <speed>400</speed>
+                                <speed>800</speed>
                                 <acceleration>0</acceleration>
                                 <gravity>0</gravity>
                                 <bounce-off-solids>No</bounce-off-solids>
@@ -2643,11 +2801,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>416</x>
-                        <y>-128</y>
+                        <x>400</x>
+                        <y>-144</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>24</width>
+                        <height>24</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -2668,6 +2826,7 @@
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
                         <KnockBack>0</KnockBack>
+                        <KnockBackAngle>0</KnockBackAngle>
                         <Safe>false</Safe>
                         <Message>2</Message>
                         <Running>false</Running>
@@ -2742,6 +2901,7 @@
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
                         <KnockBack>0</KnockBack>
+                        <KnockBackAngle>0</KnockBackAngle>
                         <State></State>
                     </instance-variables>
                     <behavior-instances>
@@ -2814,6 +2974,7 @@
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
                         <KnockBack>0</KnockBack>
+                        <KnockBackAngle>0</KnockBackAngle>
                         <State></State>
                     </instance-variables>
                     <behavior-instances>
@@ -2886,6 +3047,7 @@
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
                         <KnockBack>0</KnockBack>
+                        <KnockBackAngle>0</KnockBackAngle>
                         <State></State>
                     </instance-variables>
                     <behavior-instances>
@@ -2958,6 +3120,7 @@
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
                         <KnockBack>0</KnockBack>
+                        <KnockBackAngle>0</KnockBackAngle>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -3035,6 +3198,7 @@
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
                         <KnockBack>0</KnockBack>
+                        <KnockBackAngle>0</KnockBackAngle>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -3112,6 +3276,7 @@
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
                         <KnockBack>0</KnockBack>
+                        <KnockBackAngle>0</KnockBackAngle>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -3189,6 +3354,7 @@
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
                         <KnockBack>0</KnockBack>
+                        <KnockBackAngle>0</KnockBackAngle>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -3266,6 +3432,7 @@
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
                         <KnockBack>0</KnockBack>
+                        <KnockBackAngle>0</KnockBackAngle>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -3343,6 +3510,7 @@
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
                         <KnockBack>0</KnockBack>
+                        <KnockBackAngle>0</KnockBackAngle>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -3420,6 +3588,7 @@
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
                         <KnockBack>0</KnockBack>
+                        <KnockBackAngle>0</KnockBackAngle>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -3497,6 +3666,7 @@
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
                         <KnockBack>0</KnockBack>
+                        <KnockBackAngle>0</KnockBackAngle>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -3574,6 +3744,7 @@
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
                         <KnockBack>0</KnockBack>
+                        <KnockBackAngle>0</KnockBackAngle>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -3651,6 +3822,7 @@
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
                         <KnockBack>0</KnockBack>
+                        <KnockBackAngle>0</KnockBackAngle>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -3904,6 +4076,7 @@
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
                         <KnockBack>0</KnockBack>
+                        <KnockBackAngle>0</KnockBackAngle>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -3981,6 +4154,7 @@
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
                         <KnockBack>0</KnockBack>
+                        <KnockBackAngle>0</KnockBackAngle>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -4058,6 +4232,7 @@
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
                         <KnockBack>0</KnockBack>
+                        <KnockBackAngle>0</KnockBackAngle>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -4135,6 +4310,7 @@
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
                         <KnockBack>0</KnockBack>
+                        <KnockBackAngle>0</KnockBackAngle>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -4212,6 +4388,7 @@
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
                         <KnockBack>0</KnockBack>
+                        <KnockBackAngle>0</KnockBackAngle>
                         <Following>false</Following>
                     </instance-variables>
                     <behavior-instances>

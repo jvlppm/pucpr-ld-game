@@ -363,6 +363,9 @@
                     <param id="0" name="Instance variable">Tall</param>
                     <param id="1" name="Value">0</param>
                 </action>
+                <action id="-26" name="Move to layer" sid="5860899967963263" type="ZombieSprite">
+                    <param id="0" name="Layer">1</param>
+                </action>
             </actions>
             <sub-events>
                 <event-block sid="7674735943860521">
@@ -530,7 +533,7 @@
                 <action id="-9" name="Destroy" sid="2445870703519718" type="Shadow" />
             </actions>
         </event-block>
-        <event-block collapsed="1" sid="860158693420959">
+        <event-block sid="860158693420959">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="7244739265271348" type="System" />
                 <condition id="-11" name="For Each" sid="8142848137878339" type="System">
@@ -545,10 +548,10 @@
             <sub-events>
                 <event-block sid="8873456786002955">
                     <conditions>
-                        <condition id="-8" name="Compare two values" sid="5904280425539054" type="System">
-                            <param id="0" name="First value">random(2)</param>
-                            <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Second value">1</param>
+                        <condition id="-7" name="Compare instance variable" sid="5904280425539054" type="Victim">
+                            <param id="0" name="Instance variable">Message</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -641,6 +644,9 @@
                         <action id="-13" name="Set boolean" sid="776211774972721" type="SpriteChar">
                             <param id="0" name="Instance variable">Tall</param>
                             <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="1722040283969995" type="SpriteChar">
+                            <param id="0" name="Layer">&quot;Background&quot;</param>
                         </action>
                         <action behavior="Sine" id="2" name="Set magnitude" sid="2771069229601091" type="Victim">
                             <param id="0" name="Magnitude">0</param>
@@ -792,6 +798,104 @@
                     <param id="1" name="Value">&quot;Dead&quot;</param>
                 </action>
                 <action id="-25" name="Move to bottom" sid="7929617851763954" type="SpriteChar" />
+            </actions>
+        </event-block>
+        <event-block sid="8912937141680002">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="9175248688918067" type="System" />
+            </conditions>
+            <actions>
+                <action id="-7" name="Set size" sid="9911355025732144" type="WaterBubble">
+                    <param id="0" name="Width">WaterBubble.Width + dt * 32</param>
+                    <param id="1" name="Height">WaterBubble.Height + dt * 32</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="6155956654112392" type="WaterBubble">
+                    <param id="0" name="Opacity">WaterBubble.Opacity - dt*20</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7703366742103153">
+            <conditions>
+                <condition id="-10" name="Compare opacity" sid="1615615054270663" type="WaterBubble">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="Opacity">0</param>
+                </condition>
+                <condition id="-6" name="Every X seconds" sid="454110279075764" type="System">
+                    <param id="0" name="Interval (seconds)">0.1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="9837819233903527" type="WaterBubble" />
+            </actions>
+        </event-block>
+        <event-block sid="4333687281928659">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="885141400772454" type="Character">
+                    <param id="0" name="Object">AguaTerra</param>
+                </condition>
+                <condition behavior="Pathfinding" id="4" name="Is moving along path" sid="9014609006510125" type="Character" />
+                <condition id="-6" name="Every X seconds" sid="8006390619725956" type="System">
+                    <param id="0" name="Interval (seconds)">0.5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="9893752794136754" type="Character">
+                    <param id="0" name="Object">WaterBubble</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-29" name="Move to object" sid="7285776144867616" type="WaterBubble">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Object">AguaTerra</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4665746498874547">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="7128611335535115" type="Player">
+                    <param id="0" name="Object">AguaTerra</param>
+                </condition>
+                <condition behavior="8Direction" id="0" name="Is moving" sid="3944958264780636" type="Player" />
+                <condition id="-6" name="Every X seconds" sid="5630256575771473" type="System">
+                    <param id="0" name="Interval (seconds)">0.5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="8453170432684789" type="Character">
+                    <param id="0" name="Object">WaterBubble</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-29" name="Move to object" sid="3513498997188384" type="WaterBubble">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Object">AguaTerra</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="734304307608066">
+            <conditions>
+                <condition id="-2" name="Compare Y" sid="4548855452422781" type="BulletShell">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="Y co-ordinate">BulletShell.MaxY - 10</param>
+                </condition>
+                <condition id="-2" name="Compare Y" sid="3945977575402236" type="BulletShell">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="Y co-ordinate">BulletShell.MaxY</param>
+                </condition>
+                <condition id="-11" name="For Each" sid="6357107876219479" type="System">
+                    <param id="0" name="Object">BulletShell</param>
+                </condition>
+                <condition id="-36" name="Pick overlapping point" sid="2936578608104618" type="System">
+                    <param id="0" name="Object">AguaTerra</param>
+                    <param id="1" name="X">BulletShell.X</param>
+                    <param id="2" name="Y">BulletShell.Y</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="4908981966629433" type="BulletShell">
+                    <param id="0" name="Animation">&quot;UnderWater&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
             </actions>
         </event-block>
     </events>

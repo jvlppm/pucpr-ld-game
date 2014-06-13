@@ -7,7 +7,7 @@
         <include>Utils</include>
         <include>Camera</include>
         <include>Sprites</include>
-        <event-group description="" sid="6773088495970466" title="Balloon">
+        <event-group collapsed="1" description="" sid="6773088495970466" title="Balloon">
             <sub-events>
                 <event-block sid="1755681182641615">
                     <conditions>
@@ -193,7 +193,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="2897060075777959" title="Characters">
+        <event-group collapsed="1" description="" sid="2897060075777959" title="Characters">
             <sub-events>
                 <event-block sid="2747026023799614">
                     <conditions>
@@ -443,10 +443,16 @@
                             <param id="1" name="Comparison">4</param>
                             <param id="2" name="Value">0</param>
                         </condition>
+                        <condition id="-7" name="Compare instance variable" sid="299962879965506" type="Character">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
-                        <action id="-17" name="Move forward" sid="9164592849132099" type="Character">
-                            <param id="0" name="Distance">-dt*80</param>
+                        <action id="-23" name="Move at angle" sid="9164592849132099" type="Character">
+                            <param id="0" name="Angle">Character.KnockBackAngle</param>
+                            <param id="1" name="Distance">-dt*80</param>
                         </action>
                         <action id="-12" name="Subtract from" sid="211773081410593" type="Character">
                             <param id="0" name="Instance variable">KnockBack</param>
@@ -459,7 +465,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="3766674772289778" title="Victims">
+        <event-group collapsed="1" description="" sid="3766674772289778" title="Victims">
             <sub-events>
                 <event-block sid="4706235495098837">
                     <conditions>
@@ -533,7 +539,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="2257214021347142">
+                <event-block collapsed="1" sid="2257214021347142">
                     <conditions>
                         <condition id="-11" name="For Each" sid="1629289458268421" type="System">
                             <param id="0" name="Object">Area</param>
@@ -705,6 +711,15 @@
                             <param id="0" name="Instance variable">Message</param>
                             <param id="1" name="Value">-1</param>
                         </action>
+                        <action id="-13" name="Set boolean" sid="4476927977494909" type="Victim">
+                            <param id="0" name="Instance variable">ForceEnabled</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="6767687628336114" type="Victim">
+                            <param id="0" name="Instance variable">Running</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="2" name="Stop" sid="6374547744441759" type="Victim" />
                     </actions>
                 </event-block>
                 <event-block sid="3595759109256556">
@@ -799,7 +814,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="3052503956438317" title="Zombies">
+        <event-group collapsed="1" description="" sid="3052503956438317" title="Zombies">
             <sub-events>
                 <event-block sid="5032556258015384">
                     <conditions>
@@ -998,7 +1013,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="6161878113429321">
+                <event-block collapsed="1" sid="6161878113429321">
                     <conditions>
                         <condition id="0" name="On function" sid="9989210086701573" type="Function">
                             <param id="0" name="Name">&quot;ZombieRelease&quot;</param>
@@ -1169,7 +1184,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="9438648782380541" title="Snipers">
+        <event-group collapsed="1" description="" sid="9438648782380541" title="Snipers">
             <sub-events>
                 <event-block sid="6870329120158633">
                     <conditions>
@@ -1262,6 +1277,24 @@
                             <param id="1" name="Value">&quot;&quot;</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="159915570911159">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="9232799813482979" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="6528105226563659" type="SpriteChar">
+                                    <param id="0" name="Instance variable">Owner</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">Sniper.UID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="1210039222664111" type="SpriteChar">
+                                    <param id="0" name="Instance variable">Tall</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="7966037355216316">
                     <conditions>
@@ -1368,7 +1401,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="1746198295301054" title="InvisibleMan">
+        <event-group collapsed="1" description="" sid="1746198295301054" title="InvisibleMan">
             <sub-events>
                 <event-block sid="8372894496072236">
                     <conditions>
@@ -1416,11 +1449,16 @@
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="3429764310942575" type="InvisibleMan">
                             <param id="0" name="Instance variable">Health</param>
-                            <param id="1" name="Comparison">4</param>
+                            <param id="1" name="Comparison">3</param>
                             <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action behavior="Pathfinding" id="3" name="Set enabled" sid="4584076564715279" type="InvisibleMan">
+                            <param id="0" name="Set">0</param>
+                        </action>
+                        <action behavior="Pathfinding" id="2" name="Stop" sid="2546818072048696" type="InvisibleMan" />
+                    </actions>
                 </event-block>
                 <event-block sid="1758324003044095">
                     <conditions>
@@ -1848,6 +1886,30 @@
                         <action id="-26" name="Restart layout" sid="4446848117981179" type="System" />
                     </actions>
                 </event-block>
+                <event-block sid="5152739100847432">
+                    <conditions>
+                        <condition id="0" name="On function" sid="5871580146946468" type="Function">
+                            <param id="0" name="Name">&quot;DialogStarted&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="8" name="Set enabled" sid="269799633187725" type="Player">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9975927714612028">
+                    <conditions>
+                        <condition id="0" name="On function" sid="5980768321102782" type="Function">
+                            <param id="0" name="Name">&quot;DialogCompleted&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="8" name="Set enabled" sid="4820178117098148" type="Player">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="3193611664449879" title="Weapons">
@@ -2009,6 +2071,14 @@
                                             <param id="0" name="Instance variable">Hit</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
+                                        <action id="-10" name="Set value" sid="2733861532123888" type="Character">
+                                            <param id="0" name="Instance variable">KnockBack</param>
+                                            <param id="1" name="Value">32</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="2129131544883778" type="Character">
+                                            <param id="0" name="Instance variable">KnockBackAngle</param>
+                                            <param id="1" name="Value">180-angle(Player.X, Player.Y, Character.X, Character.Y)</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="7752977712207892">
@@ -2117,6 +2187,14 @@
                                 <action id="-8" name="Set angle" sid="5890765774028666" type="DirectionalBlood">
                                     <param id="0" name="Angle">angle(Player.X, Player.Y, Character.X, Character.Y)</param>
                                 </action>
+                                <action id="-10" name="Set value" sid="7610420919139151" type="Character">
+                                    <param id="0" name="Instance variable">KnockBack</param>
+                                    <param id="1" name="Value">16</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="1101534049146812" type="Character">
+                                    <param id="0" name="Instance variable">KnockBackAngle</param>
+                                    <param id="1" name="Value">180-Bullet.Angle</param>
+                                </action>
                                 <action id="-9" name="Destroy" sid="6681680387909679" type="Bullet" />
                                 <action id="-12" name="Subtract from" sid="3433670883948858" type="Character">
                                     <param id="0" name="Instance variable">Health</param>
@@ -2125,10 +2203,6 @@
                                 <action disabled="1" id="-10" name="Set value" sid="2800362580297623" type="DirectionalBlood">
                                     <param id="0" name="Instance variable">Owner</param>
                                     <param id="1" name="Value">Character.UID</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="7610420919139151" type="Character">
-                                    <param id="0" name="Instance variable">KnockBack</param>
-                                    <param id="1" name="Value">16</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -2221,9 +2295,9 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group description="" sid="569804434613888" title="HUD">
+        <event-group collapsed="1" description="" sid="569804434613888" title="HUD">
             <sub-events>
-                <event-block sid="1517814329212286">
+                <event-block collapsed="1" sid="1517814329212286">
                     <conditions>
                         <condition id="-8" name="Is boolean instance variable set" sid="3850111470731568" type="Player">
                             <param id="0" name="Instance variable">CarryingKnife</param>
@@ -2259,7 +2333,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="8313307141283253">
+                <event-block collapsed="1" sid="8313307141283253">
                     <conditions>
                         <condition id="-8" name="Is boolean instance variable set" sid="644344751361621" type="Player">
                             <param id="0" name="Instance variable">CarryingGun</param>
