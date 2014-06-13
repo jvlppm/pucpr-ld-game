@@ -435,9 +435,9 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="3766674772289778" title="Victims">
+        <event-group description="" sid="3766674772289778" title="Victims">
             <sub-events>
-                <event-block collapsed="1" sid="4706235495098837">
+                <event-block sid="4706235495098837">
                     <conditions>
                         <condition id="-3" name="Is on-screen" sid="658511659056421" type="Victim" />
                         <condition id="-8" name="Is boolean instance variable set" sid="1875791766255387" type="Victim">
@@ -498,14 +498,18 @@
                                     <param id="1" name="Value">90- angle(0, 0, y_component/count, x_component/count)</param>
                                 </action>
                                 <action behavior="Pathfinding" id="0" name="Find path" sid="5987086950703232" type="Victim">
-                                    <param id="0" name="X">Victim.X + Function.Call(&quot;LengthDir&quot;, &quot;x&quot;, 30, AverageAngle)</param>
-                                    <param id="1" name="Y">Victim.Y + Function.Call(&quot;LengthDir&quot;, &quot;y&quot;, 30, AverageAngle)</param>
+                                    <param id="0" name="X">Victim.X + Function.Call(&quot;LengthDir&quot;, &quot;x&quot;, 300, AverageAngle)</param>
+                                    <param id="1" name="Y">Victim.Y + Function.Call(&quot;LengthDir&quot;, &quot;y&quot;, 300, AverageAngle)</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="4697242619247239" type="Victim">
+                                    <param id="0" name="Instance variable">ForceEnabled</param>
+                                    <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="2257214021347142">
+                <event-block collapsed="1" sid="2257214021347142">
                     <conditions>
                         <condition id="-11" name="For Each" sid="1629289458268421" type="System">
                             <param id="0" name="Object">Area</param>
@@ -653,7 +657,7 @@
                 <event-block sid="2676508559313817">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="8262850755840782" type="Victim">
-                            <param id="0" name="Object">Player</param>
+                            <param id="0" name="Object">PlayerSprite</param>
                         </condition>
                         <condition id="-8" name="Is boolean instance variable set" sid="7625292939407939" type="Victim">
                             <param id="0" name="Instance variable">Safe</param>
@@ -1332,7 +1336,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="7871028774943537" title="Player">
+        <event-group collapsed="1" description="" sid="7871028774943537" title="Player">
             <sub-events>
                 <event-block sid="1225327048404472">
                     <conditions>
@@ -1914,9 +1918,9 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group description="" sid="569804434613888" title="HUD">
+        <event-group collapsed="1" description="" sid="569804434613888" title="HUD">
             <sub-events>
-                <event-block sid="1517814329212286">
+                <event-block collapsed="1" sid="1517814329212286">
                     <conditions>
                         <condition id="-8" name="Is boolean instance variable set" sid="3850111470731568" type="Player">
                             <param id="0" name="Instance variable">CarryingKnife</param>
@@ -1952,7 +1956,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="8313307141283253">
+                <event-block collapsed="1" sid="8313307141283253">
                     <conditions>
                         <condition id="-8" name="Is boolean instance variable set" sid="644344751361621" type="Player">
                             <param id="0" name="Instance variable">CarryingGun</param>
