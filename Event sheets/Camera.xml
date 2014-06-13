@@ -102,7 +102,7 @@
                 <condition id="-8" name="Compare two values" sid="8015001320245615" type="System">
                     <param id="0" name="First value">abs(Camera.X - Camera.DesiredX)</param>
                     <param id="1" name="Comparison">2</param>
-                    <param id="2" name="Second value">5</param>
+                    <param id="2" name="Second value">15</param>
                 </condition>
             </conditions>
             <actions>
@@ -119,7 +119,7 @@
                 <condition id="-8" name="Compare two values" sid="7924895661875991" type="System">
                     <param id="0" name="First value">abs(Camera.Y - Camera.DesiredY)</param>
                     <param id="1" name="Comparison">2</param>
-                    <param id="2" name="Second value">5</param>
+                    <param id="2" name="Second value">15</param>
                 </condition>
             </conditions>
             <actions>

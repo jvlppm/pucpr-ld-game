@@ -191,7 +191,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="5492905900470633" title="Dinner">
+        <event-group collapsed="1" description="" sid="5492905900470633" title="Dinner">
             <sub-events>
                 <event-block sid="1427902067996916">
                     <conditions>

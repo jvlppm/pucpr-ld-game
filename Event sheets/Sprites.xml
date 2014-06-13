@@ -505,7 +505,7 @@
                 <action id="-9" name="Destroy" sid="2445870703519718" type="Shadow" />
             </actions>
         </event-block>
-        <event-block sid="860158693420959">
+        <event-block collapsed="1" sid="860158693420959">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="7244739265271348" type="System" />
                 <condition id="-11" name="For Each" sid="8142848137878339" type="System">
@@ -561,6 +561,31 @@
                     </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="1170796252092508">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="4746638542026304" type="System" />
+                <condition id="-11" name="For Each" sid="4083900858585771" type="System">
+                    <param id="0" name="Object">Sniper</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="9246615209164106" type="Sniper">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="2883954624324256" type="Sniper">
+                    <param id="0" name="Object">SniperSprite</param>
+                    <param id="1" name="Layer">Sniper.LayerNumber</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="3596405015673111" type="SniperSprite">
+                    <param id="0" name="Instance variable">Owner</param>
+                    <param id="1" name="Value">Sniper.UID</param>
+                </action>
+                <action id="-8" name="Set angle" sid="5156768708424652" type="SniperSprite">
+                    <param id="0" name="Angle">0</param>
+                </action>
+            </actions>
         </event-block>
         <event-block sid="9140206823536772">
             <conditions>
@@ -657,6 +682,47 @@
                         <action id="-10" name="Set value" sid="2137434487037566" type="Victim">
                             <param id="0" name="Instance variable">OverrideSpriteState</param>
                             <param id="1" name="Value">&quot;Safe&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="8241202369631213">
+            <conditions>
+                <condition id="-11" name="For Each" sid="4152503635029288" type="System">
+                    <param id="0" name="Object">Sniper</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="5321313544487802" type="SpriteChar">
+                    <param id="0" name="Instance variable">Owner</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">Sniper.UID</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="7178657426617649">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="1267282169514742" type="Sniper">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="8158427590711852" type="Sniper">
+                            <param id="0" name="Instance variable">SpriteState</param>
+                            <param id="1" name="Value">&quot;Dead&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5728845228695829">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="7859336775392395" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="2527080526292887" type="Sniper">
+                            <param id="0" name="Instance variable">SpriteState</param>
+                            <param id="1" name="Value">&quot;Default&quot;</param>
                         </action>
                     </actions>
                 </event-block>
