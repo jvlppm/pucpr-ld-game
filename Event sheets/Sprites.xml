@@ -21,7 +21,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="9740166611721054">
+        <event-block collapsed="1" sid="9740166611721054">
             <conditions>
                 <condition id="-7" name="Compare instance variable" sid="7365897846999041" type="SpriteChar">
                     <param id="0" name="Instance variable">Owner</param>
@@ -221,6 +221,31 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="2965495502126442">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="7476523718102218" type="System" />
+                <condition id="-11" name="For Each" sid="9763221865318639" type="System">
+                    <param id="0" name="Object">InvisibleMan</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="4773794391517036" type="InvisibleMan">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="1025647385099351" type="InvisibleMan">
+                    <param id="0" name="Object">InvisibleZombieSprite</param>
+                    <param id="1" name="Layer">InvisibleMan.LayerNumber</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="7057639746001788" type="InvisibleZombieSprite">
+                    <param id="0" name="Instance variable">Owner</param>
+                    <param id="1" name="Value">InvisibleMan.UID</param>
+                </action>
+                <action id="-8" name="Set angle" sid="752099699639437" type="InvisibleZombieSprite">
+                    <param id="0" name="Angle">0</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="5473847066388631">
             <conditions>
                 <condition id="-8" name="Is boolean instance variable set" sid="7266278855802543" type="Player">
@@ -274,7 +299,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="6775790614916596">
+        <event-block collapsed="1" sid="6775790614916596">
             <conditions>
                 <condition id="2" name="Is playing" sid="1479042616866037" type="Zombie">
                     <param id="0" name="Animation">&quot;Default&quot;</param>
@@ -505,7 +530,7 @@
                 <action id="-9" name="Destroy" sid="2445870703519718" type="Shadow" />
             </actions>
         </event-block>
-        <event-block sid="860158693420959">
+        <event-block collapsed="1" sid="860158693420959">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="7244739265271348" type="System" />
                 <condition id="-11" name="For Each" sid="8142848137878339" type="System">
@@ -727,6 +752,47 @@
                     </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="5127304089749954">
+            <conditions>
+                <condition id="-11" name="For Each" sid="3011810203824035" type="System">
+                    <param id="0" name="Object">InvisibleMan</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="4037353720623925" type="SpriteChar">
+                    <param id="0" name="Instance variable">Owner</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">InvisibleMan.UID</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="425434706430337" type="Shadow">
+                    <param id="0" name="Unique ID">SpriteChar.Shadow</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="1218533260542412" type="Shadow">
+                    <param id="0" name="Opacity">SpriteChar.Opacity / 2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="788079365364325">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="4064355479334476" type="InvisibleMan">
+                    <param id="0" name="Instance variable">Health</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="4781280476875691" type="SpriteChar">
+                    <param id="0" name="Instance variable">Owner</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">InvisibleMan.UID</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="7637142386705058" type="InvisibleMan">
+                    <param id="0" name="Instance variable">SpriteState</param>
+                    <param id="1" name="Value">&quot;Dead&quot;</param>
+                </action>
+                <action id="-25" name="Move to bottom" sid="7929617851763954" type="SpriteChar" />
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>

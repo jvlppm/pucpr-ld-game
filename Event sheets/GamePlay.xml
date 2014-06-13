@@ -1380,13 +1380,18 @@
                     <conditions>
                         <condition id="-3" name="Is on-screen" sid="9522075622638089" type="InvisibleMan" />
                         <condition id="-4" name="Trigger once while true" sid="6125387076320343" type="System" />
+                        <condition id="-7" name="Compare instance variable" sid="1143536780557103" type="SpriteChar">
+                            <param id="0" name="Instance variable">Owner</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">InvisibleMan.UID</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="0" name="Call function" sid="3826122779698949" type="Function">
                             <param id="0" name="Name">&quot;InvisibleGoToRandom&quot;</param>
                             <param id="1" name="Parameter {n}">InvisibleMan.UID</param>
                         </action>
-                        <action id="-16" name="Set opacity" sid="6177665296044897" type="InvisibleMan">
+                        <action id="-16" name="Set opacity" sid="6177665296044897" type="SpriteChar">
                             <param id="0" name="Opacity">100</param>
                         </action>
                     </actions>
@@ -1395,9 +1400,14 @@
                     <conditions>
                         <condition id="-3" inverted="1" name="Is on-screen" sid="7587738929163339" type="InvisibleMan" />
                         <condition id="-4" name="Trigger once while true" sid="1391259584634985" type="System" />
+                        <condition id="-7" name="Compare instance variable" sid="5016825392809226" type="SpriteChar">
+                            <param id="0" name="Instance variable">Owner</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">InvisibleMan.UID</param>
+                        </condition>
                     </conditions>
                     <actions>
-                        <action id="-16" name="Set opacity" sid="3374205126310904" type="InvisibleMan">
+                        <action id="-16" name="Set opacity" sid="5953347823604413" type="SpriteChar">
                             <param id="0" name="Opacity">100</param>
                         </action>
                     </actions>
@@ -1415,6 +1425,11 @@
                 <event-block sid="1758324003044095">
                     <conditions>
                         <condition behavior="Pathfinding" id="4" inverted="1" name="Is moving along path" sid="896503402798665" type="InvisibleMan" />
+                        <condition id="-7" name="Compare instance variable" sid="4850427888388205" type="SpriteChar">
+                            <param id="0" name="Instance variable">Owner</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">InvisibleMan.UID</param>
+                        </condition>
                     </conditions>
                     <actions />
                     <sub-events>
@@ -1438,7 +1453,7 @@
                                 <condition id="-22" name="Else" sid="8335755231865073" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-16" name="Set opacity" sid="2724399648812305" type="InvisibleMan">
+                                <action id="-16" name="Set opacity" sid="2724399648812305" type="SpriteChar">
                                     <param id="0" name="Opacity">100</param>
                                 </action>
                                 <action behavior="Pathfinding" id="0" name="Find path" sid="7651428560108546" type="InvisibleMan">
@@ -1468,7 +1483,12 @@
                 <event-block sid="1003820755162384">
                     <conditions>
                         <condition id="-1" name="Every tick" sid="182788008394396" type="System" />
-                        <condition id="-10" name="Compare opacity" sid="8062032223521878" type="InvisibleMan">
+                        <condition id="-7" name="Compare instance variable" sid="1609777469529569" type="SpriteChar">
+                            <param id="0" name="Instance variable">Owner</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">InvisibleMan.UID</param>
+                        </condition>
+                        <condition id="-10" name="Compare opacity" sid="8062032223521878" type="SpriteChar">
                             <param id="0" name="Comparison">4</param>
                             <param id="1" name="Opacity">1</param>
                         </condition>
@@ -1479,8 +1499,8 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-16" name="Set opacity" sid="9631609172000658" type="InvisibleMan">
-                            <param id="0" name="Opacity">InvisibleMan.Opacity - dt * 100</param>
+                        <action id="-16" name="Set opacity" sid="9631609172000658" type="SpriteChar">
+                            <param id="0" name="Opacity">SpriteChar.Opacity - dt * 100</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1494,9 +1514,14 @@
                             <param id="1" name="Comparison">4</param>
                             <param id="2" name="Value">0</param>
                         </condition>
+                        <condition id="-7" name="Compare instance variable" sid="5824391809810259" type="SpriteChar">
+                            <param id="0" name="Instance variable">Owner</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">InvisibleMan.UID</param>
+                        </condition>
                     </conditions>
                     <actions>
-                        <action id="-16" name="Set opacity" sid="9579921200981748" type="InvisibleMan">
+                        <action id="-16" name="Set opacity" sid="1606060304909542" type="SpriteChar">
                             <param id="0" name="Opacity">20 + random(40)</param>
                         </action>
                     </actions>
@@ -1510,11 +1535,23 @@
                             <param id="0" name="Object">Character</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-16" name="Set opacity" sid="5504406509436261" type="InvisibleMan">
-                            <param id="0" name="Opacity">100</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="526571003775487">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="2968540211344672" type="SpriteChar">
+                                    <param id="0" name="Instance variable">Owner</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">InvisibleMan.UID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="5584873003463056" type="SpriteChar">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="4224452801242449">
                     <conditions>

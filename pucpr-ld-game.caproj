@@ -848,6 +848,73 @@
         <object-type name="Audio" sid="8291929508466314">
             <plugin id="Audio" />
         </object-type>
+        <object-type name="InvisibleZombieSprite" sid="5762236440021905">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Left" pingpong="0" repeatcount="1" repeatto="0" sid="3679167796772665" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.78125" />
+                </animation>
+                <animation framecount="1" loop="0" name="Right" pingpong="0" repeatcount="1" repeatto="0" sid="5410283425302304" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.78125">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Up" pingpong="0" repeatcount="1" repeatto="0" sid="8844015990437116" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.78125" />
+                </animation>
+                <animation framecount="1" loop="0" name="Down" pingpong="0" repeatcount="1" repeatto="0" sid="663680650670249" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.78125" />
+                </animation>
+                <animation framecount="2" loop="1" name="WalkingLeft" pingpong="0" repeatcount="1" repeatto="0" sid="1518680209640594" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.78125" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.78125" />
+                </animation>
+                <animation framecount="2" loop="1" name="WalkingRight" pingpong="0" repeatcount="1" repeatto="0" sid="8055631760949572" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.78125">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.78125" />
+                </animation>
+                <animation framecount="2" loop="1" name="WalkingUp" pingpong="0" repeatcount="1" repeatto="0" sid="2723707374033096" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.78125" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.78125" />
+                </animation>
+                <animation framecount="2" loop="1" name="WalkingDown" pingpong="0" repeatcount="1" repeatto="0" sid="4765480603285532" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.78125" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.78125" />
+                </animation>
+                <animation framecount="1" loop="0" name="Dead" pingpong="0" repeatcount="1" repeatto="0" sid="3621105483948922" speed="5">
+                    <frame duration="1" hotspotX="0.53125" hotspotY="0.640625">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Squashed" pingpong="0" repeatcount="1" repeatto="0" sid="879010927290802" speed="5">
+                    <frame duration="1" hotspotX="0.53125" hotspotY="0.640625">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Character" plugin-id="Sprite" sid="3925885853165109">
@@ -931,6 +998,7 @@
         </family>
         <family name="SpriteChar" plugin-id="Sprite" sid="904162080945841">
             <members>
+                <member>InvisibleZombieSprite</member>
                 <member>PlayerSprite</member>
                 <member>SniperSprite</member>
                 <member>VictimSprite</member>
