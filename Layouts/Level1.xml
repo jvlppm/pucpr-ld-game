@@ -460,6 +460,35 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="Table" uid="87">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>3584</x>
+                        <y>2208</y>
+                        <z>0</z>
+                        <width>293</width>
+                        <height>200</height>
+                        <depth>0</depth>
+                        <hotspotX>0.501706481</hotspotX>
+                        <hotspotY>0.625</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="KnifeArea" uid="22">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
@@ -2060,8 +2089,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>288</x>
-                        <y>3200</y>
+                        <x>128</x>
+                        <y>448</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -3815,39 +3844,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Table" uid="87">
-                    <properties>
-                        <left-margin>0</left-margin>
-                        <right-margin>0</right-margin>
-                        <top-margin>0</top-margin>
-                        <bottom-margin>0</bottom-margin>
-                        <edges>Stretch</edges>
-                        <fill>Stretch</fill>
-                        <initial-visibility>Visible</initial-visibility>
-                        <hotspot>Top-left</hotspot>
-                        <seams>Overlap</seams>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Solid">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>3392</x>
-                        <y>2144</y>
-                        <z>0</z>
-                        <width>352</width>
-                        <height>192</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="Zombie" uid="88">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -3896,7 +3892,7 @@
                                 <rotate-speed>135</rotate-speed>
                                 <rotate-object>Yes</rotate-object>
                                 <diagonals>Enabled</diagonals>
-                                <initial-state>Enabled</initial-state>
+                                <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="LineOfSight">
@@ -3911,8 +3907,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>3456</x>
-                        <y>2112</y>
+                        <x>3520</x>
+                        <y>2080</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -3971,7 +3967,7 @@
                                 <rotate-speed>135</rotate-speed>
                                 <rotate-object>Yes</rotate-object>
                                 <diagonals>Enabled</diagonals>
-                                <initial-state>Enabled</initial-state>
+                                <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="LineOfSight">
@@ -3986,8 +3982,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>3680</x>
-                        <y>2112</y>
+                        <x>3648</x>
+                        <y>2080</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -4046,7 +4042,7 @@
                                 <rotate-speed>135</rotate-speed>
                                 <rotate-object>Yes</rotate-object>
                                 <diagonals>Enabled</diagonals>
-                                <initial-state>Enabled</initial-state>
+                                <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="LineOfSight">
@@ -4061,8 +4057,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>3456</x>
-                        <y>2368</y>
+                        <x>3520</x>
+                        <y>2272</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -4121,7 +4117,7 @@
                                 <rotate-speed>135</rotate-speed>
                                 <rotate-object>Yes</rotate-object>
                                 <diagonals>Enabled</diagonals>
-                                <initial-state>Enabled</initial-state>
+                                <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="LineOfSight">
@@ -4136,8 +4132,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>3680</x>
-                        <y>2368</y>
+                        <x>3648</x>
+                        <y>2272</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>

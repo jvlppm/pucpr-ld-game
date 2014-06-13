@@ -372,15 +372,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Table" sid="6804308691381945">
-            <plugin id="NinePatch" />
-            <behaviors>
-                <behavior-type name="Solid" sid="8353936408751867">
-                    <behavior id="solid" />
-                </behavior-type>
-            </behaviors>
-            <texture />
-        </object-type>
         <object-type name="DinnerArea" sid="7062003291549401">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
@@ -877,6 +868,26 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Table" sid="3524065141079055">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="8823564932004056">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9967935310291397" speed="5">
+                    <frame duration="1" hotspotX="0.501706" hotspotY="0.625">
+                        <collision-poly>
+                            <point x="0" y="0.18" />
+                            <point x="1" y="0.18" />
+                            <point x="1" y="0.81" />
+                            <point x="0" y="0.81" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Character" plugin-id="Sprite" sid="3925885853165109">
@@ -947,7 +958,6 @@
         <family name="Wall" plugin-id="NinePatch" sid="6852306913057462">
             <members>
                 <member>SimpleWall</member>
-                <member>Table</member>
             </members>
         </family>
         <family name="Blood" plugin-id="Sprite" sid="5609435327068706">

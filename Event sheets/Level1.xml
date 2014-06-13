@@ -191,7 +191,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="5492905900470633" title="Dinner">
+        <event-group description="" sid="5492905900470633" title="Dinner">
             <sub-events>
                 <event-block sid="1427902067996916">
                     <conditions>
@@ -217,6 +217,9 @@
                                 <action behavior="Pathfinding" id="0" name="Find path" sid="5557248413364002" type="Zombie">
                                     <param id="0" name="X">Player.X</param>
                                     <param id="1" name="Y">Player.Y</param>
+                                </action>
+                                <action behavior="Pathfinding" id="3" name="Set enabled" sid="6329567298661411" type="Zombie">
+                                    <param id="0" name="Set">1</param>
                                 </action>
                             </actions>
                         </event-block>

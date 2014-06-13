@@ -193,7 +193,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="2897060075777959" title="Characters">
+        <event-group description="" sid="2897060075777959" title="Characters">
             <sub-events>
                 <event-block sid="2747026023799614">
                     <conditions>
@@ -205,6 +205,9 @@
                         </action>
                         <action behavior="Pathfinding" id="5" name="Add obstacle" sid="2036355355421125" type="Character">
                             <param id="0" name="Obstacle">Wall</param>
+                        </action>
+                        <action behavior="Pathfinding" id="5" name="Add obstacle" sid="1572214677364642" type="Character">
+                            <param id="0" name="Obstacle">Table</param>
                         </action>
                         <action behavior="Pathfinding" id="4" name="Regenerate obstacle map" sid="7817724900881832" type="Character" />
                     </actions>
