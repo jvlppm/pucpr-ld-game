@@ -724,6 +724,53 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="4761548260922915">
+                    <conditions>
+                        <condition id="0" name="On function" sid="8090529830012552" type="Function">
+                            <param id="0" name="Name">&quot;HeldByZombie&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="4429506421399655" type="Victim">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                        <condition id="5" inverted="1" name="Is tag playing" sid="8449585583396875" type="Audio">
+                            <param id="0" name="Tag">str(Victim.UID)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="25" name="Play at object" sid="953137508802399" type="Audio">
+                            <param id="0" name="Audio file">193760__nanity05__girl-scream</param>
+                            <param id="1" name="Loop">0</param>
+                            <param id="2" name="Volume">0</param>
+                            <param id="3" name="Object">Victim</param>
+                            <param id="4" name="Inner angle">360</param>
+                            <param id="5" name="Outer angle">360</param>
+                            <param id="6" name="Outer gain">0</param>
+                            <param id="7" name="Tag (optional)">str(Victim.UID)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1202374680592262">
+                    <conditions>
+                        <condition id="0" name="On function" sid="5147408106347047" type="Function">
+                            <param id="0" name="Name">&quot;OnHit&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="2767619291989672" type="Victim">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="25" name="Play at object" sid="2989657250414554" type="Audio">
+                            <param id="0" name="Audio file">193760__nanity05__girl-scream</param>
+                            <param id="1" name="Loop">0</param>
+                            <param id="2" name="Volume">0</param>
+                            <param id="3" name="Object">Victim</param>
+                            <param id="4" name="Inner angle">360</param>
+                            <param id="5" name="Outer angle">360</param>
+                            <param id="6" name="Outer gain">0</param>
+                            <param id="7" name="Tag (optional)">str(Victim.UID)</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="3052503956438317" title="Zombies">
@@ -836,6 +883,38 @@
                             <param id="1" name="Y">GoodGuy.Y</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="9313505264888528">
+                            <conditions>
+                                <condition id="5" inverted="1" name="Is tag playing" sid="2844149743154683" type="Audio">
+                                    <param id="0" name="Tag">str(Zombie.UID)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="25" name="Play at object" sid="7412286539035764" type="Audio">
+                                    <param id="0" name="Audio file">189281__huminaatio__zombie-breathing</param>
+                                    <param id="1" name="Loop">0</param>
+                                    <param id="2" name="Volume">10</param>
+                                    <param id="3" name="Object">Zombie</param>
+                                    <param id="4" name="Inner angle">360</param>
+                                    <param id="5" name="Outer angle">360</param>
+                                    <param id="6" name="Outer gain">0</param>
+                                    <param id="7" name="Tag (optional)">str(Zombie.UID)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1406737230114592">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="8993068728474359" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Set volume" sid="3207627739192327" type="Audio">
+                                    <param id="0" name="Tag">str(Zombie.UID)</param>
+                                    <param id="1" name="dB">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="5715188491627261">
                     <conditions>
@@ -878,6 +957,19 @@
                             <param id="1" name="Value">1</param>
                         </action>
                         <action behavior="Pathfinding" id="2" name="Stop" sid="5530335594236213" type="Zombie" />
+                        <action id="0" name="Call function" sid="9874667444379075" type="Function">
+                            <param id="0" name="Name">&quot;HeldByZombie&quot;</param>
+                            <param id="1" name="Parameter {n}">Character.UID</param>
+                        </action>
+                        <action id="6" name="Stop" sid="5512417287135747" type="Audio">
+                            <param id="0" name="Tag">str(Zombie.UID)</param>
+                        </action>
+                        <action id="0" name="Play" sid="9359874696099258" type="Audio">
+                            <param id="0" name="Audio file">213509__soykevin__zombie-attack</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">str(Zombie.UID)</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="6161878113429321">
@@ -975,6 +1067,43 @@
                         <action id="-12" name="Subtract from" sid="4460749865104301" type="Character">
                             <param id="0" name="Instance variable">Health</param>
                             <param id="1" name="Value">dt * 2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5041306194478019">
+                    <conditions>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="7099844315655805" type="Zombie" />
+                        <condition id="-11" name="For Each" sid="3896045180867685" type="System">
+                            <param id="0" name="Object">Zombie</param>
+                        </condition>
+                        <condition id="5" name="Is tag playing" sid="2237568376305846" type="Audio">
+                            <param id="0" name="Tag">str(Zombie.UID)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set volume" sid="2762387174077265" type="Audio">
+                            <param id="0" name="Tag">str(Zombie.UID)</param>
+                            <param id="1" name="dB">-distance(Player.X, Player.Y, Zombie.X, Zombie.Y) / ScreenMaxDistance * 10</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7773099781713889">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="9174271994378559" type="Zombie">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-11" name="For Each" sid="7738833043456585" type="System">
+                            <param id="0" name="Object">Zombie</param>
+                        </condition>
+                        <condition id="5" name="Is tag playing" sid="1555162503379061" type="Audio">
+                            <param id="0" name="Tag">str(Zombie.UID)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Stop" sid="2190658387991932" type="Audio">
+                            <param id="0" name="Tag">str(Zombie.UID)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1392,6 +1521,12 @@
                             <param id="0" name="Instance variable">HoldingKnife</param>
                             <param id="1" name="Value">1</param>
                         </action>
+                        <action id="0" name="Play" sid="6405901915660817" type="Audio">
+                            <param id="0" name="Audio file">118792__lmbubec__1-knife-slash-a</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block disabled="1" sid="9246430597994552">
@@ -1468,6 +1603,12 @@
                         </action>
                         <action id="-8" name="Set angle" sid="4135992262359893" type="SimpleBullet">
                             <param id="0" name="Angle">round((Player.Angle) / 90) * 90</param>
+                        </action>
+                        <action id="0" name="Play" sid="7292800857660541" type="Audio">
+                            <param id="0" name="Audio file">220612_senitiel_pistol2</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                         <action id="0" name="Spawn another object" sid="8551624278586166" type="PlayerSprite">
                             <param id="0" name="Object">BulletShell</param>
@@ -1792,6 +1933,10 @@
                                             <param id="0" name="Instance variable">Owner</param>
                                             <param id="1" name="Value">Character.UID</param>
                                         </action>
+                                        <action id="0" name="Call function" sid="6976850946861578" type="Function">
+                                            <param id="0" name="Name">&quot;OnHit&quot;</param>
+                                            <param id="1" name="Parameter {n}">Character.UID</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
@@ -1922,13 +2067,54 @@
                                     <param id="0" name="Comparison">4</param>
                                     <param id="1" name="Y co-ordinate">BulletShell.MaxY</param>
                                 </condition>
+                                <condition id="-7" name="Compare instance variable" sid="8216414100896967" type="BulletShell">
+                                    <param id="0" name="Instance variable">MaxY</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition behavior="Platform" id="4" name="Is falling" sid="4281565390939906" type="BulletShell" />
                             </conditions>
                             <actions>
-                                <action behavior="Platform" id="11" name="Set enabled" sid="5718540940534906" type="BulletShell">
-                                    <param id="0" name="State">0</param>
-                                </action>
                                 <action id="-25" name="Move to bottom" sid="4487914203233952" type="BulletShell" />
+                                <action disabled="1" id="-10" name="Set value" sid="5383552711640553" type="BulletShell">
+                                    <param id="0" name="Instance variable">MaxY</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="6533732346687565" type="BulletShell">
+                                    <param id="0" name="Vector Y">-BulletShell.Platform.VectorY / 2</param>
+                                </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="7434386111720489">
+                                    <conditions>
+                                        <condition id="5" inverted="1" name="Is tag playing" sid="4851683373381487" type="Audio">
+                                            <param id="0" name="Tag">str(BulletShell.UID)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="2064716696926017" type="Audio">
+                                            <param id="0" name="Audio file">107342__thompsonman__shotgun-shell</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">str(BulletShell.UID)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="4489347167867693">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="9662310770957449" type="System">
+                                            <param id="0" name="First value">abs(BulletShell.Platform.VectorY)</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">10</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="11" name="Set enabled" sid="5718540940534906" type="BulletShell">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-group>
