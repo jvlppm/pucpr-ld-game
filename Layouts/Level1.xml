@@ -589,6 +589,7 @@
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
+                        <KnockBack>0</KnockBack>
                         <Safe>false</Safe>
                         <Message>-1</Message>
                         <Running>false</Running>
@@ -662,6 +663,7 @@
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
+                        <KnockBack>0</KnockBack>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -936,6 +938,7 @@
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
+                        <KnockBack>0</KnockBack>
                         <Safe>false</Safe>
                         <Message>0</Message>
                         <Running>false</Running>
@@ -1108,6 +1111,7 @@
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
+                        <KnockBack>0</KnockBack>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -1184,6 +1188,7 @@
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
+                        <KnockBack>0</KnockBack>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -1321,6 +1326,7 @@
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
+                        <KnockBack>0</KnockBack>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -1397,6 +1403,7 @@
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
+                        <KnockBack>0</KnockBack>
                         <Holding>-1</Holding>
                         <KeepWalking>true</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -1550,6 +1557,7 @@
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
+                        <KnockBack>0</KnockBack>
                         <Safe>false</Safe>
                         <Message>1</Message>
                         <Running>false</Running>
@@ -1623,6 +1631,7 @@
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
+                        <KnockBack>0</KnockBack>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -1699,6 +1708,7 @@
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
+                        <KnockBack>0</KnockBack>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -1775,6 +1785,7 @@
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
+                        <KnockBack>0</KnockBack>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -1851,6 +1862,7 @@
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
+                        <KnockBack>0</KnockBack>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -1927,6 +1939,7 @@
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
+                        <KnockBack>0</KnockBack>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -2035,7 +2048,8 @@
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
-                        <CarryingKnife>false</CarryingKnife>
+                        <KnockBack>0</KnockBack>
+                        <CarryingKnife>true</CarryingKnife>
                         <HoldingKnife>false</HoldingKnife>
                         <CarryingGun>true</CarryingGun>
                         <HoldingGun>false</HoldingGun>
@@ -2099,8 +2113,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>128</x>
-                        <y>448</y>
+                        <x>4576</x>
+                        <y>1216</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -2272,10 +2286,11 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Health>1</Health>
+                        <Health>3</Health>
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
+                        <KnockBack>0</KnockBack>
                         <State></State>
                     </instance-variables>
                     <behavior-instances>
@@ -2347,6 +2362,7 @@
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
+                        <KnockBack>0</KnockBack>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -2423,6 +2439,7 @@
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
+                        <KnockBack>0</KnockBack>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -2499,6 +2516,7 @@
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
+                        <KnockBack>0</KnockBack>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -2649,6 +2667,7 @@
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
+                        <KnockBack>0</KnockBack>
                         <Safe>false</Safe>
                         <Message>2</Message>
                         <Running>false</Running>
@@ -2718,10 +2737,11 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Health>1</Health>
+                        <Health>3</Health>
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
+                        <KnockBack>0</KnockBack>
                         <State></State>
                     </instance-variables>
                     <behavior-instances>
@@ -2789,10 +2809,11 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Health>1</Health>
+                        <Health>3</Health>
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
+                        <KnockBack>0</KnockBack>
                         <State></State>
                     </instance-variables>
                     <behavior-instances>
@@ -2860,10 +2881,11 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Health>1</Health>
+                        <Health>3</Health>
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
+                        <KnockBack>0</KnockBack>
                         <State></State>
                     </instance-variables>
                     <behavior-instances>
@@ -2935,6 +2957,7 @@
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
+                        <KnockBack>0</KnockBack>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -3011,6 +3034,7 @@
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
+                        <KnockBack>0</KnockBack>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -3087,6 +3111,7 @@
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
+                        <KnockBack>0</KnockBack>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -3163,6 +3188,7 @@
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
+                        <KnockBack>0</KnockBack>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -3239,6 +3265,7 @@
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
+                        <KnockBack>0</KnockBack>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -3315,6 +3342,7 @@
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
+                        <KnockBack>0</KnockBack>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -3391,6 +3419,7 @@
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
+                        <KnockBack>0</KnockBack>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -3467,6 +3496,7 @@
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
+                        <KnockBack>0</KnockBack>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -3543,6 +3573,7 @@
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
+                        <KnockBack>0</KnockBack>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -3619,6 +3650,7 @@
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
+                        <KnockBack>0</KnockBack>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -3871,6 +3903,7 @@
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
+                        <KnockBack>0</KnockBack>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -3947,6 +3980,7 @@
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
+                        <KnockBack>0</KnockBack>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -4023,6 +4057,7 @@
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
+                        <KnockBack>0</KnockBack>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -4099,6 +4134,7 @@
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
+                        <KnockBack>0</KnockBack>
                         <Holding>-1</Holding>
                         <KeepWalking>false</KeepWalking>
                         <ReleaseDelay>0</ReleaseDelay>
@@ -4175,6 +4211,7 @@
                         <ForceEnabled>false</ForceEnabled>
                         <SpriteState></SpriteState>
                         <OverrideSpriteState>#</OverrideSpriteState>
+                        <KnockBack>0</KnockBack>
                         <Following>false</Following>
                     </instance-variables>
                     <behavior-instances>

@@ -274,7 +274,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block collapsed="1" sid="6775790614916596">
+        <event-block sid="6775790614916596">
             <conditions>
                 <condition id="2" name="Is playing" sid="1479042616866037" type="Zombie">
                     <param id="0" name="Animation">&quot;Default&quot;</param>
@@ -505,7 +505,7 @@
                 <action id="-9" name="Destroy" sid="2445870703519718" type="Shadow" />
             </actions>
         </event-block>
-        <event-block collapsed="1" sid="860158693420959">
+        <event-block sid="860158693420959">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="7244739265271348" type="System" />
                 <condition id="-11" name="For Each" sid="8142848137878339" type="System">
