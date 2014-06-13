@@ -71,6 +71,12 @@
                     <param id="1" name="Height">ScreenHeight</param>
                 </action>
                 <action behavior="Fade" id="1" name="Start fade" sid="10435654694156" type="InitialFade" />
+                <action id="0" name="Play" sid="6959456140207043" type="Audio">
+                    <param id="0" name="Audio file">technophobic_android-zombie_rag</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-group description="" sid="800431554552432" title="Knife gift">

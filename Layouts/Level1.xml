@@ -667,6 +667,7 @@
                         <ReleaseDelay>0</ReleaseDelay>
                         <HoldX>0</HoldX>
                         <HoldY>0</HoldY>
+                        <Screamed>false</Screamed>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -1112,6 +1113,7 @@
                         <ReleaseDelay>0</ReleaseDelay>
                         <HoldX>0</HoldX>
                         <HoldY>0</HoldY>
+                        <Screamed>false</Screamed>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -1187,6 +1189,7 @@
                         <ReleaseDelay>0</ReleaseDelay>
                         <HoldX>0</HoldX>
                         <HoldY>0</HoldY>
+                        <Screamed>false</Screamed>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -1323,6 +1326,7 @@
                         <ReleaseDelay>0</ReleaseDelay>
                         <HoldX>0</HoldX>
                         <HoldY>0</HoldY>
+                        <Screamed>false</Screamed>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -1398,6 +1402,7 @@
                         <ReleaseDelay>0</ReleaseDelay>
                         <HoldX>0</HoldX>
                         <HoldY>0</HoldY>
+                        <Screamed>false</Screamed>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -1623,6 +1628,7 @@
                         <ReleaseDelay>0</ReleaseDelay>
                         <HoldX>0</HoldX>
                         <HoldY>0</HoldY>
+                        <Screamed>false</Screamed>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -1698,6 +1704,7 @@
                         <ReleaseDelay>0</ReleaseDelay>
                         <HoldX>0</HoldX>
                         <HoldY>0</HoldY>
+                        <Screamed>false</Screamed>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -1773,6 +1780,7 @@
                         <ReleaseDelay>0</ReleaseDelay>
                         <HoldX>0</HoldX>
                         <HoldY>0</HoldY>
+                        <Screamed>false</Screamed>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -1848,6 +1856,7 @@
                         <ReleaseDelay>0</ReleaseDelay>
                         <HoldX>0</HoldX>
                         <HoldY>0</HoldY>
+                        <Screamed>false</Screamed>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -1923,6 +1932,7 @@
                         <ReleaseDelay>0</ReleaseDelay>
                         <HoldX>0</HoldX>
                         <HoldY>0</HoldY>
+                        <Screamed>false</Screamed>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -2342,6 +2352,7 @@
                         <ReleaseDelay>0</ReleaseDelay>
                         <HoldX>0</HoldX>
                         <HoldY>0</HoldY>
+                        <Screamed>false</Screamed>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -2417,6 +2428,7 @@
                         <ReleaseDelay>0</ReleaseDelay>
                         <HoldX>0</HoldX>
                         <HoldY>0</HoldY>
+                        <Screamed>false</Screamed>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -2492,6 +2504,7 @@
                         <ReleaseDelay>0</ReleaseDelay>
                         <HoldX>0</HoldX>
                         <HoldY>0</HoldY>
+                        <Screamed>false</Screamed>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -2927,6 +2940,7 @@
                         <ReleaseDelay>0</ReleaseDelay>
                         <HoldX>0</HoldX>
                         <HoldY>0</HoldY>
+                        <Screamed>false</Screamed>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -3002,6 +3016,7 @@
                         <ReleaseDelay>0</ReleaseDelay>
                         <HoldX>0</HoldX>
                         <HoldY>0</HoldY>
+                        <Screamed>false</Screamed>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -3077,6 +3092,7 @@
                         <ReleaseDelay>0</ReleaseDelay>
                         <HoldX>0</HoldX>
                         <HoldY>0</HoldY>
+                        <Screamed>false</Screamed>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -3152,6 +3168,7 @@
                         <ReleaseDelay>0</ReleaseDelay>
                         <HoldX>0</HoldX>
                         <HoldY>0</HoldY>
+                        <Screamed>false</Screamed>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -3227,6 +3244,7 @@
                         <ReleaseDelay>0</ReleaseDelay>
                         <HoldX>0</HoldX>
                         <HoldY>0</HoldY>
+                        <Screamed>false</Screamed>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -3302,6 +3320,7 @@
                         <ReleaseDelay>0</ReleaseDelay>
                         <HoldX>0</HoldX>
                         <HoldY>0</HoldY>
+                        <Screamed>false</Screamed>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -3377,6 +3396,7 @@
                         <ReleaseDelay>0</ReleaseDelay>
                         <HoldX>0</HoldX>
                         <HoldY>0</HoldY>
+                        <Screamed>false</Screamed>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -3452,6 +3472,7 @@
                         <ReleaseDelay>0</ReleaseDelay>
                         <HoldX>0</HoldX>
                         <HoldY>0</HoldY>
+                        <Screamed>false</Screamed>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -3527,6 +3548,7 @@
                         <ReleaseDelay>0</ReleaseDelay>
                         <HoldX>0</HoldX>
                         <HoldY>0</HoldY>
+                        <Screamed>false</Screamed>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -3602,6 +3624,7 @@
                         <ReleaseDelay>0</ReleaseDelay>
                         <HoldX>0</HoldX>
                         <HoldY>0</HoldY>
+                        <Screamed>false</Screamed>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -3853,6 +3876,7 @@
                         <ReleaseDelay>0</ReleaseDelay>
                         <HoldX>0</HoldX>
                         <HoldY>0</HoldY>
+                        <Screamed>false</Screamed>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -3928,6 +3952,7 @@
                         <ReleaseDelay>0</ReleaseDelay>
                         <HoldX>0</HoldX>
                         <HoldY>0</HoldY>
+                        <Screamed>false</Screamed>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -4003,6 +4028,7 @@
                         <ReleaseDelay>0</ReleaseDelay>
                         <HoldX>0</HoldX>
                         <HoldY>0</HoldY>
+                        <Screamed>false</Screamed>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -4078,6 +4104,7 @@
                         <ReleaseDelay>0</ReleaseDelay>
                         <HoldX>0</HoldX>
                         <HoldY>0</HoldY>
+                        <Screamed>false</Screamed>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">

@@ -55,7 +55,7 @@
         <prop name="Sampling">Point</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
-    <object-folder expanded="0">
+    <object-folder expanded="1">
         <object-type name="Player" sid="4051500685572501">
             <plugin id="Sprite" />
             <instance-variables>
@@ -97,6 +97,7 @@
                 <instance-variable name="ReleaseDelay" sid="7765719751362868" type="number" />
                 <instance-variable name="HoldX" sid="4145982478475171" type="number" />
                 <instance-variable name="HoldY" sid="5463669859336924" type="number" />
+                <instance-variable name="Screamed" sid="2531100251008502" type="boolean" />
             </instance-variables>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9332596063506549" speed="5">
@@ -993,7 +994,7 @@
     <layout-folder expanded="1">
         <layout>Level1.xml</layout>
     </layout-folder>
-    <event-folder expanded="1">
+    <event-folder expanded="0">
         <event-sheet>GamePlay.xml</event-sheet>
         <event-sheet>Camera.xml</event-sheet>
         <event-sheet>Level1.xml</event-sheet>
@@ -1038,6 +1039,14 @@
         <file name="107342__thompsonman__shotgun-shell.m4a" />
         <file name="107342__thompsonman__shotgun-shell.ogg" />
         <file name="107342__thompsonman__shotgun-shell.wav" />
+        <file name="technophobic_android-zombie_rag.m4a" />
+        <file name="technophobic_android-zombie_rag.ogg" />
+        <file name="technophobic_android-zombie_rag.wav" />
+        <file name="151710__scorpion67890__rotten-zombie-death.m4a" />
+        <file name="151710__scorpion67890__rotten-zombie-death.wav" />
+        <file name="151710_scorpion67890_rotten-zombie-death_converted.m4a" />
+        <file name="151710_scorpion67890_rotten-zombie-death_converted.ogg" />
+        <file name="151710_scorpion67890_rotten-zombie-death_converted.wav" />
     </sounds-folder>
     <music-folder expanded="1" />
     <files-folder expanded="0">
