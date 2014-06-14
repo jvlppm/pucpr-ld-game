@@ -206,6 +206,9 @@
                         <action behavior="Pathfinding" id="5" name="Add obstacle" sid="2036355355421125" type="Character">
                             <param id="0" name="Obstacle">Wall</param>
                         </action>
+                        <action behavior="Pathfinding" id="5" name="Add obstacle" sid="4224181952673507" type="Character">
+                            <param id="0" name="Obstacle">SpriteWall</param>
+                        </action>
                         <action behavior="Pathfinding" id="5" name="Add obstacle" sid="1572214677364642" type="Character">
                             <param id="0" name="Obstacle">Table</param>
                         </action>
@@ -884,7 +887,7 @@
                         <condition id="-11" name="For Each" sid="4081659821480804" type="System">
                             <param id="0" name="Object">Zombie</param>
                         </condition>
-                        <condition disabled="1" id="-15" name="Pick nearest/furthest" sid="5655291172079003" type="GoodGuy">
+                        <condition id="-15" name="Pick nearest/furthest" sid="5655291172079003" type="GoodGuy">
                             <param id="0" name="Which">0</param>
                             <param id="1" name="X">Zombie.X</param>
                             <param id="2" name="Y">Zombie.Y</param>
@@ -897,7 +900,7 @@
                         <condition id="-3" name="Is on-screen" sid="1164320351851821" type="Zombie" />
                         <condition id="-11" name="Is within angle" sid="2955755278458583" type="Zombie">
                             <param id="0" name="Within">30</param>
-                            <param id="1" name="Angle">angle(Zombie.X, Zombie.Y, Player.X, Player.Y)</param>
+                            <param id="1" name="Angle">angle(Zombie.X, Zombie.Y, GoodGuy.X, GoodGuy.Y)</param>
                         </condition>
                         <condition id="-8" name="Compare two values" sid="9840373835457671" type="System">
                             <param id="0" name="First value">distance(Zombie.X, Zombie.Y, Player.X, Player.Y)</param>
