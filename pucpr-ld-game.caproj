@@ -390,6 +390,10 @@
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="Following" sid="2159532537051284" type="boolean" />
+                <instance-variable name="Holding" sid="7429813169245858" type="number" />
+                <instance-variable name="HoldX" sid="5765375018455937" type="number" />
+                <instance-variable name="HoldY" sid="9709542328042876" type="number" />
+                <instance-variable name="ReleaseDelay" sid="2185987957031771" type="number" />
             </instance-variables>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3135610700871283" speed="5">

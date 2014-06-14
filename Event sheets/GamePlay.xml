@@ -7,7 +7,7 @@
         <include>Utils</include>
         <include>Camera</include>
         <include>Sprites</include>
-        <event-group collapsed="1" description="" sid="6773088495970466" title="Balloon">
+        <event-group description="" sid="6773088495970466" title="Balloon">
             <sub-events>
                 <event-block sid="1755681182641615">
                     <conditions>
@@ -193,7 +193,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="2897060075777959" title="Characters">
+        <event-group description="" sid="2897060075777959" title="Characters">
             <sub-events>
                 <event-block sid="2747026023799614">
                     <conditions>
@@ -465,7 +465,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="3766674772289778" title="Victims">
+        <event-group description="" sid="3766674772289778" title="Victims">
             <sub-events>
                 <event-block sid="4706235495098837">
                     <conditions>
@@ -539,7 +539,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block collapsed="1" sid="2257214021347142">
+                <event-block sid="2257214021347142">
                     <conditions>
                         <condition id="-11" name="For Each" sid="1629289458268421" type="System">
                             <param id="0" name="Object">Area</param>
@@ -814,7 +814,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="3052503956438317" title="Zombies">
+        <event-group description="" sid="3052503956438317" title="Zombies">
             <sub-events>
                 <event-block sid="5032556258015384">
                     <conditions>
@@ -895,7 +895,16 @@
                             <param id="2" name="Value">0</param>
                         </condition>
                         <condition id="-3" name="Is on-screen" sid="1164320351851821" type="Zombie" />
-                        <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="5761741511082024" type="Zombie">
+                        <condition id="-11" name="Is within angle" sid="2955755278458583" type="Zombie">
+                            <param id="0" name="Within">30</param>
+                            <param id="1" name="Angle">angle(Zombie.X, Zombie.Y, Player.X, Player.Y)</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="9840373835457671" type="System">
+                            <param id="0" name="First value">distance(Zombie.X, Zombie.Y, Player.X, Player.Y)</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">ScreenMaxDistance / 2</param>
+                        </condition>
+                        <condition behavior="LineOfSight" disabled="1" id="0" name="Has LOS to object" sid="5761741511082024" type="Zombie">
                             <param id="0" name="Object">GoodGuy</param>
                         </condition>
                         <condition id="-3" name="Is on-screen" sid="9944639276474629" type="GoodGuy" />
@@ -1013,7 +1022,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block collapsed="1" sid="6161878113429321">
+                <event-block sid="6161878113429321">
                     <conditions>
                         <condition id="0" name="On function" sid="9989210086701573" type="Function">
                             <param id="0" name="Name">&quot;ZombieRelease&quot;</param>
@@ -1184,7 +1193,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="9438648782380541" title="Snipers">
+        <event-group description="" sid="9438648782380541" title="Snipers">
             <sub-events>
                 <event-block sid="6870329120158633">
                     <conditions>
@@ -1401,7 +1410,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="1746198295301054" title="InvisibleMan">
+        <event-group description="" sid="1746198295301054" title="InvisibleMan">
             <sub-events>
                 <event-block sid="8372894496072236">
                     <conditions>
@@ -1594,12 +1603,175 @@
                 <event-block sid="4224452801242449">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="5447475839691912" type="InvisibleMan">
-                            <param id="0" name="Instance variable">Health</param>
-                            <param id="1" name="Comparison">3</param>
+                            <param id="0" name="Instance variable">ReleaseDelay</param>
+                            <param id="1" name="Comparison">4</param>
                             <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="4943396028040037" type="InvisibleMan">
+                            <param id="0" name="Instance variable">ReleaseDelay</param>
+                            <param id="1" name="Value">dt</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8814474688064628">
+                    <conditions>
+                        <condition id="0" name="On function" sid="2332705813257714" type="Function">
+                            <param id="0" name="Name">&quot;InvisibleHold&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="7341810072609046" type="InvisibleMan">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="1789844197429189" type="InvisibleMan">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="2107371324687573" type="Character">
+                            <param id="0" name="Unique ID">Function.Param(1)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="403150575016625" type="InvisibleMan">
+                            <param id="0" name="Instance variable">Holding</param>
+                            <param id="1" name="Value">Character.UID</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="5108487901313025" type="InvisibleMan">
+                            <param id="0" name="Instance variable">HoldX</param>
+                            <param id="1" name="Value">Character.X</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="5893868842643322" type="InvisibleMan">
+                            <param id="0" name="Instance variable">HoldY</param>
+                            <param id="1" name="Value">Character.Y</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="1223261062734002" type="Character">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="9678133757552723" type="InvisibleMan">
+                            <param id="0" name="Angle">angle(Self.X, Self.Y, Character.X, Character.Y)</param>
+                        </action>
+                        <action disabled="1" id="-12" name="Subtract from" sid="8673219316693982" type="Character">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="Pathfinding" id="2" name="Stop" sid="2981976230650324" type="InvisibleMan" />
+                        <action id="0" name="Call function" sid="6276634417095441" type="Function">
+                            <param id="0" name="Name">&quot;HeldByZombie&quot;</param>
+                            <param id="1" name="Parameter {n}">Character.UID</param>
+                        </action>
+                        <action id="6" name="Stop" sid="8659382636138373" type="Audio">
+                            <param id="0" name="Tag">str(InvisibleMan.UID)</param>
+                        </action>
+                        <action id="0" name="Play" sid="5496668845115289" type="Audio">
+                            <param id="0" name="Audio file">213509__soykevin__zombie-attack</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">str(InvisibleMan.UID)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2058898163527909">
+                    <conditions>
+                        <condition id="0" name="On function" sid="2385978431872257" type="Function">
+                            <param id="0" name="Name">&quot;InvisibleRelease&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="5555383363155621" type="InvisibleMan">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="7060806169263307" type="Character">
+                            <param id="0" name="Unique ID">Function.Param(1)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="8666588533090209" type="InvisibleMan">
+                            <param id="0" name="Instance variable">Holding</param>
+                            <param id="1" name="Value">-1</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="300918604504197" type="Character">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="9241598592069184" type="InvisibleMan">
+                            <param id="0" name="Instance variable">ReleaseDelay</param>
+                            <param id="1" name="Value">0.5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7353541865091447">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="9293454921909232" type="System">
+                            <param id="0" name="Object">InvisibleMan</param>
+                        </condition>
+                        <condition id="9" name="Is overlapping at offset" sid="170211419877136" type="InvisibleMan">
+                            <param id="0" name="Object">GoodGuy</param>
+                            <param id="1" name="Offset X">Function.Call(&quot;LengthDir&quot;, &quot;x&quot;, 2, InvisibleMan.Angle)</param>
+                            <param id="2" name="Offset Y">Function.Call(&quot;LengthDir&quot;, &quot;y&quot;, 2, InvisibleMan.Angle)</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="683483722253256" type="InvisibleMan">
+                            <param id="0" name="Instance variable">Holding</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="1938719131780829" type="InvisibleMan">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="7751298759107027" type="InvisibleMan">
+                            <param id="0" name="Instance variable">ReleaseDelay</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="1678059834846593" type="Character">
+                            <param id="0" name="Unique ID">GoodGuy.UID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="1703819466872862" type="Function">
+                            <param id="0" name="Name">&quot;InvisibleHold&quot;</param>
+                            <param id="1" name="Parameter {n}">InvisibleMan.UID{###}GoodGuy.UID</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="3978654794264585" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="0" name="Call function" sid="1692096998181474" type="Function">
+                            <param id="0" name="Name">&quot;InvisibleRelease&quot;</param>
+                            <param id="1" name="Parameter {n}">InvisibleMan.UID{###}GoodGuy.UID</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="996290132796984" type="Character">
+                            <param id="0" name="Instance variable">KnockBack</param>
+                            <param id="1" name="Value">32</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="7511643510297853" type="Character">
+                            <param id="0" name="Instance variable">KnockBackAngle</param>
+                            <param id="1" name="Value">angle(InvisibleMan.X, InvisibleMan.Y, Character.X, Character.y)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4115161928553519">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="7125978244740165" type="System">
+                            <param id="0" name="Object">InvisibleMan</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="3585250599070256" type="Character">
+                            <param id="0" name="Unique ID">InvisibleMan.Holding</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="4136173138804399" type="Character">
+                            <param id="0" name="X">InvisibleMan.HoldX + Character.Sine.Value</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="6907414213393141" type="Character">
+                            <param id="0" name="Y">InvisibleMan.HoldY + Character.Sine.Value</param>
+                        </action>
+                        <action id="-12" name="Subtract from" sid="5145212539513354" type="Character">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Value">dt * 2</param>
+                        </action>
+                        <action behavior="Pathfinding" id="3" name="Set enabled" sid="1219297385556881" type="InvisibleMan">
+                            <param id="0" name="Set">0</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
@@ -1883,6 +2055,7 @@
                         <condition behavior="Fade" id="0" name="On fade out finished" sid="9466521910715355" type="FinalFade" />
                     </conditions>
                     <actions>
+                        <action id="33" name="Stop all" sid="9498266365254559" type="Audio" />
                         <action id="-26" name="Restart layout" sid="4446848117981179" type="System" />
                     </actions>
                 </event-block>
@@ -2295,9 +2468,9 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="569804434613888" title="HUD">
+        <event-group description="" sid="569804434613888" title="HUD">
             <sub-events>
-                <event-block collapsed="1" sid="1517814329212286">
+                <event-block sid="1517814329212286">
                     <conditions>
                         <condition id="-8" name="Is boolean instance variable set" sid="3850111470731568" type="Player">
                             <param id="0" name="Instance variable">CarryingKnife</param>
@@ -2333,7 +2506,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block collapsed="1" sid="8313307141283253">
+                <event-block sid="8313307141283253">
                     <conditions>
                         <condition id="-8" name="Is boolean instance variable set" sid="644344751361621" type="Player">
                             <param id="0" name="Instance variable">CarryingGun</param>

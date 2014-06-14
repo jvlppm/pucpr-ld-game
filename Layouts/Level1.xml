@@ -4390,6 +4390,10 @@
                         <KnockBack>0</KnockBack>
                         <KnockBackAngle>0</KnockBackAngle>
                         <Following>false</Following>
+                        <Holding>-1</Holding>
+                        <HoldX>0</HoldX>
+                        <HoldY>0</HoldY>
+                        <ReleaseDelay>0</ReleaseDelay>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
